@@ -184,3 +184,5 @@ This research was funded by the European Union's Horizon Europe research and inn
 If you are interested in contributing to the library, please see
 [CONTRIBUTING.md](CONTRIBUTING.md). This file contains many details around contributing
 to the code base, including development practices, code checks, tests, and more.
+
+For support or collaborations: shaina.raza@vectorinstitute.ai
