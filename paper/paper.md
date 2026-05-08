@@ -12,8 +12,10 @@ tags:
 authors:
   - name: Aravind Narayanan
     orcid: 0009-0008-7991-1929
+    equal-contrib: true
     affiliation: 1
   - name: Karanpal Sekhon
+    equal-contrib: true
     affiliation: 1
   - name: Mahshid Alinoori
     affiliation: 1
@@ -34,7 +36,7 @@ bibliography: paper.bib
 FairSense-AgentiX is an open-source Python platform for automated detection of
 bias in text and images and for assessing AI deployment scenarios against
 established risk frameworks. Existing fairness tools such as AI Fairness 360
-[@bellamy2019aif360], Fairlearn [@JMLR:v24:23-0389], and LangFair [@Bouchard2025]
+[@8843908], Fairlearn [@JMLR:v24:23-0389], and LangFair [@Bouchard2025]
 address structured datasets or LLM output metrics but cannot audit unstructured
 content across text and images, explain their reasoning transparently, or connect
 findings to deployment-level risk frameworks in a single workflow. To address this
@@ -47,7 +49,7 @@ exposes both a Python library and a FastAPI [@fastapi] REST/WebSocket server wit
 accompanying React web interface. FairSense-AgentiX is designed to be
 LLM-provider-agnostic and tool-swappable, making it applicable in a wide range of
 research and production contexts. It builds on and substantially extends a prior
-static pipeline, FairSense-AI [@raza2025fairsense], by replacing single-pass LLM
+static pipeline, FairSense-AI [@raza2025fairsenseairesponsibleaimeets], by replacing single-pass LLM
 inference with an orchestrated, self-correcting agentic loop and adding a
 retrieval-augmented risk assessment module tied to established governance frameworks.
 
@@ -78,7 +80,7 @@ thoroughly tested and documented for external adoption.
 
 Fairness auditing of AI systems and content remains an active area of research
 that lacks mature, end-to-end tooling [@mehrabi2021; @blodgett2020language].
-Existing libraries such as AI Fairness 360 [@bellamy2019aif360] and Fairlearn
+Existing libraries such as AI Fairness 360 [@8843908] and Fairlearn
 [@JMLR:v24:23-0389] provide statistical metrics and post-hoc debiasing algorithms
 for structured datasets but do not address unstructured text or images, and offer
 no pathway to natural-language explanations or deployment-level risk guidance. More
@@ -156,7 +158,7 @@ graph logic from tool implementation and enables runtime substitution: the entir
 tool stack can be replaced with lightweight fakes for unit testing without modifying
 graph code. 
 
-LLM providers (OpenAI GPT-4 [@openai2023gpt4] and Anthropic Claude 
+LLM providers (OpenAI GPT-4 [@openai2024gpt4technicalreport] and Anthropic Claude 
 [@anthropic2024claude], via LangChain [@chase2022langchain]) are 
 selected through environment variables, with no code changes required to switch providers.
 
@@ -212,7 +214,7 @@ fairness auditing.
 
 At present, FairSense-AgentiX supports five bias categories (gender, age, racial,
 disability, socioeconomic), operates over English-language prompts and risk
-taxonomies, and integrates only with closed-source LLM providers (OpenAI and
+taxonomies, and integrates only with closed-source LLM providers (OpenAI GPT-4 [@openai2024gpt4technicalreport] and
 Anthropic). Quantitative evaluation against standard fairness benchmarks is not
 included in this work and is planned as a companion study.
 
