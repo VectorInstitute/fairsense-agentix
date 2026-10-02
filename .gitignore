@@ -25,6 +25,7 @@ CLAUDE.md
 *.faiss
 *.index
 *.json
+!.zenodo.json
 *.csv
 # BUT: Allow package data files
 !fairsense_agentix/data/**/*.faiss

@@ -1,0 +1,35 @@
+{
+  "title": "FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis",
+  "description": "Open-source Python platform for bias detection in text and images and AI deployment risk assessment using LangGraph orchestration, a tool registry, and FAISS-backed retrieval over the MIT AI Risk Repository.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Narayanan, Aravind",
+      "affiliation": "Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada",
+      "orcid": "0009-0008-7991-1929"
+    },
+    {
+      "name": "Sekhon, Karanpal",
+      "affiliation": "Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada"
+    },
+    {
+      "name": "Alinoori, Mahshid",
+      "affiliation": "Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada",
+      "orcid": "0009-0003-6692-6703"
+    },
+    {
+      "name": "Raza, Shaina",
+      "affiliation": "Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada",
+      "orcid": "0000-0003-1061-5845"
+    }
+  ],
+  "keywords": [
+    "fairness",
+    "bias detection",
+    "AI safety",
+    "agentic AI",
+    "responsible AI",
+    "LangGraph"
+  ],
+  "license": "mit"
+}
