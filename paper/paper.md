@@ -18,6 +18,7 @@ authors:
     equal-contrib: true
     affiliation: 1
   - name: Mahshid Alinoori
+    orcid: 0009-0003-6692-6703
     affiliation: 1
   - name: Shaina Raza
     orcid: 0000-0003-1061-5845
@@ -207,7 +208,7 @@ oversized, malformed) and a benchmarking script reports p50/p95/p99 latency and
 resident-memory deltas per workflow, exiting non-zero if any iteration fails or
 any result group is missing; both are run on demand rather than in continuous
 integration. Pre-commit hooks enforce type-checking (`mypy`) and
-linting (`ruff`), and GitHub Actions runs code checks together with the unit and
+linting (`ruff`), and GitHub Actions run code checks together with the unit and
 integration suites on every pull request.
 
 # Research Impact Statement
