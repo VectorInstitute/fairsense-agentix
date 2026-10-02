@@ -83,8 +83,9 @@ Fairness auditing of AI systems and content remains an active area of research
 that lacks mature, end-to-end tooling [@mehrabi2021; @blodgett2020language].
 Existing libraries such as AI Fairness 360 [@8843908] and Fairlearn
 [@JMLR:v24:23-0389] provide statistical metrics and post-hoc debiasing algorithms
-for structured datasets but do not address unstructured text or images, and offer
-no pathway to natural-language explanations or deployment-level risk guidance. More
+for structured datasets but do not address unstructured text or images, and are not
+oriented toward document-level natural-language bias explanations or deployment-level
+risk guidance. More
 recently, LangFair [@Bouchard2025] introduced LLM-specific fairness metrics for
 text outputs, but remains restricted to evaluating LLM responses against predefined
 prompts and provides no image modality, no agentic reasoning, and no connection to
@@ -153,7 +154,7 @@ the full image directly rather than the extracted-text intermediary.
 **Risk assessment graph.** Embeds a natural-language deployment scenario using a
 sentence-transformer model [@reimers2019sbert] and performs semantic
 nearest-neighbour search over a FAISS [@johnson2019faiss] index of 1,340 risks
-drawn from the MIT AI Risk Repository (v3, March 2025 snapshot)
+from the MIT AI Risk Repository V3 snapshot dated 26 March 2025
 [@SLATTERY2026101517]. Each matched risk is
 then linked to the four core functions of the NIST AI RMF [@nist2023rmf]
 (GOVERN, MAP, MEASURE, MANAGE) through a second FAISS index of 5,230
