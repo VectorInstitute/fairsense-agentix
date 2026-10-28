@@ -38,7 +38,7 @@ FairSense-AgentiX is an open-source Python platform for automated detection of
 bias in text and images and for assessing AI deployment scenarios against
 established risk frameworks. Existing fairness tools such as AI Fairness 360
 [@8843908], Fairlearn [@JMLR:v24:23-0389], and LangFair [@Bouchard2025]
-address structured datasets or LLM output metrics but cannot audit unstructured
+address structured datasets or large language model (LLM) output metrics but cannot audit unstructured
 content across text and images, explain their reasoning transparently, or connect
 findings to deployment-level risk frameworks in a single workflow. To address this
 gap, it implements a multi-node agentic workflow using LangGraph [@langgraph], unlike
@@ -255,11 +255,7 @@ as a companion study.
 
 # AI Usage Disclosure
 
-No generative AI was used for architectural design or core algorithms. Claude
-(Anthropic) and GitHub Copilot were used for creating documentation and docstrings,
-bug fixing, and inline code changes. For this manuscript, these tools were used for
-drafting, copy-editing, and consistency checking; all factual claims were verified
-by the authors against the codebase.
+No generative AI was used for architectural design or core algorithms. For documentation, docstrings, bug fixing, and inline code changes, we used Anthropic **Claude 3** models from the Opus/Sonnet/Haiku family [@anthropic2024claude], primarily **Sonnet**-class chat models. We also used **GitHub Copilot** inline completions in VS Code/Cursor; GitHub selects the completion model and we did not log model IDs per suggestion. For this manuscript, the same tools were used for drafting, copy-editing, and consistency checking. All AI-assisted code, documentation, and prose were reviewed, edited, and validated by the authors; factual claims were checked against the codebase and primary sources before submission.
 
 # Acknowledgements
 
