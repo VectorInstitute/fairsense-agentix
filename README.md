@@ -14,7 +14,7 @@
 
 FairSense-AgentiX is an open-source bias detection and AI risk assessment platform that uses **agentic workflows** (LangGraph orchestration, critique-and-refine) to analyze text, images, and deployment scenarios. It was **peer-reviewed and published** in the [Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.11060) ([DOI: 10.21105/joss.11060](https://doi.org/10.21105/joss.11060)).
 
-**Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/) · **Archive:** [Zenodo](https://doi.org/10.5281/zenodo.23106857) (v0.2.2)
+**Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/) · **Archive:** [Zenodo](https://doi.org/10.5281/zenodo.23106857) (latest release; cite the version DOI you used)
 
 ## ✨ Key Features
 
@@ -86,6 +86,8 @@ for instance in result.bias_instances:
 ---
 
 ## 📖 Citation
+
+For **reproducibility**, cite the **Zenodo DOI of the exact release** you used (e.g. v0.3.0 for the bundled MIT Risk Repository V4 index) **in addition to** the JOSS article below. The JOSS paper describes the software as peer-reviewed at publication time (including the earlier V3 risk snapshot); it is not updated for each release.
 
 ```bibtex
 @article{Narayanan2026,
