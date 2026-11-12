@@ -10,6 +10,7 @@ and builds FAISS indexes for semantic search using LangChain's .from_documents()
 Usage
 -----
     python scripts/build_faiss_indexes.py
+    python scripts/build_faiss_indexes.py --device cuda   # GPU node (e.g. A40)
 
 Requirements
 ------------
@@ -28,6 +29,7 @@ Outputs (LangChain format)
 
 from __future__ import annotations
 
+import argparse
 import importlib.util
 import logging
 import os
@@ -43,6 +45,28 @@ if TYPE_CHECKING:
     from fairsense_agentix.tools.embeddings import LangChainEmbedder
 
 logger = logging.getLogger(__name__)
+
+
+def _resolve_embed_device(choice: str) -> str:
+    """Return SentenceTransformer device string for HuggingFaceEmbeddings."""
+    if choice == "auto":
+        try:
+            import torch
+        except ImportError:
+            return "cpu"
+        return "cuda" if torch.cuda.is_available() else "cpu"
+    return choice
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--device",
+        choices=("auto", "cpu", "cuda"),
+        default=os.environ.get("FAIRSENSE_INDEX_BUILD_DEVICE", "auto"),
+        help="Device for embedding model during index build (default: auto)",
+    )
+    return parser.parse_args()
 
 
 def _load_runtime_settings() -> Any:
@@ -187,6 +211,7 @@ def main() -> int:
     int
         0 if at least one index was built, 1 if nothing was built or inputs missing.
     """
+    args = _parse_args()
     level_name = os.environ.get("LOGLEVEL", "INFO").upper()
     level = getattr(logging, level_name, logging.INFO)
     logging.basicConfig(
@@ -198,6 +223,11 @@ def main() -> int:
     print("\n" + "=" * 60)
     print("FAISS Index Builder (LangChain)")
     print("=" * 60)
+
+    embed_device = _resolve_embed_device(args.device)
+    if args.device == "cuda" and embed_device != "cuda":
+        logger.error("--device cuda requested but torch.cuda.is_available() is False")
+        return 1
 
     datasets: list[DatasetConfig] = [
         {
@@ -225,11 +255,16 @@ def main() -> int:
     from fairsense_agentix.tools.embeddings import LangChainEmbedder  # noqa: PLC0415
 
     logger.info("")
-    logger.info("Initializing LangChain embedder: %s", settings.embedding_model)
+    logger.info(
+        "Initializing LangChain embedder: %s (device=%s)",
+        settings.embedding_model,
+        embed_device,
+    )
     embedder = LangChainEmbedder(
         model_name=settings.embedding_model,
         dimension=settings.embedding_dimension,
         normalize=True,  # For cosine similarity
+        model_kwargs={"device": embed_device},
     )
     logger.info("  Model loaded: %s", embedder.model_name)
     logger.info("  Dimension: %s", embedder.dimension)

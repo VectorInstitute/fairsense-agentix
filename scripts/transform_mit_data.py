@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Transform MIT AI Risk Repository data into FairSense-AgentiX format.
 
-This script processes the MIT AI Risk Repository V3 CSV files and creates:
+This script processes MIT AI Risk Repository CSV exports (V3 or V4) and creates:
 1. ai_risks.csv - Risk taxonomy with descriptions for embedding
 2. ai_rmf.csv - NIST AI-RMF recommendations mapped to risks
 

@@ -33,6 +33,8 @@ Outputs: `data/raw/ai_risks.csv`, `data/raw/ai_rmf.csv` (see [DATA_FORMAT.md](DA
 
 ```bash
 uv run python scripts/build_faiss_indexes.py
+# On a GPU node (e.g. A40), after `nvidia-smi` shows a free GPU:
+uv run python scripts/build_faiss_indexes.py --device cuda
 uv run python scripts/sync_package_indexes.py
 ```
 
