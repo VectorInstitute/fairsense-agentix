@@ -1,4 +1,16 @@
-export const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:8000";
+/** In dev, default to same-origin + Vite proxy unless VITE_API_BASE is set explicitly. */
+export const API_BASE = (
+  import.meta.env.VITE_API_BASE ??
+  (import.meta.env.DEV ? "" : "http://localhost:8000")
+).replace(/\/$/, "");
+
+export function apiUrl(path: string): string {
+  return API_BASE ? `${API_BASE}${path}` : path;
+}
+
+function wsBase(): string {
+  return API_BASE || (typeof window !== "undefined" ? window.location.origin : "http://localhost:5173");
+}
 
 export type WorkflowID = "bias_text" | "bias_image" | "risk";
 
@@ -9,7 +21,7 @@ export interface HealthResponse {
 }
 
 export async function health(): Promise<HealthResponse> {
-  const res = await fetch(`${API_BASE}/v1/health`);
+  const res = await fetch(apiUrl("/v1/health"));
   if (!res.ok) {
     throw new Error(`Health check failed: ${res.statusText}`);
   }
@@ -29,7 +41,7 @@ export interface AnalyzeStartResponse {
 }
 
 export async function analyze(payload: AnalyzePayload) {
-  const res = await fetch(`${API_BASE}/v1/analyze`, {
+  const res = await fetch(apiUrl("/v1/analyze"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -41,7 +53,7 @@ export async function analyze(payload: AnalyzePayload) {
 }
 
 export async function analyzeStart(payload: AnalyzePayload): Promise<AnalyzeStartResponse> {
-  const res = await fetch(`${API_BASE}/v1/analyze/start`, {
+  const res = await fetch(apiUrl("/v1/analyze/start"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -58,7 +70,7 @@ export async function analyzeFile(file: File, inputType?: WorkflowID) {
   if (inputType) {
     form.append("input_type", inputType);
   }
-  const res = await fetch(`${API_BASE}/v1/analyze/upload`, {
+  const res = await fetch(apiUrl("/v1/analyze/upload"), {
     method: "POST",
     body: form
   });
@@ -74,7 +86,7 @@ export async function analyzeFileStart(file: File, inputType?: WorkflowID): Prom
   if (inputType) {
     form.append("input_type", inputType);
   }
-  const res = await fetch(`${API_BASE}/v1/analyze/upload/start`, {
+  const res = await fetch(apiUrl("/v1/analyze/upload/start"), {
     method: "POST",
     body: form
   });
@@ -85,7 +97,7 @@ export async function analyzeFileStart(file: File, inputType?: WorkflowID): Prom
 }
 
 export function connectToStream(runId: string, onEvent: (event: MessageEvent) => void) {
-  const url = new URL(`/v1/stream/${runId}`, API_BASE);
+  const url = new URL(`/v1/stream/${runId}`, wsBase());
   url.protocol = url.protocol === "https:" ? "wss:" : "ws:";
   const ws = new WebSocket(url.toString());
   ws.onmessage = onEvent;

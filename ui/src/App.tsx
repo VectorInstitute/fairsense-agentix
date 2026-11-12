@@ -5,7 +5,7 @@ import vectorLogo from "./assets/Vector Logo_Bilingual_White_Horizontal.png";
 import fairsenseLogo from "./assets/fairsense-logo.png";
 import aixpertLogo from "./assets/AIXPERT_logo_extended_white-2048x896.png";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { analyzeStart, analyzeFileStart, connectToStream, health, API_BASE } from "./api";
+import { analyzeStart, analyzeFileStart, connectToStream, health, apiUrl } from "./api";
 
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -298,7 +298,11 @@ export default function App() {
       // Step 3: Analysis is now running in background, events will stream in!
     } catch (err) {
       console.error(err);
-      setErrorMessage("Analysis failed. Check logs for details.");
+      const detail =
+        err instanceof Error ? err.message : "Unknown error";
+      setErrorMessage(
+        `Analysis failed: ${detail}. If using SSH, forward port 5173 and restart Vite without VITE_API_BASE so the dev proxy can reach the API.`,
+      );
       setLoading(false);
     }
   }
@@ -310,7 +314,7 @@ export default function App() {
   async function executeShutdown() {
     setShowShutdownModal(false);
     try {
-      const response = await fetch(`${API_BASE}/v1/shutdown`, {
+      const response = await fetch(apiUrl("/v1/shutdown"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
