@@ -11,12 +11,23 @@ The script intelligently maps risks to appropriate RMF functions based on:
 - Intent (intentional vs unintentional)
 """
 
+import argparse
 import csv
 import logging
 import os
 import sys
 from pathlib import Path
 from typing import TextIO
+
+
+# Default MIT spreadsheet exports (place under data/raw/; CSVs are gitignored).
+MIT_V3_EXPORT = (
+    "Copy of The AI Risk Repository V3_26_03_2025 (please create a copy) "
+    "- AI Risk Database v3.csv"
+)
+MIT_V4_EXPORT = (
+    "Copy of The AI Risk Repository V4_03_12_2025 - AI Risk Database v4.csv"
+)
 
 
 # Intentionally do not import `fairsense_agentix` here: importing the package runs
@@ -508,8 +519,46 @@ def generate_rmf_recommendations(
         logger.info("  %s: %s (%.1f%%)", func, count, percentage)
 
 
+def _default_mit_export(repository_version: str) -> str:
+    if repository_version == "v4":
+        return MIT_V4_EXPORT
+    if repository_version == "v3":
+        return MIT_V3_EXPORT
+    msg = f"Unknown repository version {repository_version!r}; use v3 or v4"
+    raise ValueError(msg)
+
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Transform MIT AI Risk Database CSV into FairSense ai_risks.csv and ai_rmf.csv",
+    )
+    parser.add_argument(
+        "--repository-version",
+        choices=("v3", "v4"),
+        default="v4",
+        help="Which default MIT export filename to use when --input is omitted (default: v4)",
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        help="Path to MIT 'AI Risk Database' sheet CSV (overrides --repository-version)",
+    )
+    parser.add_argument(
+        "--output-risks",
+        type=Path,
+        help="Output risks CSV (default: data/raw/ai_risks.csv)",
+    )
+    parser.add_argument(
+        "--output-rmf",
+        type=Path,
+        help="Output RMF CSV (default: data/raw/ai_rmf.csv)",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
     """Run main transformation pipeline."""
+    args = _parse_args()
     level_name = os.environ.get("LOGLEVEL", "INFO").upper()
     level = getattr(logging, level_name, logging.INFO)
     # Root may already have handlers (e.g. from other tools); force our CLI format.
@@ -527,19 +576,28 @@ def main() -> int:
 
     # Paths
     raw_dir = Path(__file__).parent.parent / "data" / "raw"
-    input_file = raw_dir / (
-        "Copy of The AI Risk Repository V3_26_03_2025 (please create a copy) "
-        "- AI Risk Database v3.csv"
-    )
+    if args.input is not None:
+        input_file = args.input.expanduser().resolve()
+    else:
+        input_file = raw_dir / _default_mit_export(args.repository_version)
 
-    risks_output = raw_dir / "ai_risks.csv"
-    rmf_output = raw_dir / "ai_rmf.csv"
+    risks_output = (
+        args.output_risks.expanduser().resolve()
+        if args.output_risks
+        else raw_dir / "ai_risks.csv"
+    )
+    rmf_output = (
+        args.output_rmf.expanduser().resolve()
+        if args.output_rmf
+        else raw_dir / "ai_rmf.csv"
+    )
 
     # Check input file exists
     if not input_file.exists():
         logger.error("Input file not found: %s", input_file)
         logger.error(
-            "Please ensure the MIT AI Risk Repository CSV is in data/raw/",
+            "Export the 'AI Risk Database v3/v4' sheet from airisk.mit.edu to data/raw/. "
+            "See data/raw/README.md.",
         )
         return 1
 
