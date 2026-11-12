@@ -5,7 +5,14 @@ import vectorLogo from "./assets/Vector Logo_Bilingual_White_Horizontal.png";
 import fairsenseLogo from "./assets/fairsense-logo.png";
 import aixpertLogo from "./assets/AIXPERT_logo_extended_white-2048x896.png";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { analyzeStart, analyzeFileStart, connectToStream, health, apiUrl } from "./api";
+import {
+  analyzeStart,
+  analyzeFileStart,
+  connectToStream,
+  health,
+  apiUrl,
+  type HealthResponse,
+} from "./api";
 
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -200,13 +207,20 @@ export default function App() {
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [mockProvider, setMockProvider] = useState<string | null>(null);
+  const [healthInfo, setHealthInfo] = useState<HealthResponse | null>(null);
 
   // Surface mock mode prominently: with FAIRSENSE_LLM_PROVIDER=fake the backend
   // returns synthetic placeholder results that look like a real analysis.
   useEffect(() => {
     health()
-      .then((h) => setMockProvider(h.mock_mode ? h.llm_provider : null))
-      .catch(() => setMockProvider(null));
+      .then((h) => {
+        setHealthInfo(h);
+        setMockProvider(h.mock_mode ? h.llm_provider : null);
+      })
+      .catch(() => {
+        setHealthInfo(null);
+        setMockProvider(null);
+      });
   }, []);
   const [showShutdownModal, setShowShutdownModal] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
@@ -300,9 +314,7 @@ export default function App() {
       console.error(err);
       const detail =
         err instanceof Error ? err.message : "Unknown error";
-      setErrorMessage(
-        `Analysis failed: ${detail}. If using SSH, forward port 5173 and restart Vite without VITE_API_BASE so the dev proxy can reach the API.`,
-      );
+      setErrorMessage(`Analysis failed: ${detail}`);
       setLoading(false);
     }
   }
@@ -594,7 +606,9 @@ export default function App() {
       </div>
 
       {/* About modal */}
-      {showAboutModal && <AboutModal onClose={() => setShowAboutModal(false)} />}
+      {showAboutModal && (
+        <AboutModal health={healthInfo} onClose={() => setShowAboutModal(false)} />
+      )}
 
       {/* Shutdown confirmation modal */}
       {showShutdownModal && (
@@ -1114,7 +1128,13 @@ function AnalysisModesAccordion() {
   );
 }
 
-function AboutModal({ onClose }: { onClose: () => void }) {
+function AboutModal({
+  health,
+  onClose,
+}: {
+  health: HealthResponse | null;
+  onClose: () => void;
+}) {
   const [activeTab, setActiveTab] = useState<"about" | "team" | /* "papers" | */ "connect">("about");
 
   const tabs: { id: typeof activeTab; label: string }[] = [
@@ -1197,6 +1217,17 @@ function AboutModal({ onClose }: { onClose: () => void }) {
                 <p className="text-sm text-slate-300 leading-relaxed pt-1">
                   This approach delivers more accurate, transparent, and context-aware fairness assessments than static rule-based systems.
                 </p>
+                {health?.indexed_risk_count != null && (
+                  <p className="text-xs text-slate-500 pt-2">
+                    Server v{health.software_version ?? "?"} · MIT AI Risk index{" "}
+                    {health.mit_risk_repository_version?.toUpperCase() ?? ""} (
+                    {health.indexed_risk_count.toLocaleString()} risks
+                    {health.mit_risk_snapshot_date
+                      ? `, snapshot ${health.mit_risk_snapshot_date}`
+                      : ""}
+                    )
+                  </p>
+                )}
                 <a
                   href="https://vectorinstitute.github.io/fairsense-agentix/"
                   target="_blank"

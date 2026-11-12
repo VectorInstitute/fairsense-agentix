@@ -16,8 +16,12 @@ export type WorkflowID = "bias_text" | "bias_image" | "risk";
 
 export interface HealthResponse {
   status: string;
+  software_version?: string;
   llm_provider: string;
   mock_mode: boolean;
+  mit_risk_repository_version?: string;
+  mit_risk_snapshot_date?: string;
+  indexed_risk_count?: number;
 }
 
 export async function health(): Promise<HealthResponse> {
