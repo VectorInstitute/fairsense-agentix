@@ -33,6 +33,7 @@ Outputs: `data/raw/ai_risks.csv`, `data/raw/ai_rmf.csv` (see [DATA_FORMAT.md](DA
 
 ```bash
 uv run python scripts/build_faiss_indexes.py
+uv run python scripts/sync_package_indexes.py
 ```
 
 Packaged indexes ship under `fairsense_agentix/data/indexes/`.
