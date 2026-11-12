@@ -2,19 +2,23 @@
 
 **An agentic fairness and AI-risk analysis platform developed by the [Vector Institute](https://vectorinstitute.ai/).**
 
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.11060/status.svg)](https://doi.org/10.21105/joss.11060)
 [![code checks](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/code_checks.yml/badge.svg)](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/code_checks.yml)
 [![integration tests](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/integration_tests.yml)
 [![docs](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/docs.yml/badge.svg)](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/docs.yml)
 [![codecov](https://codecov.io/github/VectorInstitute/fairsense-agentix/graph/badge.svg?token=83MYFZ3UPA)](https://codecov.io/github/VectorInstitute/fairsense-agentix)
+[![PyPI](https://img.shields.io/pypi/v/fairsense-agentix)](https://pypi.org/project/fairsense-agentix/)
 ![GitHub License](https://img.shields.io/github/license/VectorInstitute/fairsense-agentix)
 
 ---
 
-FairSense-AgentiX is an intelligent bias detection and risk assessment platform that uses **agentic AI workflows** to analyze text, images, and datasets for fairness concerns. Unlike traditional ML classifiers, FairSense employs a reasoning agent that plans, selects tools, critiques outputs, and refines them iteratively.
+FairSense-AgentiX is an open-source bias detection and AI risk assessment platform that uses **agentic workflows** (LangGraph orchestration, critique-and-refine) to analyze text, images, and deployment scenarios. It was **peer-reviewed and published** in the [Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.11060) ([DOI: 10.21105/joss.11060](https://doi.org/10.21105/joss.11060)).
+
+**Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/) · **Archive:** [Zenodo](https://doi.org/10.5281/zenodo.23106857) (v0.2.2)
 
 ## ✨ Key Features
 
-- 🤖 **Agentic Reasoning** - ReAct loop with dynamic tool selection and self-critique
+- 🤖 **Agentic Reasoning** - LangGraph orchestrator with evaluation-driven self-critique
 - 🔍 **Multi-Modal Analysis** - Text bias detection, image bias detection, and AI risk assessment
 - 🛠️ **Flexible Tool Ecosystem** - OCR, Vision-Language Models, embeddings, FAISS, and LLMs
 - 🌐 **Production-Ready APIs** - FastAPI REST API + WebSocket streaming + React UI
@@ -79,7 +83,24 @@ for instance in result.bias_instances:
     print(f"  - {instance['type']} ({instance['severity']}): {instance['text_span']}")
 ```
 
-**Full Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/)
+---
+
+## 📖 Citation
+
+```bibtex
+@article{Narayanan2026,
+  doi = {10.21105/joss.11060},
+  url = {https://doi.org/10.21105/joss.11060},
+  year = {2026},
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {126},
+  pages = {11060},
+  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
+  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
+  journal = {Journal of Open Source Software}
+}
+```
 
 ---
 

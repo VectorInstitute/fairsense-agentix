@@ -1,12 +1,21 @@
+site_url: https://vectorinstitute.github.io/fairsense-agentix/
+site_description: >-
+  Open-source agentic platform for text and image bias detection, AI risk
+  assessment, and NIST AI RMF–aligned deployment analysis from the Vector Institute.
+copyright: Copyright &copy; Vector Institute
+edit_uri: edit/main/docs/
+exclude_docs: |
+  blog-draft-joss-acceptance.md
+  *.docx
 extra_css:
   - stylesheets/extra.css
 extra:
   generator: false
   social:
-    - icon: fontawesome/brands/discord
-      link: 404.html
     - icon: fontawesome/brands/github
       link: https://github.com/VectorInstitute/fairsense-agentix
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/fairsense-agentix/
 markdown_extensions:
   - attr_list
   - admonition
@@ -68,6 +77,7 @@ theme:
     - navigation.instant
     - navigation.tabs
     - navigation.top
+    - content.action.edit
     - search.suggest
     - search.highlight
     - toc.follow

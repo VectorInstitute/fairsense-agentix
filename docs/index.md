@@ -1,233 +1,251 @@
+<div class="fs-hero" markdown>
+
 # FairSense-AgentiX
 
-**An agentic fairness and AI-risk analysis platform developed by the [Vector Institute](https://vectorinstitute.ai/).**
+<p class="fs-lead">
+An open-source platform from the <strong>Vector Institute</strong> for multi-modal bias detection,
+explainable fairness auditing, and retrieval-based mapping of deployment scenarios to the
+<a href="https://airisk.mit.edu/">MIT AI Risk Repository</a> and NIST AI RMF.
+</p>
+
+<div class="fs-badges" markdown>
+[![JOSS](assets/joss-status.svg)](https://doi.org/10.21105/joss.11060)
+[![PyPI](https://img.shields.io/pypi/v/fairsense-agentix?color=48c0d9&label=PyPI)](https://pypi.org/project/fairsense-agentix/)
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.23106857-1682C9)](https://doi.org/10.5281/zenodo.23106857)
+[![Docs CI](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/docs.yml/badge.svg)](https://github.com/VectorInstitute/fairsense-agentix/actions/workflows/docs.yml)
+</div>
+
+<div class="fs-actions" markdown>
+[Get started :octicons-arrow-right-24:](getting_started.md){ .md-button .md-button--primary }
+[Run the UI :octicons-arrow-right-24:](server.md){ .md-button }
+[JOSS paper :octicons-link-external-16:](https://joss.theoj.org/papers/10.21105/joss.11060){ .md-button }
+[GitHub :fontawesome-brands-github:](https://github.com/VectorInstitute/fairsense-agentix){ .md-button }
+</div>
+
+</div>
+
+!!! success "Peer-reviewed open-source software"
+    FairSense-AgentiX was **published** in the [Journal of Open Source Software](https://joss.theoj.org/) on 30 October 2026
+    ([DOI: 10.21105/joss.11060](https://doi.org/10.21105/joss.11060)).
+    Software archive: [Zenodo 10.5281/zenodo.23106857](https://doi.org/10.5281/zenodo.23106857) (release **v0.2.2**).
+    If you use this work in research, please cite the [JOSS paper](https://doi.org/10.21105/joss.11060).
 
 ---
 
 ## What is FairSense-AgentiX?
 
-FairSense-AgentiX is an intelligent bias detection and risk assessment platform that uses **agentic AI workflows** to analyze text, images, and datasets for fairness concerns. Unlike traditional ML classifiers that operate as black boxes, FairSense employs a reasoning agent that:
+FairSense-AgentiX detects bias in **text** and **images** and assesses **AI deployment scenarios**
+against established risk frameworks. It uses a [LangGraph](https://langchain-ai.github.io/langgraph/)
+orchestrator with a **critique-and-refine** loop—not a single-pass black-box classifier—so results
+include spans, explanations, scores, and step-by-step telemetry when you use the API or UI.
 
-- **Plans** its analysis strategy based on the input type
-- **Selects** the right tools for each task (OCR, vision models, embeddings, knowledge retrieval)
-- **Critiques** its own outputs and refines them iteratively
-- **Explains** its reasoning process through detailed telemetry
-
-This approach delivers more accurate, transparent, and context-aware fairness assessments than static rule-based systems.
-
----
-
-## Key Features
-
-### 🤖 Agentic Reasoning
-Built on [LangGraph](https://langchain-ai.github.io/langgraph/), FairSense-AgentiX implements a **ReAct (Reasoning + Acting) loop** that:
-
-- Dynamically selects analysis tools based on input characteristics
-- Iteratively refines outputs using an evaluator-critique cycle
-- Provides full transparency into decision-making via event streaming
-
-### 🔍 Multi-Modal Analysis
-Supports three analysis workflows:
-
-- **Text Bias Detection** - Identifies gender, racial, age, disability, and socioeconomic biases in text
-- **Image Bias Detection** - Analyzes visual content for stereotypes and representation issues using vision-language models
-- **Risk Assessment** - Evaluates ML deployment scenarios for fairness, security, and compliance risks
-
-### 🛠️ Flexible Tool Ecosystem
-FairSense intelligently orchestrates a suite of specialized tools:
-
-- **OCR Tools** (Tesseract, PaddleOCR) for text extraction
-- **Vision-Language Models** (BLIP, BLIP-2) for image understanding
-- **Embedding Models** for semantic search
-- **FAISS Vector Databases** for knowledge retrieval
-- **LLMs** (GPT-4, Claude) for reasoning and synthesis
-
-### 🌐 Production-Ready APIs
-- **FastAPI REST API** for programmatic access
-- **WebSocket streaming** for real-time agent telemetry
-- **React UI** with landing page, demo examples, and live timeline visualization
-- **Batch processing** for large-scale analysis jobs
-
-### ⚙️ Highly Configurable
-Fine-tune every aspect of the system:
-
-- Swap LLM providers (OpenAI, Anthropic, custom)
-- Choose OCR/vision model backends
-- Enable/disable refinement loops
-- Customize evaluation thresholds
-- Override tool selection strategies
+An orchestrator **routes** each request by declared modality (text, image, or scenario), runs the
+matching workflow, **evaluates** output quality with an LLM critic, and optionally **refines** before
+finalizing. Tools (OCR, vision models, embeddings, FAISS, LLMs) are injected via a registry so the
+same graphs run with real providers in production or lightweight fakes in CI.
 
 ---
 
-## How It Works
+## Analysis modes
 
-FairSense implements a **multi-node agentic workflow**:
+<div class="grid cards" markdown>
 
-```mermaid
-graph LR
-    A[Input] --> B[Plan]
-    B --> C[Tool Selection]
-    C --> D[Tool Execution]
-    D --> E[Evidence Synthesis]
-    E --> F[Evaluation]
-    F --> G{Pass?}
-    G -->|No| H[Refine Plan]
-    H --> C
-    G -->|Yes| I[Output]
-```
+-   :material-text-box-search:{ .vector-icon } __Text bias__
 
-1. **Planning** - Agent analyzes input and creates an action plan
-2. **Tool Selection** - Chooses appropriate tools (OCR, VLM, embeddings, etc.)
-3. **Execution** - Runs selected tools in parallel when possible
-4. **Synthesis** - Combines evidence from multiple sources
-5. **Evaluation** - Critiques output quality (completeness, accuracy)
-6. **Refinement** - Iteratively improves results based on critique (optional but recommended)
+    ---
 
-This **critique-driven refinement loop** distinguishes FairSense from static pipelines, enabling it to handle edge cases and improve output quality dynamically.
+    Structured instances (type, severity, span, explanation) and HTML highlights.
+
+    [:octicons-arrow-right-24: User guide](user_guide.md#text-bias-analysis)
+
+-   :material-image-search:{ .vector-icon } __Image bias__
+
+    ---
+
+    OCR/captioning or a vision-language path, then the same bias pipeline as text.
+
+    [:octicons-arrow-right-24: User guide](user_guide.md#image-bias-analysis)
+
+-   :material-shield-search:{ .vector-icon } __Risk assessment__
+
+    ---
+
+    Semantic search over 1,340 MIT AI Risk Repository (V3) risks plus NIST AI RMF–aligned actions.
+
+    [:octicons-arrow-right-24: User guide](user_guide.md#risk-assessment)
+
+</div>
 
 ---
 
-## Quick Start
+## Key capabilities
 
-### Installation
+### :material-graph-outline: Agentic orchestration
 
-```bash
-# Clone the repository
-git clone https://github.com/VectorInstitute/fairsense-agentix.git
-cd fairsense-agentix
+- Modality-based routing into specialised LangGraph subgraphs
+- Post-hoc LLM evaluation (0–100) with configurable refinement
+- WebSocket telemetry for live agent timelines in the [React UI](server.md)
 
-# Install dependencies with uv
-uv sync
-source .venv/bin/activate
+### :material-api: Production APIs
 
-# Configure API keys (see Configuration section)
-# Create .env file with your settings (see getting_started.md)
-```
+- Python `FairSense` API · FastAPI REST · batch jobs · [full API reference](api.md)
 
-### Your First Analysis
+### :material-tune: Configurable stack
 
-!!! warning "Configure a real LLM provider first"
-    The default `FAIRSENSE_LLM_PROVIDER` is `fake`, which lets the package import and the test suite run without an API key. In that mode `FairSense()` still "works" but every result is a **synthetic placeholder**, not a real analysis. FairSense flags this in three places: a `MockProviderWarning` at construction, `result.metadata.mock_mode == True`, and a `MOCK MODE` entry at the top of `result.warnings`. Set a real provider before running the examples below:
+- LLM providers (OpenAI, Anthropic, OpenAI-compatible endpoints) or `fake` for tests
+- Swappable OCR/caption/embedder tools via environment variables
+
+---
+
+## How it works
+
+Every request follows the same orchestrator loop: **route → execute → evaluate → deliver** (with an optional refine pass when the critic score is low).
+
+<div class="fs-flowbar" markdown>
+<span class="fs-flowbar__chip fs-flowbar__chip--term">Input</span>
+<span class="fs-flowbar__sep" aria-hidden="true"></span>
+<span class="fs-flowbar__chip">Route</span>
+<span class="fs-flowbar__sep" aria-hidden="true"></span>
+<span class="fs-flowbar__chip">Execute</span>
+<span class="fs-flowbar__sep" aria-hidden="true"></span>
+<span class="fs-flowbar__chip">Evaluate</span>
+<span class="fs-flowbar__sep" aria-hidden="true"></span>
+<span class="fs-flowbar__chip fs-flowbar__chip--term">Results</span>
+</div>
+
+<p class="fs-flowbar__loop"><span class="fs-flowbar__loop-badge">Refine</span> may send the request back to <strong>Route</strong> when quality is below threshold (capped).</p>
+
+<div class="grid cards" markdown>
+
+-   :material-sign-direction:{ .vector-icon } __1 · Route__
+
+    ---
+
+    Choose **text**, **image**, or **risk** workflow from the request and run preflight checks.
+
+-   :material-play-circle:{ .vector-icon } __2 · Execute__
+
+    ---
+
+    Run the LangGraph subgraph: bias pipeline, OCR/VLM path, or FAISS over 1,340 MIT risks.
+
+-   :material-clipboard-check:{ .vector-icon } __3 · Evaluate__
+
+    ---
+
+    LLM critic scores output (0–100). Fail → refine; pass → finalize.
+
+-   :material-package-variant:{ .vector-icon } __4 · Deliver__
+
+    ---
+
+    Spans, explanations, highlights, risk matches, and agent telemetry.
+
+</div>
+
+[:octicons-arrow-right-24: Full orchestrator diagram](architecture.md){ .md-button }
+
+---
+
+## Quick start
+
+=== "PyPI"
 
     ```bash
-    export FAIRSENSE_LLM_PROVIDER=openai        # or: anthropic
+    pip install fairsense-agentix
+    export FAIRSENSE_LLM_PROVIDER=openai
     export FAIRSENSE_LLM_API_KEY=sk-...
     ```
+
+=== "Source"
+
+    ```bash
+    git clone https://github.com/VectorInstitute/fairsense-agentix.git
+    cd fairsense-agentix
+    uv sync && source .venv/bin/activate
+    ```
+
+!!! warning "Configure a real LLM provider first"
+    The default `FAIRSENSE_LLM_PROVIDER` is `fake` (synthetic placeholders for tests). See
+    [Getting Started](getting_started.md) before running real analyses.
 
 ```python
 from fairsense_agentix import FairSense
 
-# Initialize the engine
 engine = FairSense()
-
-# Analyze text for bias
 result = engine.analyze_text(
     "We're looking for a young, energetic developer to join our startup team."
 )
-
-print(f"Overall: {result.summary}")
-print(f"Found {len(result.bias_instances or [])} bias instances")
-for instance in (result.bias_instances or []):
-    print(f"  - {instance.get('type')} ({instance.get('severity')}): {instance.get('text_span')}")
+print(result.summary)
 ```
 
-### Using the Web Interface
+[:octicons-arrow-right-24: Full getting started guide](getting_started.md){ .md-button .md-button--primary }
 
-The easiest way to get started is with the integrated web interface:
+---
 
-```python
-# Launch both backend and frontend (from a source checkout with Node.js installed)
-from fairsense_agentix import server
-server.start()
+## Documentation map
+
+| Guide | Description |
+| --- | --- |
+| [Getting Started](getting_started.md) | Install, `.env`, first analysis |
+| [User Guide](user_guide.md) | Text, image, and risk workflows |
+| [Server Guide](server.md) | FastAPI + React UI |
+| [Architecture](architecture.md) | Graphs, tools, orchestrator |
+| [API Reference](api.md) | Python and REST |
+| [Developer Guide](developers.md) | Contributing and extending |
+
+---
+
+## Use cases
+
+<div class="grid cards" markdown>
+
+-   :material-bullhorn:{ .vector-icon } __Content & marketing__
+
+    ---
+
+    Moderation pipelines, ad copy, and inclusivity reviews before publish.
+
+-   :material-briefcase:{ .vector-icon } __HR & policy__
+
+    ---
+
+    Job posts, internal communications, and DEI alignment checks.
+
+-   :material-rocket-launch:{ .vector-icon } __ML governance__
+
+    ---
+
+    Pre-deployment risk mapping, audit trails, and fairness research with agent metadata.
+
+</div>
+
+---
+
+## Citation
+
+If you use FairSense-AgentiX in academic work, please cite the JOSS article:
+
+```bibtex
+@article{Narayanan2026,
+  doi = {10.21105/joss.11060},
+  url = {https://doi.org/10.21105/joss.11060},
+  year = {2026},
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {126},
+  pages = {11060},
+  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
+  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
+  journal = {Journal of Open Source Software}
+}
 ```
 
-From a `pip install`, the web UI is not included; `server.start()` then runs the backend only — see the [Server Guide](server.md). Or use an example script:
-```bash
-python examples/launch_server.py
-```
-
-This starts:
-- **Backend API** at `http://localhost:8000`
-- **React UI** at `http://localhost:5173`
-
-The UI has two pages:
-
-- **Landing page** (`/`) — introduces the platform with a hero section, background gradient, and three analysis mode cards (Bias Text, Bias Image, Risk). Click any card to jump directly into that mode.
-- **Analysis app** (`/analyze`) — select a mode from the tab bar, then paste text, upload an image, or describe an AI deployment scenario. Each mode includes **clickable demo examples** in the right column to pre-fill inputs instantly. Results show a live agent timeline on the left and structured output on the right.
-
-Risk results link to the [MIT AI Risk Repository](https://airisk.mit.edu/) and display relevance scores (0–1) with category labels from the repository's Domain Taxonomy.
-
 ---
 
-## Documentation
+## License & support
 
-- **[Getting Started](getting_started.md)** - Installation, configuration, and first steps
-- **[Config & Troubleshooting](config_troubleshooting.md)** - .env, environment variables, and troubleshooting
-- **[User Guide](user_guide.md)** - Detailed usage examples for text, image, and risk analysis
-- **[API Reference](api.md)** - Python API and REST API documentation
-- **[Server Guide](server.md)** - Running the FastAPI backend and React UI
-- **[Developer Guide](developers.md)** - Contributing and extending FairSense-AgentiX
-- **[Acknowledgments](acknowledgments.md)** - Funding and institutional support
-
----
-
-## Architecture
-
-FairSense-AgentiX is built on a modern Python stack:
-
-- **LangGraph** - Agentic workflow orchestration
-- **LangChain** - LLM abstractions and tool integrations
-- **FastAPI** - REST API and WebSocket server
-- **React + Vite** - Modern web UI with TypeScript
-- **Pydantic** - Type-safe configuration and data validation
-- **FAISS** - Vector similarity search for knowledge retrieval
-
----
-
-## Use Cases
-
-FairSense-AgentiX is designed for:
-
-- **Content Moderation** - Detect biased language in user-generated content
-- **Hiring & HR** - Audit job postings for discriminatory language
-- **Marketing** - Review ad copy for inclusive language
-- **ML Model Audits** - Assess fairness risks before deployment
-- **Policy Compliance** - Ensure content meets DEI standards
-- **Research** - Study patterns of bias in large text/image corpora
-
----
-
-## Acknowledgments
-
-Resources used in preparing this research were provided, in part, by the Province of Ontario, the Government of Canada through CIFAR, and companies sponsoring the Vector Institute.
-
-This research was funded by the European Union's Horizon Europe research and innovation programme under the AIXPERT project (Grant Agreement No. 101214389).
-
----
-
-## License
-
-FairSense-AgentiX is released under the [MIT License](https://github.com/VectorInstitute/fairsense-agentix/blob/main/LICENSE).
-
----
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](https://github.com/VectorInstitute/fairsense-agentix/blob/main/CONTRIBUTING.md) for details on:
-
-- Code style (PEP 8, numpy docstrings)
-- Pre-commit hooks (ruff, mypy, pytest)
-- Testing requirements
-- Pull request process
-
----
-
-## Support
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/VectorInstitute/fairsense-agentix/issues)
-- **Discussions**: [Ask questions or share ideas](https://github.com/VectorInstitute/fairsense-agentix/discussions)
-- **Vector Institute**: [Learn more about our work](https://vectorinstitute.ai/)
-
----
+MIT License · [Issues](https://github.com/VectorInstitute/fairsense-agentix/issues) ·
+[Contributing](https://github.com/VectorInstitute/fairsense-agentix/blob/main/CONTRIBUTING.md)
 
 **Built with :material-heart: by the Vector Institute AI Engineering team.**

@@ -90,6 +90,209 @@
   margin-right: 0.2em;
 }
 
+/* Home hero (docs/index.md) */
+.fs-hero {
+  padding: 1.75rem 2rem;
+  margin: 0 0 2rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 8, 138, 0.1),
+    rgba(72, 192, 217, 0.14)
+  );
+  border: 1px solid rgba(235, 8, 138, 0.22);
+}
+
+[data-md-color-scheme="slate"] .fs-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(235, 8, 138, 0.16),
+    rgba(72, 192, 217, 0.08)
+  );
+  border-color: rgba(72, 192, 217, 0.25);
+}
+
+.fs-hero .fs-lead {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0.75rem 0 1rem;
+}
+
+.fs-hero .fs-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0 0.25rem;
+}
+
+.fs-hero .fs-badges img {
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.fs-hero .fs-badges a {
+  line-height: 0;
+}
+
+.fs-hero .fs-actions {
+  margin-top: 1.25rem;
+}
+
+.fs-hero .fs-actions .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Home: How it works — horizontal pipeline */
+.fs-flowbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0;
+  margin: 1.25rem 0 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 8, 138, 0.06),
+    rgba(72, 192, 217, 0.1)
+  );
+  border: 1px solid rgba(72, 192, 217, 0.35);
+}
+
+.fs-flowbar__chip {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 2rem;
+  background: var(--md-default-bg-color);
+  border: 1px solid rgba(72, 192, 217, 0.55);
+  color: var(--md-default-fg-color);
+  white-space: nowrap;
+}
+
+.fs-flowbar__chip--term {
+  border-color: rgba(235, 8, 138, 0.45);
+  background: rgba(235, 8, 138, 0.08);
+}
+
+.fs-flowbar__sep {
+  flex: 0 0 1.25rem;
+  height: 1px;
+  margin: 0 0.15rem;
+  background: linear-gradient(90deg, transparent, #48c0d9, transparent);
+  position: relative;
+}
+
+.fs-flowbar__sep::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: #48c0d9;
+  margin-right: -4px;
+}
+
+.fs-flowbar__loop {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 1.25rem;
+}
+
+.fs-flowbar__loop-badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  margin-right: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  background: #fff9c4;
+  border: 1px solid #f9a825;
+  color: #5d4200;
+}
+
+[data-md-color-scheme="slate"] .fs-flowbar__loop-badge {
+  color: #111;
+}
+
+@media screen and (max-width: 30em) {
+  .fs-flowbar__sep {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+  }
+
+  .fs-flowbar__sep::after {
+    display: none;
+  }
+
+  .fs-flowbar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .fs-flowbar__chip {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Architecture page: center Mermaid figures (avoid left-heavy viewBox) */
+.md-typeset .fs-arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+}
+
+.fs-workflow-grid {
+  width: 100%;
+  margin: 0 0 1.25rem;
+}
+
+.fs-workflow-grid .grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.fs-arch-diagram .mermaid {
+  cursor: default;
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.fs-arch-diagram--narrow .mermaid {
+  max-width: 22rem;
+}
+
+.fs-arch-diagram .mermaid svg {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.fs-arch-diagram .mermaid:hover {
+  transform: none;
+  box-shadow: none;
+  padding: 0;
+  z-index: auto;
+  background: transparent;
+}
+
 /* Override Material's Mermaid CSS variables in dark mode so node/label text stays dark.
    The fills render correctly but Material sets fg color vars to light values in slate mode. */
 [data-md-color-scheme="slate"] {

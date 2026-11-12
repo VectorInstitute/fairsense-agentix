@@ -6,74 +6,88 @@ This page documents the system architecture of FairSense-AgentiX, including the 
 
 ## System Overview
 
-FairSense-AgentiX is built on an **agentic architecture** that uses a ReAct (Reasoning + Acting) pattern to intelligently analyze content for bias and AI risks. Unlike traditional ML pipelines, the system dynamically selects tools, evaluates outputs, and refines results through an iterative feedback loop.
+FairSense-AgentiX is built on an **agentic architecture** that uses a ReAct (Reasoning + Acting) pattern to intelligently analyze content for bias and AI risks. Unlike traditional ML pipelines, the orchestrator **routes** each request to one workflow, **evaluates** output quality, and optionally **refines** before finalizing.
+
+The overview below is split into two views so the layout stays readable: **request lifecycle** (orchestrator) and **workflow dispatch** (subgraphs + tools).
+
+### Request lifecycle
+
+<div class="fs-arch-diagram" markdown>
 
 ```mermaid
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 28, "rankSpacing": 32}} }%%
 flowchart TB
-    Client(["Client\nAPI · CLI · GUI"])
-
-    subgraph api ["FairSense API"]
-        API["FairSense Class\nanalyze_text · analyze_image · assess_risk"]
-    end
-
-    subgraph orch ["Orchestrator Supergraph"]
-        Router["Router\nWorkflow Selection"]
-        Preflight["Preflight\nEvaluation"]
-        Executor["Execute\nWorkflow"]
-        Evaluator["Post-hoc\nEvaluation"]
-        Decision{"Decide\nAction"}
-        Refinement["Apply\nRefinement"]
-        Finalize["Finalize\nResult"]
-    end
-
-    subgraph wf ["Workflow Subgraphs"]
-        direction LR
-        BiasText["Bias Text\nLLM → Summarize → Highlight"]
-        BiasImage["Bias Image\nOCR + Caption → LLM → Highlight"]
-        BiasVLM["Bias Image VLM\nVLM → Highlight"]
-        Risk["Risk Assessment\nEmbed → FAISS → RMF"]
-    end
-
-    subgraph tools ["Tool Ecosystem"]
-        direction LR
-        OCR["OCR\nTesseract / PaddleOCR"]
-        Caption["Caption\nBLIP / BLIP-2"]
-        VLM["VLM\nGPT-4V / Claude Vision"]
-        LLM["LLM\nGPT-4 / Claude"]
-        Embedder["Embedder\nsentence-transformers"]
-        FAISS["FAISS Indices\nRisks + RMF"]
-    end
+    Client(["Client · API · CLI · GUI"])
+    API["FairSense API · analyze_text · analyze_image · assess_risk"]
 
     Client --> API
-    API --> Router
-    Router --> Preflight
-    Preflight --> Executor
-    Executor --> BiasText
-    Executor --> BiasImage
-    Executor --> BiasVLM
-    Executor --> Risk
-    Executor --> Evaluator
-    Evaluator --> Decision
-    Decision -- "accept / fail" --> Finalize
-    Decision -- "refine" --> Refinement
-    Refinement --> Router
-    Finalize --> API
+    API --> Router["Router · workflow selection"]
+    Router --> Preflight["Preflight evaluation"]
+    Preflight --> Execute["Execute workflow"]
+    Execute --> Evaluate["Post-hoc evaluation"]
+    Evaluate --> Decide{{"Decide action"}}
+    Decide -->|Accept / fail| Finalize["Finalize result"]
+    Decide -->|Refine| Refine["Apply refinement · loop to router"]
 
-    BiasText --> LLM
-    BiasImage --> OCR
-    BiasImage --> Caption
-    BiasImage --> LLM
-    BiasVLM --> VLM
-    Risk --> Embedder
-    Risk --> FAISS
+    classDef entry fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
+    classDef step fill:#e8f7fb,stroke:#48c0d9,stroke-width:2px,color:#111
+    classDef gate fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#111
 
-    style Client fill:#fce4ec,stroke:#eb088a,stroke-width:3px,color:#9c0057
-    style api fill:#fce4ec,stroke:#f48fb1,color:#000
-    style orch fill:#e3f2fd,stroke:#90caf9,color:#000
-    style wf fill:#fff3e0,stroke:#ffcc80,color:#000
-    style tools fill:#f3e5f5,stroke:#ce93d8,color:#000
-    style Decision fill:#fff9c4,stroke:#f9a825,color:#000
+    class Client,API entry
+    class Router,Preflight,Execute,Evaluate,Refine,Finalize step
+    class Decide gate
 ```
+
+</div>
+
+**Finalize** returns structured results to the caller via the FairSense API. **Refine** updates the plan and re-enters **Router** (same loop as in [State flow](#state-flow) below).
+
+During **Execute**, the orchestrator runs exactly **one** LangGraph subgraph (see next diagram). Telemetry from every node can stream to the React UI over WebSocket.
+
+### Workflow dispatch & tools
+
+`Execute workflow` calls the router-chosen subgraph. Tools are injected from the registry (swap via environment variables—no graph rewrite).
+
+<div class="fs-workflow-grid" markdown>
+
+<div class="grid cards" markdown>
+
+-   :material-text-box-search:{ .vector-icon } __Bias text__
+
+    ---
+
+    `bias_text` · LLM → summarize → highlight
+
+-   :material-image-search:{ .vector-icon } __Bias image (traditional)__
+
+    ---
+
+    `bias_image` · OCR + caption → LLM → highlight
+
+-   :material-eye:{ .vector-icon } __Bias image VLM__
+
+    ---
+
+    `bias_image_vlm` · multimodal LLM → highlight
+
+-   :material-shield-search:{ .vector-icon } __Risk assessment__
+
+    ---
+
+    `risk` · embed → FAISS → RMF actions
+
+</div>
+
+</div>
+
+| Workflow | Tool registry (typical) |
+| --- | --- |
+| **Bias text** | LLM (OpenAI, Anthropic, or compatible) |
+| **Bias image** | OCR (Tesseract / PaddleOCR), caption (BLIP / BLIP-2), LLM |
+| **Bias image VLM** | Vision LLM (GPT-4V, Claude Vision, …) |
+| **Risk assessment** | Embedder (`sentence-transformers`), FAISS indices (risks + NIST RMF) |
+
+JOSS Figure 1 ([orchestrator topology](https://github.com/VectorInstitute/fairsense-agentix/blob/main/paper/orchestrator_graph_topology_fairsense.png)) shows the same supergraph at paper scale.
 
 ### Key Design Principles
 
@@ -125,35 +139,36 @@ flowchart TB
 | `apply_refinement` | Update plan with evaluator feedback | Updated `SelectionPlan` |
 | `finalize` | Package final result for client | `final_result` dict |
 
-#### State Flow
+#### State flow
+
+LangGraph node IDs match `fairsense_agentix/graphs/orchestrator/build.py`. Conditional edges use `should_execute_workflow` (preflight) and `route_after_decision` (post-hoc).
+
+<div class="fs-arch-diagram" markdown>
 
 ```mermaid
-flowchart LR
-    S((" ")) --> request_plan
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 28, "rankSpacing": 32}} }%%
+flowchart TB
+    START([START]) --> request_plan["request_plan"]
+    request_plan --> preflight_eval["preflight_eval"]
+    preflight_eval --> execute_workflow["execute_workflow"]
+    execute_workflow --> posthoc_eval["posthoc_eval"]
+    posthoc_eval --> decide_action{{"decide_action"}}
+    decide_action --> finalize["finalize"]
+    decide_action --> apply_refinement["apply_refinement · ↻ request_plan"]
+    finalize --> END([END])
 
-    request_plan["request_plan"]
-    preflight_eval["preflight_eval"]
-    execute_workflow["execute_workflow"]
-    posthoc_eval["posthoc_eval"]
-    decide_action{"decide_action"}
-    apply_refinement["apply_refinement\n*(max 2-3 iterations)*"]
-    finalize["finalize"]
-    E((" "))
+    classDef step fill:#e8f7fb,stroke:#48c0d9,stroke-width:2px,color:#111
+    classDef gate fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#111
+    classDef term fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
 
-    request_plan --> preflight_eval
-    preflight_eval -- "passed" --> execute_workflow
-    preflight_eval -- "failed" --> finalize
-    execute_workflow --> posthoc_eval
-    posthoc_eval --> decide_action
-    decide_action -- "accept/fail" --> finalize
-    decide_action -- "refine" --> apply_refinement
-    apply_refinement -- "retry" --> request_plan
-    finalize --> E
-
-    style S fill:#eb088a,stroke:#b00068,color:#fff
-    style E fill:#555,stroke:#555,color:#fff
-    style decide_action fill:#fff9c4,stroke:#f9a825,color:#000
+    class request_plan,preflight_eval,execute_workflow,posthoc_eval,apply_refinement,finalize step
+    class decide_action gate
+    class START,END term
 ```
+
+</div>
+
+**Branches not drawn** (they widen the canvas): failed preflight can jump to **finalize**; **apply_refinement** loops to **request_plan** (iteration cap from orchestrator settings).
 
 **Key Features:**
 - **ReAct Pattern:** Router reasons about input → Executor acts → Evaluator observes → Decision reflects
@@ -206,27 +221,37 @@ flowchart LR
 
 #### 4.1 Bias Text Workflow
 
-**File:** `bias_text_graph.py`
+**File:** `bias_text_graph.py` · **State:** `BiasTextState`
 
-**Flow:**
+**Flow** (`bias_text/build.py` — quality checks run in the orchestrator, not here):
+
+<div class="fs-arch-diagram" markdown>
+
 ```mermaid
-flowchart LR
-    S((" ")) --> analyze_bias["Analyze Bias\nLLM call with structured output"]
-    analyze_bias --> summarize{"Need Summary?\ntext > 500 chars"}
-    summarize -- "yes" --> generate_summary["Generate Summary\nLLM call"]
-    summarize -- "no" --> highlight["Highlight HTML\nSpan extraction"]
-    generate_summary --> highlight
-    highlight --> E((" "))
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 28, "rankSpacing": 32}} }%%
+flowchart TB
+    START([START]) --> analyze_bias["analyze_bias · LLM structured output"]
+    analyze_bias --> summarize["summarize · if needed"]
+    summarize --> highlight["highlight · HTML spans"]
+    highlight --> END([END])
 
-    style S fill:#eb088a,stroke:#b00068,color:#fff
-    style E fill:#555,stroke:#555,color:#fff
-    style summarize fill:#fff9c4,stroke:#f9a825,color:#000
+    classDef step fill:#e8f7fb,stroke:#48c0d9,stroke-width:2px,color:#111
+    classDef gate fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#111
+    classDef term fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
+
+    class analyze_bias,summarize,highlight step
+    class START,END term
 ```
 
+</div>
+
+**`should_summarize`:** text longer than 500 characters **or** `options.enable_summary=true` (otherwise the graph routes **analyze_bias → highlight** and skips **summarize**).
+
 **Nodes:**
-1. **analyze_bias** - Calls LLM with bias detection prompt, returns structured `BiasAnalysisOutput`
-2. **summarize** (conditional) - Generates executive summary if text is long
-3. **highlight** - Converts bias instances to color-coded HTML
+
+1. **analyze_bias** — LLM bias detection → `BiasAnalysisOutput`
+2. **summarize** — optional executive summary (conditional edge)
+3. **highlight** — color-coded HTML spans
 
 **Output Fields:**
 - `bias_analysis` - Structured Pydantic model with bias instances
@@ -237,34 +262,41 @@ flowchart LR
 
 #### 4.2 Bias Image Workflow (Traditional)
 
-**File:** `bias_image_graph.py`
+**File:** `bias_image_graph.py` · **State:** `BiasImageState`
 
-**Flow:**
+**Flow** — LangGraph starts **`extract_ocr`** and **`generate_caption`** in parallel, then merges:
+
+<div class="fs-arch-diagram fs-arch-diagram--narrow" markdown>
+
 ```mermaid
-flowchart LR
-    S((" ")) --> ocr["OCR\nExtract text"]
-    S --> caption["Caption\nDescribe image"]
-    ocr --> merge["Merge Text\nCombine OCR + caption"]
-    caption --> merge
-    merge --> analyze_bias["Analyze Bias\nLLM call"]
-    analyze_bias --> summarize{"Need Summary?"}
-    summarize -- "yes" --> generate_summary["Generate Summary"]
-    summarize -- "no" --> highlight["Highlight HTML"]
-    generate_summary --> highlight
-    highlight --> E((" "))
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 36, "rankSpacing": 36}} }%%
+flowchart TB
+    extract_ocr["extract_ocr"] --> merge_text["merge_text"]
+    generate_caption["generate_caption"] --> merge_text
+    merge_text --> analyze_bias["analyze_bias"]
+    analyze_bias --> summarize["summarize"]
+    summarize --> highlight["highlight"]
+    highlight --> END([END])
 
-    style S fill:#eb088a,stroke:#b00068,color:#fff
-    style E fill:#555,stroke:#555,color:#fff
-    style summarize fill:#fff9c4,stroke:#f9a825,color:#000
+    classDef step fill:#fff3e0,stroke:#ffcc80,stroke-width:2px,color:#111
+    classDef parallel fill:#e8f7fb,stroke:#48c0d9,stroke-width:2px,color:#111
+    classDef term fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
+
+    class extract_ocr,generate_caption parallel
+    class merge_text,analyze_bias,summarize,highlight step
+    class END term
 ```
 
+</div>
+
 **Nodes:**
-1. **ocr** - Extracts text from image using Tesseract or PaddleOCR
-2. **caption** - Generates image description using BLIP or BLIP-2
-3. **merge_text** - Combines OCR and caption into unified text
-4. **analyze_bias** - Same as bias_text workflow
-5. **summarize** (conditional) - Optional summary
-6. **highlight** - Color-coded HTML
+
+1. **extract_ocr** — Tesseract or PaddleOCR
+2. **generate_caption** — BLIP / BLIP-2
+3. **merge_text** — combines OCR + caption for LLM input
+4. **analyze_bias** — shared text bias pipeline
+5. **summarize** — summary node (always invoked; may no-op on short merged text)
+6. **highlight** — HTML spans
 
 **Output Fields:**
 - `ocr_text` - Extracted text from image
@@ -280,27 +312,34 @@ flowchart LR
 
 #### 4.3 Bias Image VLM Workflow
 
-**File:** `bias_image_vlm_graph.py`
+**File:** `bias_image_vlm_graph.py` · **State:** `BiasImageVLMState`
 
-**Flow:**
+**Flow** — three-node linear graph (no OCR/caption branch):
+
+<div class="fs-arch-diagram" markdown>
+
 ```mermaid
-flowchart LR
-    S((" ")) --> vlm_analyze["VLM Analysis\nSingle multimodal call"]
-    vlm_analyze --> summarize{"Need Summary?"}
-    summarize -- "yes" --> generate_summary["Generate Summary"]
-    summarize -- "no" --> highlight["Highlight HTML"]
-    generate_summary --> highlight
-    highlight --> E((" "))
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 28, "rankSpacing": 32}} }%%
+flowchart TB
+    START([START]) --> visual_analyze["visual_analyze · multimodal LLM + CoT"]
+    visual_analyze --> summarize["summarize"]
+    summarize --> highlight["highlight"]
+    highlight --> END([END])
 
-    style S fill:#eb088a,stroke:#b00068,color:#fff
-    style E fill:#555,stroke:#555,color:#fff
-    style summarize fill:#fff9c4,stroke:#f9a825,color:#000
+    classDef step fill:#fff3e0,stroke:#ffcc80,stroke-width:2px,color:#111
+    classDef term fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
+
+    class visual_analyze,summarize,highlight step
+    class START,END term
 ```
 
+</div>
+
 **Nodes:**
-1. **vlm_analyze** - Single multimodal LLM call (GPT-4V or Claude Vision) with Chain-of-Thought reasoning
-2. **summarize** (conditional) - Optional summary
-3. **highlight** - Color-coded HTML
+
+1. **visual_analyze** — single VLM call (`GPT-4o` / Claude vision per provider settings)
+2. **summarize** — executive summary over VLM output
+3. **highlight** — HTML spans (reuses text formatter paths)
 
 **Output Fields:**
 - `vlm_analysis` - Structured VLM analysis with:
@@ -319,30 +358,40 @@ flowchart LR
 
 #### 4.4 Risk Assessment Workflow
 
-**File:** `risk_graph.py`
+**File:** `risk_graph.py` · **State:** `RiskState`
 
-**Flow:**
+**Flow** (`risk/build.py`):
+
+<div class="fs-arch-diagram" markdown>
+
 ```mermaid
-flowchart LR
-    S((" ")) --> embed["Embed Scenario\nText → vector"]
-    embed --> retrieve_risks["Retrieve Risks\nFAISS similarity search"]
-    retrieve_risks --> retrieve_rmf["Retrieve RMF\nPer-risk recommendations"]
-    retrieve_rmf --> join["Join Tables\nCombine risks + RMF"]
-    join --> format["Format Output\nHTML table + CSV"]
-    format --> persist["Persist CSV\nSave to outputs/"]
-    persist --> E((" "))
+%%{init: {"flowchart": {"useMaxWidth": true, "padding": 12, "nodeSpacing": 28, "rankSpacing": 32}} }%%
+flowchart TB
+    START([START]) --> embed_scenario["embed_scenario"]
+    embed_scenario --> search_risks["search_risks · FAISS"]
+    search_risks --> search_rmf_per_risk["search_rmf_per_risk"]
+    search_rmf_per_risk --> join_data["join_data"]
+    join_data --> format_html["format_html"]
+    format_html --> export_csv["export_csv"]
+    export_csv --> END([END])
 
-    style S fill:#eb088a,stroke:#b00068,color:#fff
-    style E fill:#555,stroke:#555,color:#fff
+    classDef step fill:#f3e5f5,stroke:#ce93d8,stroke-width:2px,color:#111
+    classDef term fill:#fce4ec,stroke:#eb088a,stroke-width:2px,color:#111
+
+    class embed_scenario,search_risks,search_rmf_per_risk,join_data,format_html,export_csv step
+    class START,END term
 ```
 
+</div>
+
 **Nodes:**
-1. **embed_scenario** - Converts deployment scenario to 384-dim vector using sentence-transformers
-2. **retrieve_risks** - Semantic search against 280+ AI risks from NIST AI-RMF
-3. **retrieve_rmf** - For each risk, fetch top-k mitigation recommendations
-4. **join_results** - Combines risks with recommendations
-5. **format_output** - Creates HTML table for display
-6. **persist_csv** - Exports results to `outputs/risk_assessment_{timestamp}.csv`
+
+1. **embed_scenario** — `sentence-transformers` → 384-dim vector
+2. **search_risks** — top-k similarity over the packaged MIT AI Risk Repository index (**1,340** risks, V3)
+3. **search_rmf_per_risk** — NIST AI RMF–aligned actions per retrieved risk
+4. **join_data** — merge risks + recommendations
+5. **format_html** — display table
+6. **export_csv** — optional file under `outputs/`
 
 **Output Fields:**
 - `embedding` - 384-dimensional vector of scenario
@@ -352,8 +401,8 @@ flowchart LR
 - `csv_path` - Path to exported CSV file
 
 **Knowledge Base:**
-- **Risks:** 280+ AI risks from NIST AI Risk Management Framework
-- **RMF:** 500+ mitigation recommendations mapped to risk categories
+- **Risks:** 1,340 indexed entries from the MIT AI Risk Repository (V3 embeddings)
+- **RMF:** companion FAISS index of NIST AI RMF–style mitigation rows joined per risk
 - **Storage:** FAISS index files live inside the package at `fairsense_agentix/data/indexes/` in LangChain format:
   ```
   fairsense_agentix/data/indexes/
