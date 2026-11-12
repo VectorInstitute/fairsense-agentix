@@ -360,7 +360,7 @@ Each item in `result.risks` is a `dict`. Use `.get(...)` for safe access since k
     The recommendations are **not** text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions, then indexed for retrieval. See `scripts/transform_mit_data.py` for how they are built.
 
 !!! note "Risk source"
-    Risks are retrieved from the [MIT AI Risk Repository](https://airisk.mit.edu/) (V3, 1,340 entries) using semantic similarity search. The `category` field follows the repository's Domain Taxonomy; the number prefix (e.g., `3.1`) identifies the domain and subcategory. A score of `1.0` means the risk is maximally relevant to the described scenario; `0.0` means unrelated.
+    Risks are retrieved from the [MIT AI Risk Repository](https://airisk.mit.edu/) (V4, 1,538 indexed entries, Dec 2025 snapshot) using semantic similarity search. The `category` field follows the repository's Domain Taxonomy; the number prefix (e.g., `3.1`) identifies the domain and subcategory. A score of `1.0` means the risk is maximally relevant to the described scenario; `0.0` means unrelated.
 
 !!! warning "If `result.status` is `failed`"
     `status: failed` means the agent's quality evaluator rejected the output (e.g., low FAISS similarity scores against the MIT AI Risk Repository). Check `result.errors` for details. Vague or short scenario descriptions tend to produce low similarity; more specific, domain-relevant scenarios — describing the model, training data, deployment context, and human-impact surface — generally produce higher similarity scores and `status: success`.

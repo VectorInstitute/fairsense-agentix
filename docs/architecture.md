@@ -387,7 +387,7 @@ flowchart TB
 **Nodes:**
 
 1. **embed_scenario** — `sentence-transformers` → 384-dim vector
-2. **search_risks** — top-k similarity over the packaged MIT AI Risk Repository index (**1,340** risks, V3)
+2. **search_risks** — top-k similarity over the packaged MIT AI Risk Repository index (**1,538** risks, V4)
 3. **search_rmf_per_risk** — NIST AI RMF–aligned actions per retrieved risk
 4. **join_data** — merge risks + recommendations
 5. **format_html** — display table
@@ -401,12 +401,12 @@ flowchart TB
 - `csv_path` - Path to exported CSV file
 
 **Knowledge Base:**
-- **Risks:** 1,340 indexed entries from the MIT AI Risk Repository (V3 embeddings)
+- **Risks:** 1,538 indexed entries from the MIT AI Risk Repository V4 snapshot (3 Dec 2025). The [JOSS paper](https://doi.org/10.21105/joss.11060) documents the earlier V3 (1,340) index.
 - **RMF:** companion FAISS index of NIST AI RMF–style mitigation rows joined per risk
 - **Storage:** FAISS index files live inside the package at `fairsense_agentix/data/indexes/` in LangChain format:
   ```
   fairsense_agentix/data/indexes/
-  ├── risks/index.faiss   # vector index (1,340 risks, 384-dim embeddings)
+  ├── risks/index.faiss   # vector index (1,538 risks, 384-dim embeddings)
   ├── risks/index.pkl     # LangChain document store
   ├── risks_meta.json     # human-readable fields (id, risk_name, description, severity, category)
   ├── rmf/index.faiss

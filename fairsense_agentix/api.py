@@ -294,9 +294,9 @@ class FairSense:
     ) -> RiskResult:
         """Assess AI risks in deployment scenario.
 
-        Performs semantic search against 280+ AI risks from the NIST AI Risk
-        Management Framework. Retrieves relevant risks and corresponding
-        mitigation recommendations.
+        Performs semantic search against the packaged MIT AI Risk Repository
+        index (see ``fairsense_agentix.data.risk_corpus``). Retrieves relevant
+        risks and generated NIST AI RMF–style mitigation recommendations.
 
         Parameters
         ----------
