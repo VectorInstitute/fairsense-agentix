@@ -247,6 +247,10 @@ class RiskResult(BaseModel):
         description="Formatted HTML table of risks + recommendations",
     )
     csv_path: Optional[str] = Field(None, description="Path to exported CSV file")
+    joined_table: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="Flattened risk + RMF rows for export and display",
+    )
 
     # Metadata and diagnostics
     metadata: ResultMetadata = Field(description="Execution metadata")

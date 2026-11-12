@@ -442,6 +442,7 @@ class FairSense:
             rmf_recommendations=output.get("rmf_recommendations", {}),
             html_table=output.get("html_table"),
             csv_path=output.get("csv_path"),
+            joined_table=output.get("joined_table") or [],
             metadata=metadata,
             errors=final["errors"],
             warnings=_with_mock_warning(final["warnings"]),

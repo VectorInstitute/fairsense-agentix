@@ -503,6 +503,12 @@ Each mode includes **clickable demo examples** in the right column — select on
 
 A **"MIT AI Risk Repository ↗"** link in the results header opens the full database for deeper exploration.
 
+Each risk card also lists up to three **NIST AI RMF** actions (**GOVERN**, **MAP**, **MEASURE**, …) linked to that MIT risk id in the bundled index (not repeated semantic search hits). Use **JSON** or **CSV** in the results header to download the full API payload or a flattened risk+RMF table.
+
+### Batch mode (UI)
+
+On **Bias (Text)** and **Risk**, switch **Run → batch**. Enter multiple inputs separated by a line containing only `---`. The UI calls `POST /v1/batch` and polls until completion, then shows expandable per-item results and **Download all (JSON)**.
+
 ### Shutdown
 
 Click the red **Shutdown** button in the top-right corner of the app page to gracefully stop both servers, or press `Ctrl+C` in the terminal.

@@ -100,6 +100,41 @@ export async function analyzeFileStart(file: File, inputType?: WorkflowID): Prom
   return res.json();
 }
 
+export interface BatchItemPayload {
+  content: string;
+  input_type?: WorkflowID;
+  options?: Record<string, unknown>;
+}
+
+export interface BatchStatusResponse {
+  job_id: string;
+  status: "pending" | "running" | "completed" | "failed";
+  total: number;
+  completed: number;
+  errors: string[];
+  results: unknown[];
+}
+
+export async function startBatch(items: BatchItemPayload[]): Promise<BatchStatusResponse> {
+  const res = await fetch(apiUrl("/v1/batch"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items }),
+  });
+  if (!res.ok) {
+    throw new Error(`Batch request failed: ${res.statusText}`);
+  }
+  return res.json();
+}
+
+export async function getBatchStatus(jobId: string): Promise<BatchStatusResponse> {
+  const res = await fetch(apiUrl(`/v1/batch/${jobId}`));
+  if (!res.ok) {
+    throw new Error(`Batch status failed: ${res.statusText}`);
+  }
+  return res.json();
+}
+
 export function connectToStream(runId: string, onEvent: (event: MessageEvent) => void) {
   const url = new URL(`/v1/stream/${runId}`, wsBase());
   url.protocol = url.protocol === "https:" ? "wss:" : "ws:";
