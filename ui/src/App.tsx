@@ -399,11 +399,28 @@ export default function App() {
           ? await analyzeFileStart(file as File, "bias_image")
           : await analyzeStart({
             content: input,
-            input_type: mode === "csv" ? "risk" : undefined,
+            input_type: workflowForMode(mode),
             options: mode === "csv" ? RISK_ANALYZE_OPTIONS : undefined,
           });
 
       const runId = startResponse.run_id;
+      let finished = false;
+
+      const finish = (update: { result?: any; error?: string }) => {
+        if (finished) {
+          return;
+        }
+        finished = true;
+        if (update.result !== undefined) {
+          setResult(update.result);
+        }
+        if (update.error) {
+          setErrorMessage(update.error);
+        }
+        setLoading(false);
+      };
+
+      wsRef.current?.close();
 
       // Step 2: Connect WebSocket BEFORE analysis completes (this is the fix!)
       const ws = connectToStream(runId, (evt) => {
@@ -412,15 +429,16 @@ export default function App() {
 
           // Check if this is the completion event
           if (data.event === "analysis_complete" && data.context?.result) {
-            // Extract final result from completion event
-            setResult(data.context.result);
-            setLoading(false); // Stop loading spinner
+            finish({ result: data.context.result });
           }
 
           // Check if this is an error event
           if (data.event === "analysis_error") {
-            setErrorMessage(data.context?.message ? String(data.context.message) : "Analysis failed. Check the timeline for details.");
-            setLoading(false); // Stop loading spinner
+            finish({
+              error: data.context?.message
+                ? String(data.context.message)
+                : "Analysis failed. Check the timeline for details.",
+            });
           }
 
           // Add all events to timeline (including intermediate agent events)
@@ -429,6 +447,20 @@ export default function App() {
           // ignore malformed payloads
         }
       });
+
+      ws.onerror = () => {
+        finish({
+          error: "Lost connection to the analysis stream. Is the API running on port 8000?",
+        });
+      };
+      ws.onclose = () => {
+        if (!finished) {
+          finish({
+            error:
+              "Analysis stream closed before completion. Restart the API and try again.",
+          });
+        }
+      };
 
       wsRef.current = ws;
 
@@ -472,6 +504,11 @@ export default function App() {
     }
     return { __html: result.bias_result.highlighted_html };
   }, [result]);
+
+  const analysisComplete = timeline.some((e) => e.event === "analysis_complete");
+  const analysisErrored = timeline.some((e) => e.event === "analysis_error");
+  const showInProgress =
+    loading || (runMode === "single" && timeline.length > 0 && !analysisComplete && !analysisErrored);
 
   return (
     <main className="min-h-screen bg-base text-white">
@@ -707,7 +744,17 @@ export default function App() {
               )}
             </div>
           )}
-          {batchResults && batchResults.length > 0 ? (
+          {showInProgress ? (
+            <div className="glass p-6 flex items-center gap-3 text-slate-300 text-sm">
+              <Loader2 className="animate-spin text-accent-200" size={20} />
+              <div>
+                <p className="font-medium text-slate-200">Analysis in progress</p>
+                <p className="text-xs text-slate-500 mt-1">
+                  Streaming agent steps in the timeline. Text bias can take 30–90s with a live LLM.
+                </p>
+              </div>
+            </div>
+          ) : batchResults && batchResults.length > 0 ? (
             <BatchResultsPanel results={batchResults} mode={mode} health={healthInfo} />
           ) : (
             <ResultPanel result={result} health={healthInfo} />
@@ -1428,11 +1475,15 @@ function ResultPanel({
     );
   }
 
-  const summary = result.bias_result?.summary;
-  const instances = result.bias_result?.bias_instances ?? [];
+  const br = result.bias_result ?? {};
+  const summary = br.summary;
+  const instances = br.bias_instances ?? [];
+  const errors = (br.errors ?? []) as string[];
+  const warnings = (br.warnings ?? []) as string[];
+  const status = br.status as string | undefined;
 
   // Try multiple possible paths for image_base64
-  const imageBase64 = result.bias_result?.image_base64 || result.image_base64 || result.workflow_result?.image_base64;
+  const imageBase64 = br.image_base64 || result.image_base64 || result.workflow_result?.image_base64;
 
   return (
     <div className={shell}>
@@ -1443,11 +1494,51 @@ function ResultPanel({
         </div>
         <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
           <span className="inline-block w-1 h-5 bg-accent-200 rounded-full" />
-          {result.bias_result?.status === "success"
+          {status === "success"
             ? "Analysis Complete"
-            : "Analysis"}
+            : status === "failed"
+              ? "Analysis Failed"
+              : status === "partial"
+                ? "Partial Results"
+                : "Analysis"}
         </h3>
       </header>
+
+      {errors.length > 0 && (
+        <div className="rounded-xl border border-red-700/40 bg-red-900/20 p-4 space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-wide text-red-300">
+            API / workflow errors
+          </p>
+          <ul className="text-sm text-red-200/90 space-y-1 list-disc list-inside">
+            {errors.map((msg, i) => (
+              <li key={i}>{msg}</li>
+            ))}
+          </ul>
+          <p className="text-xs text-slate-500 pt-1">
+            The run finished, but the bias workflow did not return instances. Check API logs,{" "}
+            <code className="text-slate-400">FAIRSENSE_LLM_API_KEY</code>, base URL, and provider quota.
+          </p>
+        </div>
+      )}
+
+      {warnings.length > 0 && (
+        <div className="rounded-xl border border-yellow-700/30 bg-yellow-900/10 p-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-yellow-300/90 mb-1">
+            Warnings
+          </p>
+          <ul className="text-xs text-yellow-200/80 space-y-1 list-disc list-inside">
+            {warnings.map((msg, i) => (
+              <li key={i}>{msg}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {!summary && instances.length === 0 && errors.length === 0 && status && status !== "success" && (
+        <p className="text-sm text-slate-400">
+          No bias instances were returned (status: {status}). Inspect exported JSON or server logs.
+        </p>
+      )}
 
       {/* Collapsible image viewer for visual analysis */}
       {imageBase64 && (
