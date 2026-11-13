@@ -33,10 +33,15 @@ import {
   biasInstancesCsv,
   batchResultsJson,
   buildRiskJoinedTable,
+  dedupeRiskHits,
   downloadJson,
   downloadTextFile,
+  flattenBatchRiskCsv,
+  parseScenarioCsv,
   riskJoinedCsv,
 } from "./export";
+
+const RISK_ANALYZE_OPTIONS = { rmf_per_risk: 4, top_k: 10 };
 
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -261,6 +266,14 @@ export default function App() {
     total: number;
     status: string;
   } | null>(null);
+  const [batchScenariosFromFile, setBatchScenariosFromFile] = useState<string[]>([]);
+
+  const batchScenarioList = useMemo(() => {
+    if (batchScenariosFromFile.length > 0) {
+      return batchScenariosFromFile;
+    }
+    return parseBatchScenarios(input);
+  }, [batchScenariosFromFile, input]);
 
   // Surface mock mode prominently: with FAIRSENSE_LLM_PROVIDER=fake the backend
   // returns synthetic placeholder results that look like a real analysis.
@@ -314,13 +327,10 @@ export default function App() {
   const canSubmit =
     (!loading && runMode === "single" && mode !== "image" && input.trim().length > 0) ||
     (!loading && runMode === "single" && mode === "image" && file) ||
-    (!loading &&
-      runMode === "batch" &&
-      mode !== "image" &&
-      parseBatchScenarios(input).length > 0);
+    (!loading && runMode === "batch" && mode !== "image" && batchScenarioList.length > 0);
 
   async function handleBatchAnalyze() {
-    const scenarios = parseBatchScenarios(input);
+    const scenarios = batchScenarioList;
     if (scenarios.length === 0) {
       return;
     }
@@ -336,6 +346,7 @@ export default function App() {
       const items = scenarios.map((content) => ({
         content,
         input_type: hint,
+        options: mode === "csv" ? RISK_ANALYZE_OPTIONS : {},
       }));
       const started = await startBatch(items);
       const jobId = started.job_id;
@@ -388,7 +399,8 @@ export default function App() {
           ? await analyzeFileStart(file as File, "bias_image")
           : await analyzeStart({
             content: input,
-            input_type: mode === "csv" ? "risk" : undefined
+            input_type: mode === "csv" ? "risk" : undefined,
+            options: mode === "csv" ? RISK_ANALYZE_OPTIONS : undefined,
           });
 
       const runId = startResponse.run_id;
@@ -571,10 +583,39 @@ export default function App() {
               onChange={(e) => setInput(e.target.value)}
             />
           )}
+          {runMode === "batch" && mode !== "image" && (
+            <label className="flex items-center gap-3 text-xs text-slate-400 cursor-pointer">
+              <input
+                type="file"
+                accept=".csv,text/csv"
+                className="text-slate-300 file:mr-2 file:rounded-lg file:border file:border-slate-700 file:bg-slate-900 file:px-3 file:py-1.5 file:text-xs file:text-slate-200"
+                onChange={async (e) => {
+                  const f = e.target.files?.[0];
+                  if (!f) {
+                    setBatchScenariosFromFile([]);
+                    return;
+                  }
+                  const text = await f.text();
+                  setBatchScenariosFromFile(parseScenarioCsv(text));
+                }}
+              />
+              <span>CSV with a scenario / content / text column (or one column per row)</span>
+            </label>
+          )}
           {batchProgress && (
-            <div className="glass px-4 py-3 text-sm text-slate-300 flex items-center gap-2">
-              <Loader2 className="animate-spin text-accent-200" size={16} />
-              Batch {batchProgress.status}: {batchProgress.completed}/{batchProgress.total}
+            <div className="glass px-4 py-3 text-sm text-slate-300 space-y-2">
+              <div className="flex items-center gap-2">
+                <Loader2 className="animate-spin text-accent-200" size={16} />
+                Batch {batchProgress.status}: {batchProgress.completed}/{batchProgress.total}
+              </div>
+              <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  className="h-full bg-accent-200 transition-all duration-300"
+                  style={{
+                    width: `${Math.min(100, (100 * batchProgress.completed) / Math.max(1, batchProgress.total))}%`,
+                  }}
+                />
+              </div>
             </div>
           )}
           <div className="flex gap-4">
@@ -606,6 +647,7 @@ export default function App() {
                 setFile(null);
                 setResult(null);
                 setBatchResults(null);
+                setBatchScenariosFromFile([]);
                 setTimeline([]);
               }}
             >
@@ -666,9 +708,9 @@ export default function App() {
             </div>
           )}
           {batchResults && batchResults.length > 0 ? (
-            <BatchResultsPanel results={batchResults} mode={mode} />
+            <BatchResultsPanel results={batchResults} mode={mode} health={healthInfo} />
           ) : (
-            <ResultPanel result={result} />
+            <ResultPanel result={result} health={healthInfo} />
           )}
           {highlightHtml && (
             <div className="glass p-5 space-y-5">
@@ -1152,7 +1194,15 @@ function ExportResultButtons({ result }: { result: any }) {
   );
 }
 
-function BatchResultsPanel({ results, mode }: { results: any[]; mode: Mode }) {
+function BatchResultsPanel({
+  results,
+  mode,
+  health,
+}: {
+  results: any[];
+  mode: Mode;
+  health: HealthResponse | null;
+}) {
   const [expanded, setExpanded] = useState<number | null>(0);
   const handleBatchJson = () => {
     downloadTextFile(
@@ -1160,6 +1210,13 @@ function BatchResultsPanel({ results, mode }: { results: any[]; mode: Mode }) {
       batchResultsJson(results),
       "application/json",
     );
+  };
+  const handleBatchCsv = () => {
+    const csv = flattenBatchRiskCsv(results);
+    if (!csv) {
+      return;
+    }
+    downloadTextFile(`fairsense-batch-risk-${Date.now()}.csv`, csv, "text/csv");
   };
 
   return (
@@ -1171,13 +1228,24 @@ function BatchResultsPanel({ results, mode }: { results: any[]; mode: Mode }) {
             {results.length} {mode === "csv" ? "risk" : "bias"} assessments
           </h3>
         </div>
-        <button
-          type="button"
-          onClick={handleBatchJson}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200"
-        >
-          <Download size={12} /> Download all (JSON)
-        </button>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={handleBatchJson}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200"
+          >
+            <Download size={12} /> JSON
+          </button>
+          {mode === "csv" && (
+            <button
+              type="button"
+              onClick={handleBatchCsv}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200"
+            >
+              <Download size={12} /> Combined CSV
+            </button>
+          )}
+        </div>
       </header>
       <div className="space-y-2 max-h-[70vh] overflow-y-auto custom-scrollbar pr-1">
         {results.map((item, idx) => (
@@ -1197,7 +1265,7 @@ function BatchResultsPanel({ results, mode }: { results: any[]; mode: Mode }) {
             </button>
             {expanded === idx && (
               <div className="border-t border-slate-800 p-2">
-                <ResultPanel result={item} nested />
+                <ResultPanel result={item} nested health={health} />
               </div>
             )}
           </div>
@@ -1219,7 +1287,29 @@ function stripCitations(text: string): string {
     .trim();
 }
 
-function ResultPanel({ result, nested }: { result: any | null; nested?: boolean }) {
+function CorpusBadge({ health }: { health: HealthResponse | null }) {
+  if (health?.indexed_risk_count == null) {
+    return null;
+  }
+  return (
+    <p className="text-xs text-slate-500">
+      MIT AI Risk index{" "}
+      {health.mit_risk_repository_version?.toUpperCase() ?? ""} ·{" "}
+      {health.indexed_risk_count.toLocaleString()} risks
+      {health.mit_risk_snapshot_date ? ` · snapshot ${health.mit_risk_snapshot_date}` : ""}
+    </p>
+  );
+}
+
+function ResultPanel({
+  result,
+  nested,
+  health,
+}: {
+  result: any | null;
+  nested?: boolean;
+  health?: HealthResponse | null;
+}) {
   const [imageExpanded, setImageExpanded] = useState(false);
   const shell = nested ? "space-y-4" : "glass p-5 space-y-4";
 
@@ -1232,7 +1322,10 @@ function ResultPanel({ result, nested }: { result: any | null; nested?: boolean 
   }
 
   if (result.workflow_id === "risk") {
-    const risks = result.risk_result?.risks ?? [];
+    const risks = dedupeRiskHits(
+      (result.risk_result?.risks ?? []) as Record<string, unknown>[],
+      5,
+    ).filter((r) => Number(r.score ?? 0) > 0);
     const rmfMap = (result.risk_result?.rmf_recommendations ?? {}) as Record<
       string,
       Record<string, unknown>[]
@@ -1244,6 +1337,7 @@ function ResultPanel({ result, nested }: { result: any | null; nested?: boolean 
             <p className="pill">Risk Insights</p>
             <ExportResultButtons result={result} />
           </div>
+          {!nested && <CorpusBadge health={health ?? null} />}
           <div className="flex items-center justify-between gap-3">
             <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
               <span className="inline-block w-1 h-5 bg-accent-200 rounded-full" />
@@ -1261,7 +1355,7 @@ function ResultPanel({ result, nested }: { result: any | null; nested?: boolean 
           </div>
         </header>
         <div className="space-y-3">
-          {risks.filter((r: any) => (r.score ?? 0) > 0).slice(0, 5).map((risk: any, idx: number) => {
+          {risks.map((risk: any, idx: number) => {
             const rid = riskIdFor(risk);
             const rmfRecs = rmfMap[rid] ?? [];
             return (
@@ -1294,11 +1388,17 @@ function ResultPanel({ result, nested }: { result: any | null; nested?: boolean 
               <p className="text-xs text-slate-400 leading-relaxed">{stripCitations(risk.description ?? risk.text ?? "")}</p>
               {rmfRecs.length > 0 && (
                 <div className="pt-2 border-t border-slate-800/80 space-y-2">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                    NIST AI RMF actions
+                  <p className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+                    Mitigations (illustrative NIST AI RMF)
+                    <span className="relative group cursor-help normal-case tracking-normal text-slate-600 hover:text-slate-400">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-normal normal-case tracking-normal text-slate-300 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity z-50">
+                        Template GOVERN / MAP / MEASURE / MANAGE actions linked to this MIT risk id—not verbatim MIT spreadsheet mitigations. Do not cite as MIT sources.
+                      </span>
+                    </span>
                   </p>
                   <ul className="space-y-2">
-                    {rmfRecs.slice(0, 3).map((rec, ridx) => (
+                    {rmfRecs.map((rec, ridx) => (
                       <li key={ridx} className="text-xs text-slate-400 leading-relaxed">
                         {rec.function && (
                           <span className="text-accent-200/90 font-medium mr-1">{String(rec.function)}</span>

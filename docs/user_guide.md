@@ -503,11 +503,11 @@ Each mode includes **clickable demo examples** in the right column — select on
 
 A **"MIT AI Risk Repository ↗"** link in the results header opens the full database for deeper exploration.
 
-Each risk card also lists up to three **NIST AI RMF** actions (**GOVERN**, **MAP**, **MEASURE**, …) linked to that MIT risk id in the bundled index (not repeated semantic search hits). Use **JSON** or **CSV** in the results header to download the full API payload or a flattened risk+RMF table.
+Each risk card lists up to four **illustrative NIST AI RMF** actions (**GOVERN**, **MAP**, **MEASURE**, **MANAGE**) **linked by MIT risk id**. They are generated templates from `transform_mit_data.py`, not verbatim MIT mitigations—hover the ⓘ on **Mitigations** in the UI. Results are **deduplicated** by risk id and category label (best score kept). The header shows the bundled index version (from `/v1/health`). Use **JSON** or **CSV** to download results.
 
 ### Batch mode (UI)
 
-On **Bias (Text)** and **Risk**, switch **Run → batch**. Enter multiple inputs separated by a line containing only `---`. The UI calls `POST /v1/batch` and polls until completion, then shows expandable per-item results and **Download all (JSON)**.
+On **Bias (Text)** and **Risk**, switch **Run → batch**. Enter multiple inputs separated by a line containing only `---`, or upload a **CSV** with a `scenario` / `content` / `text` column. A progress bar tracks `POST /v1/batch` polling. Download **JSON** or **Combined CSV** (risk batch flattens all `joined_table` rows with a `batch_item` column).
 
 ### Shutdown
 

@@ -172,7 +172,7 @@ def search_rmf_per_risk(state: RiskState) -> dict:
 
             # Get RMF recommendations per risk from options (default 3)
             options = state.options or {}
-            rmf_per_risk = options.get("rmf_per_risk", 3)
+            rmf_per_risk = options.get("rmf_per_risk", 4)
 
             # Validate rmf_per_risk parameter
             if not isinstance(rmf_per_risk, int) or rmf_per_risk <= 0:
@@ -181,7 +181,7 @@ def search_rmf_per_risk(state: RiskState) -> dict:
                     rmf_per_risk=rmf_per_risk,
                     using_default=3,
                 )
-                rmf_per_risk = 3  # Use default for invalid values
+                rmf_per_risk = 4  # Use default for invalid values
             rmf_per_risk = min(rmf_per_risk, 20)  # Cap at reasonable maximum
 
             # RMF recommendations keyed by risk_id
