@@ -25,9 +25,7 @@ MIT_V3_EXPORT = (
     "Copy of The AI Risk Repository V3_26_03_2025 (please create a copy) "
     "- AI Risk Database v3.csv"
 )
-MIT_V4_EXPORT = (
-    "Copy of The AI Risk Repository V4_03_12_2025 - AI Risk Database v4.csv"
-)
+MIT_V4_EXPORT = "Copy of The AI Risk Repository V4_03_12_2025 - AI Risk Database v4.csv"
 
 
 # Intentionally do not import `fairsense_agentix` here: importing the package runs
@@ -530,18 +528,21 @@ def _default_mit_export(repository_version: str) -> str:
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Transform MIT AI Risk Database CSV into FairSense ai_risks.csv and ai_rmf.csv",
+        description=(
+            "Transform MIT AI Risk Database CSV into FairSense "
+            "ai_risks.csv and ai_rmf.csv"
+        ),
     )
     parser.add_argument(
         "--repository-version",
         choices=("v3", "v4"),
         default="v4",
-        help="Which default MIT export filename to use when --input is omitted (default: v4)",
+        help=("MIT export filename when --input is omitted (default: v4)"),
     )
     parser.add_argument(
         "--input",
         type=Path,
-        help="Path to MIT 'AI Risk Database' sheet CSV (overrides --repository-version)",
+        help="MIT 'AI Risk Database' sheet CSV (overrides --repository-version)",
     )
     parser.add_argument(
         "--output-risks",
@@ -596,8 +597,8 @@ def main() -> int:
     if not input_file.exists():
         logger.error("Input file not found: %s", input_file)
         logger.error(
-            "Export the 'AI Risk Database v3/v4' sheet from airisk.mit.edu to data/raw/. "
-            "See data/raw/README.md.",
+            "Export the 'AI Risk Database v3/v4' sheet from airisk.mit.edu "
+            "to data/raw/. See data/raw/README.md.",
         )
         return 1
 

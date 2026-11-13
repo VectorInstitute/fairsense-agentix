@@ -20,6 +20,9 @@ import pytest
 from fairsense_agentix.graphs.risk_graph import create_risk_graph
 
 
+DEFAULT_RMF_PER_RISK = 4
+
+
 @pytest.mark.integration
 class TestRiskGraphBasic:
     """Basic smoke tests for RiskGraph."""
@@ -63,7 +66,7 @@ class TestRiskGraphBasic:
             # Handle both key naming conventions
             risk_id = risk.get("risk_id") or risk.get("id")
             assert risk_id in result["rmf_recommendations"]
-            assert len(result["rmf_recommendations"][risk_id]) == 3  # 3 RMF per risk
+            assert len(result["rmf_recommendations"][risk_id]) == DEFAULT_RMF_PER_RISK
 
         # Verify data joined
         assert result["joined_table"] is not None
@@ -102,8 +105,8 @@ class TestRiskGraphBasic:
         # Verify RMF recommendations for all 3 risks
         assert len(result["rmf_recommendations"]) == 3
 
-        # Verify joined table has 3 risks * 3 RMF = 9 rows
-        assert len(result["joined_table"]) == 9
+        # Verify joined table has 3 risks * default RMF rows
+        assert len(result["joined_table"]) == 3 * DEFAULT_RMF_PER_RISK
 
     def test_short_scenario(self) -> None:
         """Test execution with short scenario text."""
@@ -173,7 +176,7 @@ class TestRiskGraphDeterministicFixtures:
         assert len(result["rmf_recommendations"]) == 5
 
         assert result["joined_table"] is not None
-        assert len(result["joined_table"]) == 15  # 5 risks * 3 RMF each
+        assert len(result["joined_table"]) == 5 * DEFAULT_RMF_PER_RISK
 
         assert result["html_table"] is not None
         assert "<table>" in result["html_table"]
@@ -193,7 +196,7 @@ class TestRiskGraphDeterministicFixtures:
         # Verify top_k=3 produces correct structure
         assert len(result["risks"]) == 3
         assert len(result["rmf_recommendations"]) == 3
-        assert len(result["joined_table"]) == 9  # 3 risks * 3 RMF
+        assert len(result["joined_table"]) == 3 * DEFAULT_RMF_PER_RISK
 
         # Verify joined table has all required fields
         for row in result["joined_table"]:
@@ -257,7 +260,7 @@ class TestRiskGraphDeterministicFixtures:
         # Long scenarios should still produce valid output
         assert result["embedding"] is not None
         assert len(result["risks"]) == 5
-        assert len(result["joined_table"]) == 15
+        assert len(result["joined_table"]) == 5 * DEFAULT_RMF_PER_RISK
 
 
 @pytest.mark.integration

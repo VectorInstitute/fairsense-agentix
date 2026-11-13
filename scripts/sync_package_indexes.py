@@ -15,6 +15,7 @@ from pathlib import Path
 
 
 def sync_indexes(*, src: Path, dest: Path, dry_run: bool) -> int:
+    """Copy index artifacts from *src* into the package data directory *dest*."""
     if not src.is_dir():
         print(f"Source directory not found: {src}", file=sys.stderr)
         return 1
@@ -28,7 +29,10 @@ def sync_indexes(*, src: Path, dest: Path, dry_run: bool) -> int:
     ]
     missing = [p for p in artifacts if not p.exists()]
     if missing:
-        print("Missing build artifacts (run build_faiss_indexes.py first):", file=sys.stderr)
+        print(
+            "Missing build artifacts (run build_faiss_indexes.py first):",
+            file=sys.stderr,
+        )
         for path in missing:
             print(f"  - {path}", file=sys.stderr)
         return 1
@@ -50,6 +54,7 @@ def sync_indexes(*, src: Path, dest: Path, dry_run: bool) -> int:
 
 
 def main() -> int:
+    """CLI entry point."""
     repo = Path(__file__).resolve().parent.parent
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -66,7 +71,11 @@ def main() -> int:
     )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
-    return sync_indexes(src=args.src.resolve(), dest=args.dest.resolve(), dry_run=args.dry_run)
+    return sync_indexes(
+        src=args.src.resolve(),
+        dest=args.dest.resolve(),
+        dry_run=args.dry_run,
+    )
 
 
 if __name__ == "__main__":

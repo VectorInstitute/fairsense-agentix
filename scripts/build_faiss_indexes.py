@@ -41,6 +41,12 @@ import pandas as pd
 from langchain_core.documents import Document
 
 
+try:
+    import torch
+except ImportError:
+    torch = None  # type: ignore[assignment]
+
+
 if TYPE_CHECKING:
     from fairsense_agentix.tools.embeddings import LangChainEmbedder
 
@@ -50,9 +56,7 @@ logger = logging.getLogger(__name__)
 def _resolve_embed_device(choice: str) -> str:
     """Return SentenceTransformer device string for HuggingFaceEmbeddings."""
     if choice == "auto":
-        try:
-            import torch
-        except ImportError:
+        if torch is None:
             return "cpu"
         return "cuda" if torch.cuda.is_available() else "cpu"
     return choice
