@@ -1,5 +1,6 @@
 """Risk graph nodes: embedding and FAISS retrieval."""
 
+from fairsense_agentix.graphs.risk.rmf_lookup import recommendations_for_risk
 from fairsense_agentix.graphs.state import RiskState
 from fairsense_agentix.services.telemetry import telemetry
 from fairsense_agentix.tools import get_tool_registry
@@ -171,7 +172,7 @@ def search_rmf_per_risk(state: RiskState) -> dict:
 
             # Get RMF recommendations per risk from options (default 3)
             options = state.options or {}
-            rmf_per_risk = options.get("rmf_per_risk", 3)
+            rmf_per_risk = options.get("rmf_per_risk", 4)
 
             # Validate rmf_per_risk parameter
             if not isinstance(rmf_per_risk, int) or rmf_per_risk <= 0:
@@ -180,7 +181,7 @@ def search_rmf_per_risk(state: RiskState) -> dict:
                     rmf_per_risk=rmf_per_risk,
                     using_default=3,
                 )
-                rmf_per_risk = 3  # Use default for invalid values
+                rmf_per_risk = 4  # Use default for invalid values
             rmf_per_risk = min(rmf_per_risk, 20)  # Cap at reasonable maximum
 
             # RMF recommendations keyed by risk_id
@@ -188,22 +189,28 @@ def search_rmf_per_risk(state: RiskState) -> dict:
 
             for risk in state.risks:
                 risk_id = risk["id"] if "id" in risk else risk.get("risk_id", "")
-                risk_description = risk.get("description", risk.get("text", ""))
 
-                # Embed the risk description
-                with telemetry.timer("risk.embed_risk_description"):
-                    risk_embedding = registry.embedder.encode(risk_description)
-
-                # Search RMF index for recommendations
-                # (convert ndarray to list for protocol compatibility)
+                # RMF rows are keyed to each MIT risk at index build time; semantic
+                # search over the global RMF index duplicated the same template text.
                 with telemetry.timer(
-                    "risk.faiss_rmf_search",
+                    "risk.rmf_lookup",
+                    risk_id=risk_id,
                     rmf_per_risk=rmf_per_risk,
                 ):
-                    rmf_results = registry.faiss_rmf.search(
-                        query_vector=risk_embedding.tolist(),
-                        top_k=rmf_per_risk,
-                    )
+                    rmf_results = recommendations_for_risk(risk_id, rmf_per_risk)
+
+                if not rmf_results:
+                    risk_description = risk.get("description", risk.get("text", ""))
+                    with telemetry.timer("risk.embed_risk_description"):
+                        risk_embedding = registry.embedder.encode(risk_description)
+                    with telemetry.timer(
+                        "risk.faiss_rmf_search",
+                        rmf_per_risk=rmf_per_risk,
+                    ):
+                        rmf_results = registry.faiss_rmf.search(
+                            query_vector=risk_embedding.tolist(),
+                            top_k=rmf_per_risk,
+                        )
 
                 rmf_recommendations[risk_id] = rmf_results
 

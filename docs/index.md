@@ -70,7 +70,7 @@ same graphs run with real providers in production or lightweight fakes in CI.
 
     ---
 
-    Semantic search over 1,340 MIT AI Risk Repository (V3) risks plus NIST AI RMF–aligned actions.
+    Semantic search over 1,538 MIT AI Risk Repository (V4, Dec 2025) risks plus NIST AI RMF–aligned actions.
 
     [:octicons-arrow-right-24: User guide](user_guide.md#risk-assessment)
 
@@ -127,7 +127,7 @@ Every request follows the same orchestrator loop: **route → execute → evalua
 
     ---
 
-    Run the LangGraph subgraph: bias pipeline, OCR/VLM path, or FAISS over 1,340 MIT risks.
+    Run the LangGraph subgraph: bias pipeline, OCR/VLM path, or FAISS over 1,538 MIT risks.
 
 -   :material-clipboard-check:{ .vector-icon } __3 · Evaluate__
 

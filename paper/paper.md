@@ -174,7 +174,7 @@ formatter, and persistence) are constructed by a central `ToolRegistry` from
 configuration and injected into each subgraph at build time. This design decouples
 graph logic from tool implementation and enables runtime substitution: the entire
 tool stack can be replaced with lightweight fakes for unit testing without modifying
-graph code. 
+graph code.
 
 LLM providers (OpenAI GPT-4 [@openai2024gpt4technicalreport] and Anthropic Claude
 [@anthropic2024claude], via LangChain [@chase2022langchain]) are selected through

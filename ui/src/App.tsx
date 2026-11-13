@@ -1,11 +1,47 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { clsx } from "clsx";
-import { Loader2, Play, Upload, Activity, Power, FileText, Image, ShieldAlert, X, BookOpen } from "lucide-react";
+import {
+  Loader2,
+  Play,
+  Upload,
+  Activity,
+  Power,
+  FileText,
+  Image,
+  ShieldAlert,
+  X,
+  BookOpen,
+  Download,
+  Layers,
+} from "lucide-react";
 import vectorLogo from "./assets/Vector Logo_Bilingual_White_Horizontal.png";
 import fairsenseLogo from "./assets/fairsense-logo.png";
 import aixpertLogo from "./assets/AIXPERT_logo_extended_white-2048x896.png";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { analyzeStart, analyzeFileStart, connectToStream, health, API_BASE } from "./api";
+import {
+  analyzeStart,
+  analyzeFileStart,
+  connectToStream,
+  health,
+  apiUrl,
+  startBatch,
+  getBatchStatus,
+  type HealthResponse,
+  type WorkflowID,
+} from "./api";
+import {
+  biasInstancesCsv,
+  batchResultsJson,
+  buildRiskJoinedTable,
+  dedupeRiskHits,
+  downloadJson,
+  downloadTextFile,
+  flattenBatchRiskCsv,
+  parseScenarioCsv,
+  riskJoinedCsv,
+} from "./export";
+
+const RISK_ANALYZE_OPTIONS = { rmf_per_risk: 4, top_k: 10 };
 
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -28,6 +64,28 @@ const BlueskyIcon = ({ size = 16 }: { size?: number }) => (
 );
 
 type Mode = "text" | "image" | "csv";
+type RunMode = "single" | "batch";
+
+function parseBatchScenarios(raw: string): string[] {
+  return raw
+    .split(/\n\s*---\s*\n/)
+    .map((block) => block.trim())
+    .filter((block) => block.length > 0);
+}
+
+function workflowForMode(mode: Mode): WorkflowID | undefined {
+  if (mode === "csv") {
+    return "risk";
+  }
+  if (mode === "text") {
+    return "bias_text";
+  }
+  return undefined;
+}
+
+function riskIdFor(risk: Record<string, unknown>): string {
+  return String(risk.id ?? risk.risk_id ?? "");
+}
 
 const MODE_LABELS: Record<Mode, string> = {
   text: "Bias (Text)",
@@ -200,13 +258,35 @@ export default function App() {
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [mockProvider, setMockProvider] = useState<string | null>(null);
+  const [healthInfo, setHealthInfo] = useState<HealthResponse | null>(null);
+  const [runMode, setRunMode] = useState<RunMode>("single");
+  const [batchResults, setBatchResults] = useState<any[] | null>(null);
+  const [batchProgress, setBatchProgress] = useState<{
+    completed: number;
+    total: number;
+    status: string;
+  } | null>(null);
+  const [batchScenariosFromFile, setBatchScenariosFromFile] = useState<string[]>([]);
+
+  const batchScenarioList = useMemo(() => {
+    if (batchScenariosFromFile.length > 0) {
+      return batchScenariosFromFile;
+    }
+    return parseBatchScenarios(input);
+  }, [batchScenariosFromFile, input]);
 
   // Surface mock mode prominently: with FAIRSENSE_LLM_PROVIDER=fake the backend
   // returns synthetic placeholder results that look like a real analysis.
   useEffect(() => {
     health()
-      .then((h) => setMockProvider(h.mock_mode ? h.llm_provider : null))
-      .catch(() => setMockProvider(null));
+      .then((h) => {
+        setHealthInfo(h);
+        setMockProvider(h.mock_mode ? h.llm_provider : null);
+      })
+      .catch(() => {
+        setHealthInfo(null);
+        setMockProvider(null);
+      });
   }, []);
   const [showShutdownModal, setShowShutdownModal] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
@@ -245,16 +325,72 @@ export default function App() {
   }, [timeline]);
 
   const canSubmit =
-    (!loading && mode !== "image" && input.trim().length > 0) ||
-    (!loading && mode === "image" && file);
+    (!loading && runMode === "single" && mode !== "image" && input.trim().length > 0) ||
+    (!loading && runMode === "single" && mode === "image" && file) ||
+    (!loading && runMode === "batch" && mode !== "image" && batchScenarioList.length > 0);
 
-  async function handleAnalyze() {
-    if (!canSubmit) {
+  async function handleBatchAnalyze() {
+    const scenarios = batchScenarioList;
+    if (scenarios.length === 0) {
       return;
     }
     setLoading(true);
     setTimeline([]);
     setResult(null);
+    setBatchResults(null);
+    setBatchProgress({ completed: 0, total: scenarios.length, status: "pending" });
+    setErrorMessage(null);
+
+    try {
+      const hint = workflowForMode(mode);
+      const items = scenarios.map((content) => ({
+        content,
+        input_type: hint,
+        options: mode === "csv" ? RISK_ANALYZE_OPTIONS : {},
+      }));
+      const started = await startBatch(items);
+      const jobId = started.job_id;
+      let final = started;
+      for (let i = 0; i < 600; i++) {
+        await new Promise((r) => setTimeout(r, 1000));
+        final = await getBatchStatus(jobId);
+        setBatchProgress({
+          completed: final.completed,
+          total: final.total,
+          status: final.status,
+        });
+        if (final.status === "completed" || final.status === "failed") {
+          break;
+        }
+      }
+      setBatchResults(final.results ?? []);
+      if (final.errors?.length) {
+        setErrorMessage(
+          `Batch finished with ${final.errors.length} error(s). See partial results below.`,
+        );
+      }
+    } catch (err) {
+      console.error(err);
+      const detail = err instanceof Error ? err.message : "Unknown error";
+      setErrorMessage(`Batch failed: ${detail}`);
+    } finally {
+      setLoading(false);
+      setBatchProgress(null);
+    }
+  }
+
+  async function handleAnalyze() {
+    if (!canSubmit) {
+      return;
+    }
+    if (runMode === "batch") {
+      await handleBatchAnalyze();
+      return;
+    }
+    setLoading(true);
+    setTimeline([]);
+    setResult(null);
+    setBatchResults(null);
 
     try {
       // Step 1: Start analysis and get run_id immediately (fixes race condition!)
@@ -263,10 +399,28 @@ export default function App() {
           ? await analyzeFileStart(file as File, "bias_image")
           : await analyzeStart({
             content: input,
-            input_type: mode === "csv" ? "risk" : undefined
+            input_type: workflowForMode(mode),
+            options: mode === "csv" ? RISK_ANALYZE_OPTIONS : undefined,
           });
 
       const runId = startResponse.run_id;
+      let finished = false;
+
+      const finish = (update: { result?: any; error?: string }) => {
+        if (finished) {
+          return;
+        }
+        finished = true;
+        if (update.result !== undefined) {
+          setResult(update.result);
+        }
+        if (update.error) {
+          setErrorMessage(update.error);
+        }
+        setLoading(false);
+      };
+
+      wsRef.current?.close();
 
       // Step 2: Connect WebSocket BEFORE analysis completes (this is the fix!)
       const ws = connectToStream(runId, (evt) => {
@@ -275,15 +429,16 @@ export default function App() {
 
           // Check if this is the completion event
           if (data.event === "analysis_complete" && data.context?.result) {
-            // Extract final result from completion event
-            setResult(data.context.result);
-            setLoading(false); // Stop loading spinner
+            finish({ result: data.context.result });
           }
 
           // Check if this is an error event
           if (data.event === "analysis_error") {
-            setErrorMessage(data.context?.message ? String(data.context.message) : "Analysis failed. Check the timeline for details.");
-            setLoading(false); // Stop loading spinner
+            finish({
+              error: data.context?.message
+                ? String(data.context.message)
+                : "Analysis failed. Check the timeline for details.",
+            });
           }
 
           // Add all events to timeline (including intermediate agent events)
@@ -293,12 +448,28 @@ export default function App() {
         }
       });
 
+      ws.onerror = () => {
+        finish({
+          error: "Lost connection to the analysis stream. Is the API running on port 8000?",
+        });
+      };
+      ws.onclose = () => {
+        if (!finished) {
+          finish({
+            error:
+              "Analysis stream closed before completion. Restart the API and try again.",
+          });
+        }
+      };
+
       wsRef.current = ws;
 
       // Step 3: Analysis is now running in background, events will stream in!
     } catch (err) {
       console.error(err);
-      setErrorMessage("Analysis failed. Check logs for details.");
+      const detail =
+        err instanceof Error ? err.message : "Unknown error";
+      setErrorMessage(`Analysis failed: ${detail}`);
       setLoading(false);
     }
   }
@@ -310,7 +481,7 @@ export default function App() {
   async function executeShutdown() {
     setShowShutdownModal(false);
     try {
-      const response = await fetch(`${API_BASE}/v1/shutdown`, {
+      const response = await fetch(apiUrl("/v1/shutdown"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
@@ -333,6 +504,11 @@ export default function App() {
     }
     return { __html: result.bias_result.highlighted_html };
   }, [result]);
+
+  const analysisComplete = timeline.some((e) => e.event === "analysis_complete");
+  const analysisErrored = timeline.some((e) => e.event === "analysis_error");
+  const showInProgress =
+    loading || (runMode === "single" && timeline.length > 0 && !analysisComplete && !analysisErrored);
 
   return (
     <main className="min-h-screen bg-base text-white">
@@ -413,21 +589,71 @@ export default function App() {
 
       <section className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-6">
-          <ModeSelector mode={mode} onModeChange={setMode} />
+          <ModeSelector
+            mode={mode}
+            onModeChange={(m) => {
+              setMode(m);
+              if (m === "image") {
+                setRunMode("single");
+              }
+            }}
+          />
           <ModeDescription mode={mode} />
+          {mode !== "image" && (
+            <RunModeToggle runMode={runMode} onChange={setRunMode} mode={mode} />
+          )}
           {mode === "image" ? (
             <ImageDropzone file={file} onFileChange={setFile} />
           ) : (
             <textarea
               className="w-full min-h-[220px] glass p-4 focus:outline-none focus:ring-2 focus:ring-accent-200"
               placeholder={
-                mode === "csv"
-                  ? "Describe your deployment scenario or paste CSV text..."
-                  : "Paste your job posting or conversation snippet..."
+                runMode === "batch"
+                  ? mode === "csv"
+                    ? "One deployment scenario per block. Separate scenarios with a line containing only ---"
+                    : "One text sample per block. Separate samples with a line containing only ---"
+                  : mode === "csv"
+                    ? "Describe your deployment scenario or paste CSV text..."
+                    : "Paste your job posting or conversation snippet..."
               }
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
+          )}
+          {runMode === "batch" && mode !== "image" && (
+            <label className="flex items-center gap-3 text-xs text-slate-400 cursor-pointer">
+              <input
+                type="file"
+                accept=".csv,text/csv"
+                className="text-slate-300 file:mr-2 file:rounded-lg file:border file:border-slate-700 file:bg-slate-900 file:px-3 file:py-1.5 file:text-xs file:text-slate-200"
+                onChange={async (e) => {
+                  const f = e.target.files?.[0];
+                  if (!f) {
+                    setBatchScenariosFromFile([]);
+                    return;
+                  }
+                  const text = await f.text();
+                  setBatchScenariosFromFile(parseScenarioCsv(text));
+                }}
+              />
+              <span>CSV with a scenario / content / text column (or one column per row)</span>
+            </label>
+          )}
+          {batchProgress && (
+            <div className="glass px-4 py-3 text-sm text-slate-300 space-y-2">
+              <div className="flex items-center gap-2">
+                <Loader2 className="animate-spin text-accent-200" size={16} />
+                Batch {batchProgress.status}: {batchProgress.completed}/{batchProgress.total}
+              </div>
+              <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  className="h-full bg-accent-200 transition-all duration-300"
+                  style={{
+                    width: `${Math.min(100, (100 * batchProgress.completed) / Math.max(1, batchProgress.total))}%`,
+                  }}
+                />
+              </div>
+            </div>
           )}
           <div className="flex gap-4">
             <button
@@ -446,7 +672,8 @@ export default function App() {
                 </>
               ) : (
                 <>
-                  <Play size={16} /> Run Analysis
+                  {runMode === "batch" ? <Layers size={16} /> : <Play size={16} />}
+                  {runMode === "batch" ? "Run Batch" : "Run Analysis"}
                 </>
               )}
             </button>
@@ -456,6 +683,8 @@ export default function App() {
                 setInput("");
                 setFile(null);
                 setResult(null);
+                setBatchResults(null);
+                setBatchScenariosFromFile([]);
                 setTimeline([]);
               }}
             >
@@ -463,11 +692,11 @@ export default function App() {
             </button>
           </div>
 
-          <TimelinePanel events={timeline} />
+          {runMode === "single" && <TimelinePanel events={timeline} />}
         </div>
 
         <div className="space-y-6">
-          {!result && (
+          {!result && !batchResults?.length && (
             <div className="glass p-5 space-y-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Try an example</p>
               {mode === "image" ? (
@@ -515,7 +744,21 @@ export default function App() {
               )}
             </div>
           )}
-          <ResultPanel result={result} />
+          {showInProgress ? (
+            <div className="glass p-6 flex items-center gap-3 text-slate-300 text-sm">
+              <Loader2 className="animate-spin text-accent-200" size={20} />
+              <div>
+                <p className="font-medium text-slate-200">Analysis in progress</p>
+                <p className="text-xs text-slate-500 mt-1">
+                  Streaming agent steps in the timeline. Text bias can take 30–90s with a live LLM.
+                </p>
+              </div>
+            </div>
+          ) : batchResults && batchResults.length > 0 ? (
+            <BatchResultsPanel results={batchResults} mode={mode} health={healthInfo} />
+          ) : (
+            <ResultPanel result={result} health={healthInfo} />
+          )}
           {highlightHtml && (
             <div className="glass p-5 space-y-5">
               <header>
@@ -590,7 +833,9 @@ export default function App() {
       </div>
 
       {/* About modal */}
-      {showAboutModal && <AboutModal onClose={() => setShowAboutModal(false)} />}
+      {showAboutModal && (
+        <AboutModal health={healthInfo} onClose={() => setShowAboutModal(false)} />
+      )}
 
       {/* Shutdown confirmation modal */}
       {showShutdownModal && (
@@ -901,6 +1146,182 @@ function BiasLegend() {
   );
 }
 
+function RunModeToggle({
+  runMode,
+  onChange,
+  mode,
+}: {
+  runMode: RunMode;
+  onChange: (m: RunMode) => void;
+  mode: Mode;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+      <span className="uppercase tracking-wide text-slate-500">Run</span>
+      {(["single", "batch"] as RunMode[]).map((opt) => (
+        <button
+          key={opt}
+          type="button"
+          onClick={() => onChange(opt)}
+          className={clsx(
+            "rounded-lg px-3 py-1.5 border transition-colors capitalize",
+            runMode === opt
+              ? "border-accent-200/60 bg-accent-200/10 text-accent-200"
+              : "border-slate-700 text-slate-400 hover:border-slate-500",
+          )}
+        >
+          {opt}
+        </button>
+      ))}
+      {runMode === "batch" && (
+        <span className="text-slate-500">
+          {mode === "csv" ? "Multiple risk scenarios via POST /v1/batch" : "Multiple bias texts via POST /v1/batch"}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function ExportResultButtons({ result }: { result: any }) {
+  const handleJson = () => {
+    downloadJson(`fairsense-${result.workflow_id ?? "result"}-${Date.now()}.json`, result);
+  };
+  const handleCsv = () => {
+    if (result.workflow_id === "risk") {
+      const rr = result.risk_result ?? {};
+      const joined =
+        (rr.joined_table as Record<string, unknown>[])?.length > 0
+          ? (rr.joined_table as Record<string, unknown>[])
+          : buildRiskJoinedTable(rr.risks ?? [], rr.rmf_recommendations ?? {});
+      const csv = riskJoinedCsv(joined);
+      if (!csv) {
+        return;
+      }
+      downloadTextFile(`fairsense-risk-${Date.now()}.csv`, csv, "text/csv");
+      return;
+    }
+    const instances = result.bias_result?.bias_instances ?? [];
+    if (instances.length === 0) {
+      return;
+    }
+    downloadTextFile(
+      `fairsense-bias-${Date.now()}.csv`,
+      biasInstancesCsv(instances),
+      "text/csv",
+    );
+  };
+  const csvDisabled =
+    result.workflow_id === "risk"
+      ? !(result.risk_result?.risks?.length)
+      : !(result.bias_result?.bias_instances?.length);
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      <button
+        type="button"
+        onClick={handleJson}
+        className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200 transition-colors"
+      >
+        <Download size={12} /> JSON
+      </button>
+      <button
+        type="button"
+        onClick={handleCsv}
+        disabled={csvDisabled}
+        className={clsx(
+          "inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs transition-colors",
+          csvDisabled
+            ? "border-slate-800 text-slate-600 cursor-not-allowed"
+            : "border-slate-700 text-slate-300 hover:border-accent-200/50 hover:text-accent-200",
+        )}
+      >
+        <Download size={12} /> CSV
+      </button>
+    </div>
+  );
+}
+
+function BatchResultsPanel({
+  results,
+  mode,
+  health,
+}: {
+  results: any[];
+  mode: Mode;
+  health: HealthResponse | null;
+}) {
+  const [expanded, setExpanded] = useState<number | null>(0);
+  const handleBatchJson = () => {
+    downloadTextFile(
+      `fairsense-batch-${Date.now()}.json`,
+      batchResultsJson(results),
+      "application/json",
+    );
+  };
+  const handleBatchCsv = () => {
+    const csv = flattenBatchRiskCsv(results);
+    if (!csv) {
+      return;
+    }
+    downloadTextFile(`fairsense-batch-risk-${Date.now()}.csv`, csv, "text/csv");
+  };
+
+  return (
+    <div className="glass p-5 space-y-4">
+      <header className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p className="pill">Batch Results</p>
+          <h3 className="text-lg font-semibold text-slate-100 mt-1">
+            {results.length} {mode === "csv" ? "risk" : "bias"} assessments
+          </h3>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={handleBatchJson}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200"
+          >
+            <Download size={12} /> JSON
+          </button>
+          {mode === "csv" && (
+            <button
+              type="button"
+              onClick={handleBatchCsv}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-accent-200/50 hover:text-accent-200"
+            >
+              <Download size={12} /> Combined CSV
+            </button>
+          )}
+        </div>
+      </header>
+      <div className="space-y-2 max-h-[70vh] overflow-y-auto custom-scrollbar pr-1">
+        {results.map((item, idx) => (
+          <div key={idx} className="rounded-xl border border-slate-800/60 overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setExpanded(expanded === idx ? null : idx)}
+              className="w-full flex justify-between items-center px-4 py-3 text-left text-sm text-slate-200 hover:bg-slate-900/50"
+            >
+              <span>
+                #{idx + 1}{" "}
+                {item.workflow_id === "risk"
+                  ? "Risk"
+                  : item.workflow_id?.replace("bias_", "Bias ") ?? "Result"}
+              </span>
+              <Play size={12} className={clsx("transition-transform", expanded === idx && "rotate-90")} />
+            </button>
+            {expanded === idx && (
+              <div className="border-t border-slate-800 p-2">
+                <ResultPanel result={item} nested health={health} />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // TODO: Instead of stripping citations, link [N] and (Author et al., YYYY) to their
 // source papers using the MIT AI Risk Repository paper metadata. Requires rebuilding
 // the FAISS index with paper URLs included in risk metadata.
@@ -913,23 +1334,57 @@ function stripCitations(text: string): string {
     .trim();
 }
 
-function ResultPanel({ result }: { result: any | null }) {
+function CorpusBadge({ health }: { health: HealthResponse | null }) {
+  if (health?.indexed_risk_count == null) {
+    return null;
+  }
+  return (
+    <p className="text-xs text-slate-500">
+      MIT AI Risk index{" "}
+      {health.mit_risk_repository_version?.toUpperCase() ?? ""} ·{" "}
+      {health.indexed_risk_count.toLocaleString()} risks
+      {health.mit_risk_snapshot_date ? ` · snapshot ${health.mit_risk_snapshot_date}` : ""}
+    </p>
+  );
+}
+
+function ResultPanel({
+  result,
+  nested,
+  health,
+}: {
+  result: any | null;
+  nested?: boolean;
+  health?: HealthResponse | null;
+}) {
   const [imageExpanded, setImageExpanded] = useState(false);
+  const shell = nested ? "space-y-4" : "glass p-5 space-y-4";
 
   if (!result) {
     return (
-      <div className="glass p-6 text-slate-400">
+      <div className={nested ? "p-4 text-slate-400 text-sm" : "glass p-6 text-slate-400"}>
         Run an analysis to view structured output.
       </div>
     );
   }
 
   if (result.workflow_id === "risk") {
-    const risks = result.risk_result?.risks ?? [];
+    const risks = dedupeRiskHits(
+      (result.risk_result?.risks ?? []) as Record<string, unknown>[],
+      5,
+    ).filter((r) => Number(r.score ?? 0) > 0);
+    const rmfMap = (result.risk_result?.rmf_recommendations ?? {}) as Record<
+      string,
+      Record<string, unknown>[]
+    >;
     return (
-      <div className="glass p-5 space-y-4">
+      <div className={shell}>
         <header className="space-y-2">
-          <p className="pill">Risk Insights</p>
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <p className="pill">Risk Insights</p>
+            <ExportResultButtons result={result} />
+          </div>
+          {!nested && <CorpusBadge health={health ?? null} />}
           <div className="flex items-center justify-between gap-3">
             <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
               <span className="inline-block w-1 h-5 bg-accent-200 rounded-full" />
@@ -947,8 +1402,11 @@ function ResultPanel({ result }: { result: any | null }) {
           </div>
         </header>
         <div className="space-y-3">
-          {risks.filter((r: any) => (r.score ?? 0) > 0).slice(0, 5).map((risk: any, idx: number) => (
-            <div key={idx} className="rounded-xl border border-slate-800/50 bg-slate-900/30 p-4 space-y-2 hover:border-slate-700/70 transition-colors">
+          {risks.map((risk: any, idx: number) => {
+            const rid = riskIdFor(risk);
+            const rmfRecs = rmfMap[rid] ?? [];
+            return (
+            <div key={rid || idx} className="rounded-xl border border-slate-800/50 bg-slate-900/30 p-4 space-y-2 hover:border-slate-700/70 transition-colors">
               <div className="flex justify-between items-start gap-3">
                 <div className="space-y-1 min-w-0">
                   <p className="text-sm font-semibold text-slate-200 leading-snug">
@@ -975,30 +1433,112 @@ function ResultPanel({ result }: { result: any | null }) {
                 </span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">{stripCitations(risk.description ?? risk.text ?? "")}</p>
+              {rmfRecs.length > 0 && (
+                <div className="pt-2 border-t border-slate-800/80 space-y-2">
+                  <p className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+                    Mitigations (illustrative NIST AI RMF)
+                    <span className="relative group cursor-help normal-case tracking-normal text-slate-600 hover:text-slate-400">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-normal normal-case tracking-normal text-slate-300 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity z-50">
+                        Template GOVERN / MAP / MEASURE / MANAGE actions linked to this MIT risk id—not verbatim MIT spreadsheet mitigations. Do not cite as MIT sources.
+                      </span>
+                    </span>
+                  </p>
+                  <ul className="space-y-2">
+                    {rmfRecs.map((rec, ridx) => (
+                      <li key={ridx} className="text-xs text-slate-400 leading-relaxed">
+                        {rec.function && (
+                          <span className="text-accent-200/90 font-medium mr-1">{String(rec.function)}</span>
+                        )}
+                        {stripCitations(
+                          String(rec.recommendation ?? rec.text ?? rec.action ?? ""),
+                        )}
+                        {(() => {
+                          const s = Number(rec.relevance_score ?? rec.score);
+                          if (Number.isNaN(s) || s >= 0.999) {
+                            return null;
+                          }
+                          return (
+                            <span className="text-slate-600 ml-1">({s.toFixed(2)})</span>
+                          );
+                        })()}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     );
   }
 
-  const summary = result.bias_result?.summary;
-  const instances = result.bias_result?.bias_instances ?? [];
+  const br = result.bias_result ?? {};
+  const summary = br.summary;
+  const instances = br.bias_instances ?? [];
+  const errors = (br.errors ?? []) as string[];
+  const warnings = (br.warnings ?? []) as string[];
+  const status = br.status as string | undefined;
 
   // Try multiple possible paths for image_base64
-  const imageBase64 = result.bias_result?.image_base64 || result.image_base64 || result.workflow_result?.image_base64;
+  const imageBase64 = br.image_base64 || result.image_base64 || result.workflow_result?.image_base64;
 
   return (
-    <div className="glass p-5 space-y-4">
+    <div className={shell}>
       <header className="space-y-2">
-        <p className="pill">Bias Insights</p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <p className="pill">Bias Insights</p>
+          <ExportResultButtons result={result} />
+        </div>
         <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
           <span className="inline-block w-1 h-5 bg-accent-200 rounded-full" />
-          {result.bias_result?.status === "success"
+          {status === "success"
             ? "Analysis Complete"
-            : "Analysis"}
+            : status === "failed"
+              ? "Analysis Failed"
+              : status === "partial"
+                ? "Partial Results"
+                : "Analysis"}
         </h3>
       </header>
+
+      {errors.length > 0 && (
+        <div className="rounded-xl border border-red-700/40 bg-red-900/20 p-4 space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-wide text-red-300">
+            API / workflow errors
+          </p>
+          <ul className="text-sm text-red-200/90 space-y-1 list-disc list-inside">
+            {errors.map((msg, i) => (
+              <li key={i}>{msg}</li>
+            ))}
+          </ul>
+          <p className="text-xs text-slate-500 pt-1">
+            The run finished, but the bias workflow did not return instances. Check API logs,{" "}
+            <code className="text-slate-400">FAIRSENSE_LLM_API_KEY</code>, base URL, and provider quota.
+          </p>
+        </div>
+      )}
+
+      {warnings.length > 0 && (
+        <div className="rounded-xl border border-yellow-700/30 bg-yellow-900/10 p-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-yellow-300/90 mb-1">
+            Warnings
+          </p>
+          <ul className="text-xs text-yellow-200/80 space-y-1 list-disc list-inside">
+            {warnings.map((msg, i) => (
+              <li key={i}>{msg}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {!summary && instances.length === 0 && errors.length === 0 && status && status !== "success" && (
+        <p className="text-sm text-slate-400">
+          No bias instances were returned (status: {status}). Inspect exported JSON or server logs.
+        </p>
+      )}
 
       {/* Collapsible image viewer for visual analysis */}
       {imageBase64 && (
@@ -1110,7 +1650,13 @@ function AnalysisModesAccordion() {
   );
 }
 
-function AboutModal({ onClose }: { onClose: () => void }) {
+function AboutModal({
+  health,
+  onClose,
+}: {
+  health: HealthResponse | null;
+  onClose: () => void;
+}) {
   const [activeTab, setActiveTab] = useState<"about" | "team" | /* "papers" | */ "connect">("about");
 
   const tabs: { id: typeof activeTab; label: string }[] = [
@@ -1193,6 +1739,17 @@ function AboutModal({ onClose }: { onClose: () => void }) {
                 <p className="text-sm text-slate-300 leading-relaxed pt-1">
                   This approach delivers more accurate, transparent, and context-aware fairness assessments than static rule-based systems.
                 </p>
+                {health?.indexed_risk_count != null && (
+                  <p className="text-xs text-slate-500 pt-2">
+                    Server v{health.software_version ?? "?"} · MIT AI Risk index{" "}
+                    {health.mit_risk_repository_version?.toUpperCase() ?? ""} (
+                    {health.indexed_risk_count.toLocaleString()} risks
+                    {health.mit_risk_snapshot_date
+                      ? `, snapshot ${health.mit_risk_snapshot_date}`
+                      : ""}
+                    )
+                  </p>
+                )}
                 <a
                   href="https://vectorinstitute.github.io/fairsense-agentix/"
                   target="_blank"

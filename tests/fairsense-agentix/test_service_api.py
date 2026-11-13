@@ -116,6 +116,9 @@ class TestHealth:
         assert body["status"] == "ok"
         assert body["llm_provider"] == settings.llm_provider
         assert body["mock_mode"] is (settings.llm_provider == "fake")
+        assert body["indexed_risk_count"] == 1538
+        assert body["mit_risk_repository_version"] == "v4"
+        assert "software_version" in body
 
 
 @pytest.mark.integration

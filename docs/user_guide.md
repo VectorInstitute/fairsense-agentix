@@ -360,7 +360,7 @@ Each item in `result.risks` is a `dict`. Use `.get(...)` for safe access since k
     The recommendations are **not** text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions, then indexed for retrieval. See `scripts/transform_mit_data.py` for how they are built.
 
 !!! note "Risk source"
-    Risks are retrieved from the [MIT AI Risk Repository](https://airisk.mit.edu/) (V3, 1,340 entries) using semantic similarity search. The `category` field follows the repository's Domain Taxonomy; the number prefix (e.g., `3.1`) identifies the domain and subcategory. A score of `1.0` means the risk is maximally relevant to the described scenario; `0.0` means unrelated.
+    Risks are retrieved from the [MIT AI Risk Repository](https://airisk.mit.edu/) (V4, 1,538 indexed entries, Dec 2025 snapshot) using semantic similarity search. The `category` field follows the repository's Domain Taxonomy; the number prefix (e.g., `3.1`) identifies the domain and subcategory. A score of `1.0` means the risk is maximally relevant to the described scenario; `0.0` means unrelated.
 
 !!! warning "If `result.status` is `failed`"
     `status: failed` means the agent's quality evaluator rejected the output (e.g., low FAISS similarity scores against the MIT AI Risk Repository). Check `result.errors` for details. Vague or short scenario descriptions tend to produce low similarity; more specific, domain-relevant scenarios — describing the model, training data, deployment context, and human-impact surface — generally produce higher similarity scores and `status: success`.
@@ -502,6 +502,12 @@ Each mode includes **clickable demo examples** in the right column — select on
 | Description | `description` (or `text`) | Full risk description (academic citations stripped for readability) |
 
 A **"MIT AI Risk Repository ↗"** link in the results header opens the full database for deeper exploration.
+
+Each risk card lists up to four **illustrative NIST AI RMF** actions (**GOVERN**, **MAP**, **MEASURE**, **MANAGE**) **linked by MIT risk id**. They are generated templates from `transform_mit_data.py`, not verbatim MIT mitigations—hover the ⓘ on **Mitigations** in the UI. Results are **deduplicated** by risk id and category label (best score kept). The header shows the bundled index version (from `/v1/health`). Use **JSON** or **CSV** to download results.
+
+### Batch mode (UI)
+
+On **Bias (Text)** and **Risk**, switch **Run → batch**. Enter multiple inputs separated by a line containing only `---`, or upload a **CSV** with a `scenario` / `content` / `text` column. A progress bar tracks `POST /v1/batch` polling. Download **JSON** or **Combined CSV** (risk batch flattens all `joined_table` rows with a `batch_item` column).
 
 ### Shutdown
 

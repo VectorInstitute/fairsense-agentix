@@ -36608,5 +36608,5346 @@
     "function": "MANAGE",
     "action": "Manage human oversight escalation and intervention procedures",
     "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5231",
+    "risk_id": "RISK1341",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5232",
+    "risk_id": "RISK1341",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5233",
+    "risk_id": "RISK1341",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5234",
+    "risk_id": "RISK1341",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5235",
+    "risk_id": "RISK1342",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5236",
+    "risk_id": "RISK1342",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5237",
+    "risk_id": "RISK1342",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5238",
+    "risk_id": "RISK1342",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5239",
+    "risk_id": "RISK1343",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5240",
+    "risk_id": "RISK1343",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5241",
+    "risk_id": "RISK1343",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5242",
+    "risk_id": "RISK1343",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5243",
+    "risk_id": "RISK1344",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5244",
+    "risk_id": "RISK1344",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5245",
+    "risk_id": "RISK1344",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5246",
+    "risk_id": "RISK1344",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5247",
+    "risk_id": "RISK1345",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5248",
+    "risk_id": "RISK1345",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5249",
+    "risk_id": "RISK1345",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5250",
+    "risk_id": "RISK1346",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5251",
+    "risk_id": "RISK1346",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5252",
+    "risk_id": "RISK1346",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5253",
+    "risk_id": "RISK1346",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5254",
+    "risk_id": "RISK1347",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5255",
+    "risk_id": "RISK1347",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5256",
+    "risk_id": "RISK1347",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5257",
+    "risk_id": "RISK1347",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5258",
+    "risk_id": "RISK1348",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5259",
+    "risk_id": "RISK1348",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5260",
+    "risk_id": "RISK1348",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5261",
+    "risk_id": "RISK1348",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5262",
+    "risk_id": "RISK1349",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5263",
+    "risk_id": "RISK1349",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5264",
+    "risk_id": "RISK1349",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5265",
+    "risk_id": "RISK1349",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5266",
+    "risk_id": "RISK1350",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5267",
+    "risk_id": "RISK1350",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5268",
+    "risk_id": "RISK1350",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5269",
+    "risk_id": "RISK1350",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5270",
+    "risk_id": "RISK1351",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5271",
+    "risk_id": "RISK1351",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5272",
+    "risk_id": "RISK1351",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5273",
+    "risk_id": "RISK1351",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5274",
+    "risk_id": "RISK1352",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5275",
+    "risk_id": "RISK1352",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5276",
+    "risk_id": "RISK1352",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5277",
+    "risk_id": "RISK1352",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5278",
+    "risk_id": "RISK1353",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5279",
+    "risk_id": "RISK1353",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5280",
+    "risk_id": "RISK1353",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5281",
+    "risk_id": "RISK1354",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5282",
+    "risk_id": "RISK1354",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5283",
+    "risk_id": "RISK1354",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5284",
+    "risk_id": "RISK1354",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5285",
+    "risk_id": "RISK1355",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5286",
+    "risk_id": "RISK1355",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5287",
+    "risk_id": "RISK1355",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5288",
+    "risk_id": "RISK1356",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5289",
+    "risk_id": "RISK1356",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5290",
+    "risk_id": "RISK1356",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5291",
+    "risk_id": "RISK1356",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5292",
+    "risk_id": "RISK1357",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5293",
+    "risk_id": "RISK1357",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5294",
+    "risk_id": "RISK1357",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5295",
+    "risk_id": "RISK1357",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5296",
+    "risk_id": "RISK1358",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5297",
+    "risk_id": "RISK1358",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5298",
+    "risk_id": "RISK1358",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5299",
+    "risk_id": "RISK1358",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5300",
+    "risk_id": "RISK1359",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5301",
+    "risk_id": "RISK1359",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5302",
+    "risk_id": "RISK1359",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5303",
+    "risk_id": "RISK1359",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5304",
+    "risk_id": "RISK1360",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5305",
+    "risk_id": "RISK1360",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5306",
+    "risk_id": "RISK1360",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5307",
+    "risk_id": "RISK1360",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5308",
+    "risk_id": "RISK1361",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5309",
+    "risk_id": "RISK1361",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5310",
+    "risk_id": "RISK1361",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5311",
+    "risk_id": "RISK1362",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5312",
+    "risk_id": "RISK1362",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5313",
+    "risk_id": "RISK1362",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5314",
+    "risk_id": "RISK1363",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5315",
+    "risk_id": "RISK1363",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5316",
+    "risk_id": "RISK1363",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5317",
+    "risk_id": "RISK1363",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5318",
+    "risk_id": "RISK1364",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5319",
+    "risk_id": "RISK1364",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5320",
+    "risk_id": "RISK1364",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5321",
+    "risk_id": "RISK1364",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5322",
+    "risk_id": "RISK1365",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5323",
+    "risk_id": "RISK1365",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5324",
+    "risk_id": "RISK1365",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5325",
+    "risk_id": "RISK1365",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5326",
+    "risk_id": "RISK1366",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5327",
+    "risk_id": "RISK1366",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5328",
+    "risk_id": "RISK1366",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5329",
+    "risk_id": "RISK1366",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5330",
+    "risk_id": "RISK1367",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5331",
+    "risk_id": "RISK1367",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5332",
+    "risk_id": "RISK1367",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5333",
+    "risk_id": "RISK1367",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5334",
+    "risk_id": "RISK1368",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5335",
+    "risk_id": "RISK1368",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5336",
+    "risk_id": "RISK1368",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5337",
+    "risk_id": "RISK1368",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5338",
+    "risk_id": "RISK1369",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5339",
+    "risk_id": "RISK1369",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5340",
+    "risk_id": "RISK1369",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5341",
+    "risk_id": "RISK1370",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5342",
+    "risk_id": "RISK1370",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5343",
+    "risk_id": "RISK1370",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5344",
+    "risk_id": "RISK1370",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5345",
+    "risk_id": "RISK1371",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5346",
+    "risk_id": "RISK1371",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5347",
+    "risk_id": "RISK1371",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5348",
+    "risk_id": "RISK1372",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5349",
+    "risk_id": "RISK1372",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5350",
+    "risk_id": "RISK1372",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5351",
+    "risk_id": "RISK1373",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5352",
+    "risk_id": "RISK1373",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5353",
+    "risk_id": "RISK1373",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5354",
+    "risk_id": "RISK1373",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5355",
+    "risk_id": "RISK1374",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5356",
+    "risk_id": "RISK1374",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5357",
+    "risk_id": "RISK1374",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5358",
+    "risk_id": "RISK1374",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5359",
+    "risk_id": "RISK1375",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5360",
+    "risk_id": "RISK1375",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5361",
+    "risk_id": "RISK1375",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5362",
+    "risk_id": "RISK1375",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5363",
+    "risk_id": "RISK1376",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5364",
+    "risk_id": "RISK1376",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5365",
+    "risk_id": "RISK1376",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5366",
+    "risk_id": "RISK1377",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5367",
+    "risk_id": "RISK1377",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5368",
+    "risk_id": "RISK1377",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5369",
+    "risk_id": "RISK1378",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5370",
+    "risk_id": "RISK1378",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5371",
+    "risk_id": "RISK1378",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5372",
+    "risk_id": "RISK1379",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5373",
+    "risk_id": "RISK1379",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5374",
+    "risk_id": "RISK1379",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5375",
+    "risk_id": "RISK1379",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5376",
+    "risk_id": "RISK1380",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5377",
+    "risk_id": "RISK1380",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5378",
+    "risk_id": "RISK1380",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5379",
+    "risk_id": "RISK1381",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5380",
+    "risk_id": "RISK1381",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5381",
+    "risk_id": "RISK1381",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5382",
+    "risk_id": "RISK1382",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5383",
+    "risk_id": "RISK1382",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5384",
+    "risk_id": "RISK1382",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5385",
+    "risk_id": "RISK1382",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5386",
+    "risk_id": "RISK1383",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5387",
+    "risk_id": "RISK1383",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5388",
+    "risk_id": "RISK1383",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5389",
+    "risk_id": "RISK1383",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5390",
+    "risk_id": "RISK1384",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5391",
+    "risk_id": "RISK1384",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5392",
+    "risk_id": "RISK1384",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5393",
+    "risk_id": "RISK1384",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5394",
+    "risk_id": "RISK1385",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5395",
+    "risk_id": "RISK1385",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5396",
+    "risk_id": "RISK1385",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5397",
+    "risk_id": "RISK1385",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5398",
+    "risk_id": "RISK1386",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5399",
+    "risk_id": "RISK1386",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5400",
+    "risk_id": "RISK1386",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5401",
+    "risk_id": "RISK1386",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5402",
+    "risk_id": "RISK1387",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5403",
+    "risk_id": "RISK1387",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5404",
+    "risk_id": "RISK1387",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5405",
+    "risk_id": "RISK1387",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5406",
+    "risk_id": "RISK1388",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5407",
+    "risk_id": "RISK1388",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5408",
+    "risk_id": "RISK1388",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5409",
+    "risk_id": "RISK1388",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5410",
+    "risk_id": "RISK1389",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5411",
+    "risk_id": "RISK1389",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5412",
+    "risk_id": "RISK1389",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5413",
+    "risk_id": "RISK1390",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5414",
+    "risk_id": "RISK1390",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5415",
+    "risk_id": "RISK1390",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5416",
+    "risk_id": "RISK1390",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5417",
+    "risk_id": "RISK1391",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5418",
+    "risk_id": "RISK1391",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5419",
+    "risk_id": "RISK1391",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5420",
+    "risk_id": "RISK1391",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5421",
+    "risk_id": "RISK1392",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5422",
+    "risk_id": "RISK1392",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5423",
+    "risk_id": "RISK1392",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5424",
+    "risk_id": "RISK1393",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5425",
+    "risk_id": "RISK1393",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5426",
+    "risk_id": "RISK1393",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5427",
+    "risk_id": "RISK1394",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5428",
+    "risk_id": "RISK1394",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5429",
+    "risk_id": "RISK1394",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5430",
+    "risk_id": "RISK1395",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5431",
+    "risk_id": "RISK1395",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5432",
+    "risk_id": "RISK1395",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5433",
+    "risk_id": "RISK1395",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5434",
+    "risk_id": "RISK1396",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5435",
+    "risk_id": "RISK1396",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5436",
+    "risk_id": "RISK1396",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5437",
+    "risk_id": "RISK1396",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5438",
+    "risk_id": "RISK1397",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5439",
+    "risk_id": "RISK1397",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5440",
+    "risk_id": "RISK1397",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5441",
+    "risk_id": "RISK1398",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5442",
+    "risk_id": "RISK1398",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5443",
+    "risk_id": "RISK1398",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5444",
+    "risk_id": "RISK1399",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5445",
+    "risk_id": "RISK1399",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5446",
+    "risk_id": "RISK1399",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5447",
+    "risk_id": "RISK1399",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5448",
+    "risk_id": "RISK1400",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5449",
+    "risk_id": "RISK1400",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5450",
+    "risk_id": "RISK1400",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5451",
+    "risk_id": "RISK1400",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5452",
+    "risk_id": "RISK1401",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5453",
+    "risk_id": "RISK1401",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5454",
+    "risk_id": "RISK1401",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5455",
+    "risk_id": "RISK1402",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5456",
+    "risk_id": "RISK1402",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5457",
+    "risk_id": "RISK1402",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5458",
+    "risk_id": "RISK1402",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5459",
+    "risk_id": "RISK1403",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5460",
+    "risk_id": "RISK1403",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5461",
+    "risk_id": "RISK1403",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5462",
+    "risk_id": "RISK1403",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5463",
+    "risk_id": "RISK1404",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5464",
+    "risk_id": "RISK1404",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5465",
+    "risk_id": "RISK1404",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5466",
+    "risk_id": "RISK1404",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5467",
+    "risk_id": "RISK1405",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5468",
+    "risk_id": "RISK1405",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5469",
+    "risk_id": "RISK1405",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5470",
+    "risk_id": "RISK1405",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5471",
+    "risk_id": "RISK1406",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5472",
+    "risk_id": "RISK1406",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5473",
+    "risk_id": "RISK1406",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5474",
+    "risk_id": "RISK1406",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5475",
+    "risk_id": "RISK1407",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5476",
+    "risk_id": "RISK1407",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5477",
+    "risk_id": "RISK1407",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5478",
+    "risk_id": "RISK1407",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5479",
+    "risk_id": "RISK1408",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5480",
+    "risk_id": "RISK1408",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5481",
+    "risk_id": "RISK1408",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5482",
+    "risk_id": "RISK1408",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5483",
+    "risk_id": "RISK1409",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5484",
+    "risk_id": "RISK1409",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5485",
+    "risk_id": "RISK1409",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5486",
+    "risk_id": "RISK1409",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5487",
+    "risk_id": "RISK1410",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5488",
+    "risk_id": "RISK1410",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5489",
+    "risk_id": "RISK1410",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5490",
+    "risk_id": "RISK1410",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5491",
+    "risk_id": "RISK1411",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5492",
+    "risk_id": "RISK1411",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5493",
+    "risk_id": "RISK1411",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5494",
+    "risk_id": "RISK1411",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5495",
+    "risk_id": "RISK1412",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5496",
+    "risk_id": "RISK1412",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5497",
+    "risk_id": "RISK1412",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5498",
+    "risk_id": "RISK1412",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5499",
+    "risk_id": "RISK1413",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5500",
+    "risk_id": "RISK1413",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5501",
+    "risk_id": "RISK1413",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5502",
+    "risk_id": "RISK1413",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5503",
+    "risk_id": "RISK1414",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5504",
+    "risk_id": "RISK1414",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5505",
+    "risk_id": "RISK1414",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5506",
+    "risk_id": "RISK1414",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5507",
+    "risk_id": "RISK1415",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5508",
+    "risk_id": "RISK1415",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5509",
+    "risk_id": "RISK1415",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5510",
+    "risk_id": "RISK1415",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5511",
+    "risk_id": "RISK1416",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5512",
+    "risk_id": "RISK1416",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5513",
+    "risk_id": "RISK1416",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5514",
+    "risk_id": "RISK1416",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5515",
+    "risk_id": "RISK1417",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5516",
+    "risk_id": "RISK1417",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5517",
+    "risk_id": "RISK1417",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5518",
+    "risk_id": "RISK1417",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5519",
+    "risk_id": "RISK1418",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5520",
+    "risk_id": "RISK1418",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5521",
+    "risk_id": "RISK1418",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5522",
+    "risk_id": "RISK1418",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5523",
+    "risk_id": "RISK1419",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5524",
+    "risk_id": "RISK1419",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5525",
+    "risk_id": "RISK1419",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5526",
+    "risk_id": "RISK1419",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5527",
+    "risk_id": "RISK1420",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5528",
+    "risk_id": "RISK1420",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5529",
+    "risk_id": "RISK1420",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5530",
+    "risk_id": "RISK1420",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5531",
+    "risk_id": "RISK1421",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5532",
+    "risk_id": "RISK1421",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5533",
+    "risk_id": "RISK1421",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5534",
+    "risk_id": "RISK1421",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5535",
+    "risk_id": "RISK1422",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5536",
+    "risk_id": "RISK1422",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5537",
+    "risk_id": "RISK1422",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5538",
+    "risk_id": "RISK1422",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5539",
+    "risk_id": "RISK1423",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5540",
+    "risk_id": "RISK1423",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5541",
+    "risk_id": "RISK1423",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5542",
+    "risk_id": "RISK1423",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5543",
+    "risk_id": "RISK1424",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5544",
+    "risk_id": "RISK1424",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5545",
+    "risk_id": "RISK1424",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5546",
+    "risk_id": "RISK1424",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5547",
+    "risk_id": "RISK1425",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5548",
+    "risk_id": "RISK1425",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5549",
+    "risk_id": "RISK1425",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5550",
+    "risk_id": "RISK1425",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5551",
+    "risk_id": "RISK1426",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5552",
+    "risk_id": "RISK1426",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5553",
+    "risk_id": "RISK1426",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5554",
+    "risk_id": "RISK1426",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5555",
+    "risk_id": "RISK1427",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5556",
+    "risk_id": "RISK1427",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5557",
+    "risk_id": "RISK1427",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5558",
+    "risk_id": "RISK1427",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5559",
+    "risk_id": "RISK1428",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5560",
+    "risk_id": "RISK1428",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5561",
+    "risk_id": "RISK1428",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5562",
+    "risk_id": "RISK1428",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5563",
+    "risk_id": "RISK1429",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5564",
+    "risk_id": "RISK1429",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5565",
+    "risk_id": "RISK1429",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5566",
+    "risk_id": "RISK1429",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5567",
+    "risk_id": "RISK1430",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5568",
+    "risk_id": "RISK1430",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5569",
+    "risk_id": "RISK1430",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5570",
+    "risk_id": "RISK1430",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5571",
+    "risk_id": "RISK1431",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5572",
+    "risk_id": "RISK1431",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5573",
+    "risk_id": "RISK1431",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5574",
+    "risk_id": "RISK1431",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5575",
+    "risk_id": "RISK1432",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5576",
+    "risk_id": "RISK1432",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5577",
+    "risk_id": "RISK1432",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5578",
+    "risk_id": "RISK1432",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5579",
+    "risk_id": "RISK1433",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5580",
+    "risk_id": "RISK1433",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5581",
+    "risk_id": "RISK1433",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5582",
+    "risk_id": "RISK1433",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5583",
+    "risk_id": "RISK1434",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5584",
+    "risk_id": "RISK1434",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5585",
+    "risk_id": "RISK1434",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5586",
+    "risk_id": "RISK1434",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5587",
+    "risk_id": "RISK1435",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5588",
+    "risk_id": "RISK1435",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5589",
+    "risk_id": "RISK1435",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5590",
+    "risk_id": "RISK1435",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5591",
+    "risk_id": "RISK1436",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5592",
+    "risk_id": "RISK1436",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5593",
+    "risk_id": "RISK1436",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5594",
+    "risk_id": "RISK1436",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5595",
+    "risk_id": "RISK1437",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5596",
+    "risk_id": "RISK1437",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5597",
+    "risk_id": "RISK1437",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5598",
+    "risk_id": "RISK1437",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5599",
+    "risk_id": "RISK1438",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5600",
+    "risk_id": "RISK1438",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5601",
+    "risk_id": "RISK1438",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5602",
+    "risk_id": "RISK1438",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5603",
+    "risk_id": "RISK1439",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5604",
+    "risk_id": "RISK1439",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5605",
+    "risk_id": "RISK1439",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5606",
+    "risk_id": "RISK1439",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5607",
+    "risk_id": "RISK1440",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5608",
+    "risk_id": "RISK1440",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5609",
+    "risk_id": "RISK1440",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5610",
+    "risk_id": "RISK1440",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5611",
+    "risk_id": "RISK1441",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5612",
+    "risk_id": "RISK1441",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5613",
+    "risk_id": "RISK1441",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5614",
+    "risk_id": "RISK1441",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5615",
+    "risk_id": "RISK1442",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5616",
+    "risk_id": "RISK1442",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5617",
+    "risk_id": "RISK1442",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5618",
+    "risk_id": "RISK1442",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5619",
+    "risk_id": "RISK1443",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5620",
+    "risk_id": "RISK1443",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5621",
+    "risk_id": "RISK1443",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5622",
+    "risk_id": "RISK1443",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5623",
+    "risk_id": "RISK1444",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5624",
+    "risk_id": "RISK1444",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5625",
+    "risk_id": "RISK1444",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5626",
+    "risk_id": "RISK1444",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5627",
+    "risk_id": "RISK1445",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5628",
+    "risk_id": "RISK1445",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5629",
+    "risk_id": "RISK1445",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5630",
+    "risk_id": "RISK1445",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5631",
+    "risk_id": "RISK1446",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5632",
+    "risk_id": "RISK1446",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5633",
+    "risk_id": "RISK1446",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5634",
+    "risk_id": "RISK1446",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5635",
+    "risk_id": "RISK1447",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5636",
+    "risk_id": "RISK1447",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5637",
+    "risk_id": "RISK1447",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5638",
+    "risk_id": "RISK1447",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5639",
+    "risk_id": "RISK1448",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5640",
+    "risk_id": "RISK1448",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5641",
+    "risk_id": "RISK1448",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5642",
+    "risk_id": "RISK1448",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5643",
+    "risk_id": "RISK1449",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5644",
+    "risk_id": "RISK1449",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5645",
+    "risk_id": "RISK1449",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5646",
+    "risk_id": "RISK1449",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5647",
+    "risk_id": "RISK1450",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5648",
+    "risk_id": "RISK1450",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5649",
+    "risk_id": "RISK1450",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5650",
+    "risk_id": "RISK1451",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5651",
+    "risk_id": "RISK1451",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5652",
+    "risk_id": "RISK1451",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5653",
+    "risk_id": "RISK1452",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5654",
+    "risk_id": "RISK1452",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5655",
+    "risk_id": "RISK1452",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5656",
+    "risk_id": "RISK1452",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5657",
+    "risk_id": "RISK1453",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5658",
+    "risk_id": "RISK1453",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5659",
+    "risk_id": "RISK1453",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5660",
+    "risk_id": "RISK1453",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5661",
+    "risk_id": "RISK1454",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5662",
+    "risk_id": "RISK1454",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5663",
+    "risk_id": "RISK1454",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5664",
+    "risk_id": "RISK1455",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5665",
+    "risk_id": "RISK1455",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5666",
+    "risk_id": "RISK1455",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5667",
+    "risk_id": "RISK1455",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5668",
+    "risk_id": "RISK1456",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5669",
+    "risk_id": "RISK1456",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5670",
+    "risk_id": "RISK1456",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5671",
+    "risk_id": "RISK1457",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5672",
+    "risk_id": "RISK1457",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5673",
+    "risk_id": "RISK1457",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5674",
+    "risk_id": "RISK1458",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5675",
+    "risk_id": "RISK1458",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5676",
+    "risk_id": "RISK1458",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5677",
+    "risk_id": "RISK1458",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5678",
+    "risk_id": "RISK1459",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5679",
+    "risk_id": "RISK1459",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5680",
+    "risk_id": "RISK1459",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5681",
+    "risk_id": "RISK1459",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5682",
+    "risk_id": "RISK1460",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5683",
+    "risk_id": "RISK1460",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5684",
+    "risk_id": "RISK1460",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5685",
+    "risk_id": "RISK1460",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5686",
+    "risk_id": "RISK1461",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5687",
+    "risk_id": "RISK1461",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5688",
+    "risk_id": "RISK1461",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5689",
+    "risk_id": "RISK1461",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5690",
+    "risk_id": "RISK1462",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5691",
+    "risk_id": "RISK1462",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5692",
+    "risk_id": "RISK1462",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5693",
+    "risk_id": "RISK1462",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5694",
+    "risk_id": "RISK1463",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5695",
+    "risk_id": "RISK1463",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5696",
+    "risk_id": "RISK1463",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5697",
+    "risk_id": "RISK1463",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5698",
+    "risk_id": "RISK1464",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5699",
+    "risk_id": "RISK1464",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5700",
+    "risk_id": "RISK1464",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5701",
+    "risk_id": "RISK1464",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5702",
+    "risk_id": "RISK1465",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5703",
+    "risk_id": "RISK1465",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5704",
+    "risk_id": "RISK1465",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5705",
+    "risk_id": "RISK1465",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5706",
+    "risk_id": "RISK1466",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5707",
+    "risk_id": "RISK1466",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5708",
+    "risk_id": "RISK1466",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5709",
+    "risk_id": "RISK1466",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5710",
+    "risk_id": "RISK1467",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5711",
+    "risk_id": "RISK1467",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5712",
+    "risk_id": "RISK1467",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5713",
+    "risk_id": "RISK1467",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5714",
+    "risk_id": "RISK1468",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5715",
+    "risk_id": "RISK1468",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5716",
+    "risk_id": "RISK1468",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5717",
+    "risk_id": "RISK1468",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5718",
+    "risk_id": "RISK1469",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5719",
+    "risk_id": "RISK1469",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5720",
+    "risk_id": "RISK1469",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5721",
+    "risk_id": "RISK1469",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5722",
+    "risk_id": "RISK1470",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5723",
+    "risk_id": "RISK1470",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5724",
+    "risk_id": "RISK1470",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5725",
+    "risk_id": "RISK1471",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5726",
+    "risk_id": "RISK1471",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5727",
+    "risk_id": "RISK1471",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5728",
+    "risk_id": "RISK1471",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5729",
+    "risk_id": "RISK1472",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5730",
+    "risk_id": "RISK1472",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5731",
+    "risk_id": "RISK1472",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5732",
+    "risk_id": "RISK1472",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5733",
+    "risk_id": "RISK1473",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5734",
+    "risk_id": "RISK1473",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5735",
+    "risk_id": "RISK1473",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5736",
+    "risk_id": "RISK1473",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5737",
+    "risk_id": "RISK1474",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5738",
+    "risk_id": "RISK1474",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5739",
+    "risk_id": "RISK1474",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5740",
+    "risk_id": "RISK1474",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5741",
+    "risk_id": "RISK1475",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5742",
+    "risk_id": "RISK1475",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5743",
+    "risk_id": "RISK1475",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5744",
+    "risk_id": "RISK1475",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5745",
+    "risk_id": "RISK1476",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5746",
+    "risk_id": "RISK1476",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5747",
+    "risk_id": "RISK1476",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5748",
+    "risk_id": "RISK1476",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5749",
+    "risk_id": "RISK1477",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5750",
+    "risk_id": "RISK1477",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5751",
+    "risk_id": "RISK1477",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5752",
+    "risk_id": "RISK1477",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5753",
+    "risk_id": "RISK1478",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5754",
+    "risk_id": "RISK1478",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5755",
+    "risk_id": "RISK1478",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5756",
+    "risk_id": "RISK1478",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5757",
+    "risk_id": "RISK1479",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5758",
+    "risk_id": "RISK1479",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5759",
+    "risk_id": "RISK1479",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5760",
+    "risk_id": "RISK1479",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5761",
+    "risk_id": "RISK1480",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5762",
+    "risk_id": "RISK1480",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5763",
+    "risk_id": "RISK1480",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5764",
+    "risk_id": "RISK1480",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5765",
+    "risk_id": "RISK1481",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5766",
+    "risk_id": "RISK1481",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5767",
+    "risk_id": "RISK1481",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5768",
+    "risk_id": "RISK1481",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5769",
+    "risk_id": "RISK1482",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5770",
+    "risk_id": "RISK1482",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5771",
+    "risk_id": "RISK1482",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5772",
+    "risk_id": "RISK1482",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5773",
+    "risk_id": "RISK1483",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5774",
+    "risk_id": "RISK1483",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5775",
+    "risk_id": "RISK1483",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5776",
+    "risk_id": "RISK1483",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5777",
+    "risk_id": "RISK1484",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5778",
+    "risk_id": "RISK1484",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5779",
+    "risk_id": "RISK1484",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5780",
+    "risk_id": "RISK1484",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5781",
+    "risk_id": "RISK1485",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5782",
+    "risk_id": "RISK1485",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5783",
+    "risk_id": "RISK1485",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5784",
+    "risk_id": "RISK1485",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5785",
+    "risk_id": "RISK1486",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5786",
+    "risk_id": "RISK1486",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5787",
+    "risk_id": "RISK1486",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5788",
+    "risk_id": "RISK1486",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5789",
+    "risk_id": "RISK1487",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5790",
+    "risk_id": "RISK1487",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5791",
+    "risk_id": "RISK1487",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5792",
+    "risk_id": "RISK1487",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5793",
+    "risk_id": "RISK1488",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5794",
+    "risk_id": "RISK1488",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5795",
+    "risk_id": "RISK1488",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5796",
+    "risk_id": "RISK1488",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5797",
+    "risk_id": "RISK1489",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5798",
+    "risk_id": "RISK1489",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5799",
+    "risk_id": "RISK1489",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5800",
+    "risk_id": "RISK1489",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5801",
+    "risk_id": "RISK1490",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5802",
+    "risk_id": "RISK1490",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5803",
+    "risk_id": "RISK1490",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5804",
+    "risk_id": "RISK1490",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5805",
+    "risk_id": "RISK1491",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5806",
+    "risk_id": "RISK1491",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5807",
+    "risk_id": "RISK1491",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5808",
+    "risk_id": "RISK1491",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5809",
+    "risk_id": "RISK1492",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5810",
+    "risk_id": "RISK1492",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5811",
+    "risk_id": "RISK1492",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5812",
+    "risk_id": "RISK1492",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5813",
+    "risk_id": "RISK1493",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5814",
+    "risk_id": "RISK1493",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5815",
+    "risk_id": "RISK1493",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5816",
+    "risk_id": "RISK1493",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5817",
+    "risk_id": "RISK1494",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5818",
+    "risk_id": "RISK1494",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5819",
+    "risk_id": "RISK1494",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5820",
+    "risk_id": "RISK1494",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5821",
+    "risk_id": "RISK1495",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5822",
+    "risk_id": "RISK1495",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5823",
+    "risk_id": "RISK1495",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5824",
+    "risk_id": "RISK1495",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5825",
+    "risk_id": "RISK1496",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5826",
+    "risk_id": "RISK1496",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5827",
+    "risk_id": "RISK1496",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5828",
+    "risk_id": "RISK1496",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5829",
+    "risk_id": "RISK1497",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5830",
+    "risk_id": "RISK1497",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5831",
+    "risk_id": "RISK1497",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5832",
+    "risk_id": "RISK1497",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5833",
+    "risk_id": "RISK1498",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5834",
+    "risk_id": "RISK1498",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5835",
+    "risk_id": "RISK1498",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5836",
+    "risk_id": "RISK1498",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5837",
+    "risk_id": "RISK1499",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5838",
+    "risk_id": "RISK1499",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5839",
+    "risk_id": "RISK1499",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5840",
+    "risk_id": "RISK1499",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5841",
+    "risk_id": "RISK1500",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5842",
+    "risk_id": "RISK1500",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5843",
+    "risk_id": "RISK1500",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5844",
+    "risk_id": "RISK1500",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5845",
+    "risk_id": "RISK1501",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5846",
+    "risk_id": "RISK1501",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5847",
+    "risk_id": "RISK1501",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5848",
+    "risk_id": "RISK1501",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5849",
+    "risk_id": "RISK1502",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5850",
+    "risk_id": "RISK1502",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5851",
+    "risk_id": "RISK1502",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5852",
+    "risk_id": "RISK1502",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5853",
+    "risk_id": "RISK1503",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5854",
+    "risk_id": "RISK1503",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5855",
+    "risk_id": "RISK1503",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5856",
+    "risk_id": "RISK1503",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5857",
+    "risk_id": "RISK1504",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5858",
+    "risk_id": "RISK1504",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5859",
+    "risk_id": "RISK1504",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5860",
+    "risk_id": "RISK1504",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5861",
+    "risk_id": "RISK1505",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5862",
+    "risk_id": "RISK1505",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5863",
+    "risk_id": "RISK1505",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5864",
+    "risk_id": "RISK1505",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5865",
+    "risk_id": "RISK1506",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5866",
+    "risk_id": "RISK1506",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5867",
+    "risk_id": "RISK1506",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5868",
+    "risk_id": "RISK1506",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5869",
+    "risk_id": "RISK1507",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5870",
+    "risk_id": "RISK1507",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5871",
+    "risk_id": "RISK1507",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5872",
+    "risk_id": "RISK1507",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5873",
+    "risk_id": "RISK1508",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5874",
+    "risk_id": "RISK1508",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5875",
+    "risk_id": "RISK1508",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5876",
+    "risk_id": "RISK1508",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5877",
+    "risk_id": "RISK1509",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5878",
+    "risk_id": "RISK1509",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5879",
+    "risk_id": "RISK1509",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5880",
+    "risk_id": "RISK1509",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5881",
+    "risk_id": "RISK1510",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5882",
+    "risk_id": "RISK1510",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5883",
+    "risk_id": "RISK1510",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5884",
+    "risk_id": "RISK1511",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5885",
+    "risk_id": "RISK1511",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5886",
+    "risk_id": "RISK1511",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5887",
+    "risk_id": "RISK1511",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5888",
+    "risk_id": "RISK1512",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5889",
+    "risk_id": "RISK1512",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5890",
+    "risk_id": "RISK1512",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5891",
+    "risk_id": "RISK1512",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5892",
+    "risk_id": "RISK1513",
+    "function": "GOVERN",
+    "action": "Develop human oversight policies ensuring appropriate human control and intervention capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5893",
+    "risk_id": "RISK1513",
+    "function": "MAP",
+    "action": "Map human-AI interaction points and identify areas requiring human oversight",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5894",
+    "risk_id": "RISK1513",
+    "function": "MEASURE",
+    "action": "Measure user trust, reliance patterns, and human-AI collaboration effectiveness",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5895",
+    "risk_id": "RISK1513",
+    "function": "MANAGE",
+    "action": "Manage human oversight escalation and intervention procedures",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5896",
+    "risk_id": "RISK1514",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5897",
+    "risk_id": "RISK1514",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5898",
+    "risk_id": "RISK1514",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5899",
+    "risk_id": "RISK1515",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5900",
+    "risk_id": "RISK1515",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5901",
+    "risk_id": "RISK1515",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5902",
+    "risk_id": "RISK1515",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5903",
+    "risk_id": "RISK1516",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5904",
+    "risk_id": "RISK1516",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5905",
+    "risk_id": "RISK1516",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5906",
+    "risk_id": "RISK1516",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5907",
+    "risk_id": "RISK1517",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5908",
+    "risk_id": "RISK1517",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5909",
+    "risk_id": "RISK1517",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5910",
+    "risk_id": "RISK1517",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5911",
+    "risk_id": "RISK1518",
+    "function": "GOVERN",
+    "action": "Establish governance structures for monitoring societal impacts and stakeholder engagement",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5912",
+    "risk_id": "RISK1518",
+    "function": "MAP",
+    "action": "Map potential socioeconomic impacts across different stakeholder groups",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5913",
+    "risk_id": "RISK1518",
+    "function": "MEASURE",
+    "action": "Measure societal impacts using validated metrics and stakeholder feedback mechanisms",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5914",
+    "risk_id": "RISK1518",
+    "function": "MANAGE",
+    "action": "Establish harm mitigation procedures and stakeholder support mechanisms",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5915",
+    "risk_id": "RISK1519",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5916",
+    "risk_id": "RISK1519",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5917",
+    "risk_id": "RISK1519",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5918",
+    "risk_id": "RISK1519",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5919",
+    "risk_id": "RISK1520",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5920",
+    "risk_id": "RISK1520",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5921",
+    "risk_id": "RISK1520",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5922",
+    "risk_id": "RISK1520",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5923",
+    "risk_id": "RISK1521",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5924",
+    "risk_id": "RISK1521",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5925",
+    "risk_id": "RISK1521",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5926",
+    "risk_id": "RISK1521",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5927",
+    "risk_id": "RISK1522",
+    "function": "GOVERN",
+    "action": "Establish AI risk management governance policies and accountability structures",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5928",
+    "risk_id": "RISK1522",
+    "function": "MAP",
+    "action": "Conduct comprehensive risk assessment and impact analysis",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5929",
+    "risk_id": "RISK1522",
+    "function": "MEASURE",
+    "action": "Implement monitoring and measurement systems for risk indicators",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5930",
+    "risk_id": "RISK1523",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5931",
+    "risk_id": "RISK1523",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5932",
+    "risk_id": "RISK1523",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5933",
+    "risk_id": "RISK1523",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5934",
+    "risk_id": "RISK1524",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5935",
+    "risk_id": "RISK1524",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5936",
+    "risk_id": "RISK1524",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5937",
+    "risk_id": "RISK1524",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5938",
+    "risk_id": "RISK1525",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5939",
+    "risk_id": "RISK1525",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5940",
+    "risk_id": "RISK1525",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5941",
+    "risk_id": "RISK1525",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5942",
+    "risk_id": "RISK1526",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5943",
+    "risk_id": "RISK1526",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5944",
+    "risk_id": "RISK1526",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5945",
+    "risk_id": "RISK1526",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5946",
+    "risk_id": "RISK1527",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5947",
+    "risk_id": "RISK1527",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5948",
+    "risk_id": "RISK1527",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5949",
+    "risk_id": "RISK1527",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5950",
+    "risk_id": "RISK1528",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5951",
+    "risk_id": "RISK1528",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5952",
+    "risk_id": "RISK1528",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5953",
+    "risk_id": "RISK1528",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5954",
+    "risk_id": "RISK1529",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5955",
+    "risk_id": "RISK1529",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5956",
+    "risk_id": "RISK1529",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5957",
+    "risk_id": "RISK1529",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5958",
+    "risk_id": "RISK1530",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5959",
+    "risk_id": "RISK1530",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5960",
+    "risk_id": "RISK1530",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5961",
+    "risk_id": "RISK1530",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5962",
+    "risk_id": "RISK1531",
+    "function": "GOVERN",
+    "action": "Create oversight mechanisms to verify information accuracy and establish content moderation policies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5963",
+    "risk_id": "RISK1531",
+    "function": "MAP",
+    "action": "Identify potential sources of misinformation and map information pathways",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5964",
+    "risk_id": "RISK1531",
+    "function": "MEASURE",
+    "action": "Establish accuracy benchmarks and implement fact-checking validation protocols",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5965",
+    "risk_id": "RISK1531",
+    "function": "MANAGE",
+    "action": "Create content correction mechanisms and misinformation mitigation workflows",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5966",
+    "risk_id": "RISK1532",
+    "function": "GOVERN",
+    "action": "Create technical governance frameworks for AI safety, testing protocols, and risk management",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5967",
+    "risk_id": "RISK1532",
+    "function": "MAP",
+    "action": "Conduct technical risk assessments identifying failure modes and safety boundaries",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5968",
+    "risk_id": "RISK1532",
+    "function": "MEASURE",
+    "action": "Implement comprehensive testing suites for robustness, reliability, and safety",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5969",
+    "risk_id": "RISK1532",
+    "function": "MANAGE",
+    "action": "Implement safety fallbacks, failure recovery procedures, and continuous improvement processes",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5970",
+    "risk_id": "RISK1533",
+    "function": "GOVERN",
+    "action": "Define security governance policies and incident response procedures for AI system threats",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5971",
+    "risk_id": "RISK1533",
+    "function": "MAP",
+    "action": "Perform threat modeling to identify attack surfaces and security vulnerabilities",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5972",
+    "risk_id": "RISK1533",
+    "function": "MEASURE",
+    "action": "Deploy security monitoring systems and conduct penetration testing regularly",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5973",
+    "risk_id": "RISK1533",
+    "function": "MANAGE",
+    "action": "Deploy security incident response and threat mitigation capabilities",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5974",
+    "risk_id": "RISK1534",
+    "function": "GOVERN",
+    "action": "Establish governance policies for fairness testing and bias monitoring across all AI systems",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5975",
+    "risk_id": "RISK1534",
+    "function": "MAP",
+    "action": "Conduct comprehensive bias audits across protected characteristics and use cases",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5976",
+    "risk_id": "RISK1534",
+    "function": "MEASURE",
+    "action": "Implement continuous bias metrics tracking across demographic groups and contexts",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5977",
+    "risk_id": "RISK1534",
+    "function": "MANAGE",
+    "action": "Establish bias remediation procedures and fairness improvement feedback loops",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5978",
+    "risk_id": "RISK1535",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5979",
+    "risk_id": "RISK1535",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5980",
+    "risk_id": "RISK1535",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5981",
+    "risk_id": "RISK1535",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5982",
+    "risk_id": "RISK1536",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5983",
+    "risk_id": "RISK1536",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5984",
+    "risk_id": "RISK1536",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5985",
+    "risk_id": "RISK1536",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5986",
+    "risk_id": "RISK1537",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5987",
+    "risk_id": "RISK1537",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5988",
+    "risk_id": "RISK1537",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5989",
+    "risk_id": "RISK1537",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5990",
+    "risk_id": "RISK1538",
+    "function": "GOVERN",
+    "action": "Implement data governance frameworks ensuring privacy-by-design principles and compliance with regulations",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5991",
+    "risk_id": "RISK1538",
+    "function": "MAP",
+    "action": "Map data flows and identify privacy risks throughout the AI system lifecycle",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "RMF5992",
+    "risk_id": "RISK1538",
+    "function": "MEASURE",
+    "action": "Deploy privacy-preserving measurement techniques and conduct regular privacy audits",
+    "priority": "HIGH"
+  },
+  {
+    "id": "RMF5993",
+    "risk_id": "RISK1538",
+    "function": "MANAGE",
+    "action": "Implement privacy incident response plans and data protection mitigation strategies",
+    "priority": "HIGH"
   }
 ]
