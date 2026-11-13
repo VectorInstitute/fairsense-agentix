@@ -1,0 +1,4 @@
+scenario
+"A hospital deploys a triage ML model on patient EHR data. The model is updated from user feedback without re-validation. No disparate impact testing on protected groups."
+"A retailer runs live facial recognition in 300 stores trained on mugshots. Customers are not informed. Security staff get automatic alerts above 70% match confidence."
+"A bank uses an LLM chatbot for customer service. Fine-tuning data includes prior call transcripts. The system logs full prompts for model improvement without consent notices."

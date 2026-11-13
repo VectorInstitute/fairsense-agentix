@@ -27,6 +27,7 @@ CLAUDE.md
 *.json
 !.zenodo.json
 *.csv
+!examples/batch_risk_scenarios.csv
 # BUT: Allow package data files
 !fairsense_agentix/data/**/*.faiss
 !fairsense_agentix/data/**/*.pkl
