@@ -37,6 +37,9 @@ CLAUDE.md
 data/indexes/*.json
 data/indexes/README.md
 .env
+.env.vector
+.env.local
+local/
 .cache/langchain.db
 run_demo.sh
 test_demo.py
