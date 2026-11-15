@@ -83,24 +83,7 @@ for instance in result.bias_instances:
     print(f"  - {instance['type']} ({instance['severity']}): {instance['text_span']}")
 ```
 
----
 
-## 📖 Citation
-
-```bibtex
-@article{Narayanan2026,
-  doi = {10.21105/joss.11060},
-  url = {https://doi.org/10.21105/joss.11060},
-  year = {2026},
-  publisher = {The Open Journal},
-  volume = {11},
-  number = {126},
-  pages = {11060},
-  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
-  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
-  journal = {Journal of Open Source Software}
-}
-```
 
 ---
 
@@ -218,6 +201,25 @@ pytest.
 Resources used in preparing this research were provided, in part, by the Province of Ontario, the Government of Canada through CIFAR, and companies sponsoring the Vector Institute.
 
 This research was funded by the European Union's Horizon Europe research and innovation programme under the AIXPERT project (Grant Agreement No. 101214389).
+
+---
+
+## 📖 Citation
+
+```bibtex
+@article{Narayanan2026,
+  doi = {10.21105/joss.11060},
+  url = {https://doi.org/10.21105/joss.11060},
+  year = {2026},
+  publisher = {The Open Journal},
+  volume = {11},
+  number = {126},
+  pages = {11060},
+  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
+  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
+  journal = {Journal of Open Source Software}
+}
+```
 
 ## Contributing
 If you are interested in contributing to the library, please see
