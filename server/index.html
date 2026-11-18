@@ -342,6 +342,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../mit-risk-index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MIT risk index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../api/" class="md-tabs__link">
         
   
@@ -780,6 +799,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../mit-risk-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIT risk index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/" class="md-nav__link">
         
   
@@ -1088,7 +1129,11 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>install
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
 </span></code></pre></div>
-<p>Set <code>VITE_API_BASE</code> to your backend URL (default: <code>http://localhost:8000</code>).</p>
+<p><strong>API URL in the browser:</strong></p>
+<ul>
+<li><strong>Same machine (laptop):</strong> leave <code>VITE_API_BASE</code> unset so the UI calls <code>http://localhost:8000</code>, or set it explicitly.</li>
+<li><strong>SSH tunnel (one forwarded port):</strong> start the API on the remote host (<code>127.0.0.1:8000</code>), run <code>npm run dev</code> on the remote, forward <strong>only port 5173</strong>, and <strong>do not</strong> set <code>VITE_API_BASE</code>. Vite proxies <code>/v1</code> (including WebSockets) to <code>http://127.0.0.1:8000</code> (see <code>ui/vite.config.ts</code>).</li>
+</ul>
 <hr />
 <h2 id="launcher-usage">Launcher Usage<a class="headerlink" href="#launcher-usage" title="Permanent link">&para;</a></h2>
 <h3 id="custom-ports">Custom Ports<a class="headerlink" href="#custom-ports" title="Permanent link">&para;</a></h3>

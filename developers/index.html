@@ -340,6 +340,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../mit-risk-index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MIT risk index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../api/" class="md-tabs__link">
         
   
@@ -560,6 +579,28 @@
   
   <span class="md-ellipsis">
     Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mit-risk-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIT risk index
     
   </span>
   
@@ -2055,7 +2096,11 @@
 </tr>
 <tr>
 <td><code>nodes_retrieval.py</code></td>
-<td><code>embed_scenario</code>, <code>search_risks</code>, <code>search_rmf_per_risk</code>.</td>
+<td><code>embed_scenario</code>, <code>search_risks</code>, <code>search_rmf_per_risk</code> (calls <code>rmf_lookup.recommendations_for_risk</code>).</td>
+</tr>
+<tr>
+<td><code>rmf_lookup.py</code></td>
+<td>Load <code>rmf_meta.json</code> by MIT <code>risk_id</code> (replaces global RMF FAISS neighbor search at display time).</td>
 </tr>
 <tr>
 <td><code>nodes_output.py</code></td>

@@ -16,7 +16,7 @@
         <link rel="prev" href="../server/">
       
       
-        <link rel="next" href="../api/">
+        <link rel="next" href="../mit-risk-index/">
       
       
       <link rel="icon" href="../assets/favicon-48x48.svg">
@@ -330,6 +330,25 @@
     
   
   Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mit-risk-index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MIT risk index
 
       </a>
     </li>
@@ -1138,6 +1157,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mit-risk-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIT risk index
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2159,8 +2200,8 @@ flowchart TB
 <p><strong>Nodes:</strong></p>
 <ol>
 <li><strong>embed_scenario</strong> — <code>sentence-transformers</code> → 384-dim vector</li>
-<li><strong>search_risks</strong> — top-k similarity over the packaged MIT AI Risk Repository index (<strong>1,340</strong> risks, V3)</li>
-<li><strong>search_rmf_per_risk</strong> — NIST AI RMF–aligned actions per retrieved risk</li>
+<li><strong>search_risks</strong> — top-k similarity over the packaged MIT AI Risk Repository index (<strong>1,538</strong> risks, V4)</li>
+<li><strong>search_rmf_per_risk</strong> — illustrative RMF actions per retrieved risk (<code>rmf_meta.json</code> lookup by <code>risk_id</code>; default <strong>4</strong> per risk via <code>options.rmf_per_risk</code>)</li>
 <li><strong>join_data</strong> — merge risks + recommendations</li>
 <li><strong>format_html</strong> — display table</li>
 <li><strong>export_csv</strong> — optional file under <code>outputs/</code></li>
@@ -2172,11 +2213,11 @@ flowchart TB
 - <code>html_table</code> - Formatted HTML table
 - <code>csv_path</code> - Path to exported CSV file</p>
 <p><strong>Knowledge Base:</strong>
-- <strong>Risks:</strong> 1,340 indexed entries from the MIT AI Risk Repository (V3 embeddings)
-- <strong>RMF:</strong> companion FAISS index of NIST AI RMF–style mitigation rows joined per risk
+- <strong>Risks:</strong> 1,538 indexed entries from the MIT AI Risk Repository V4 snapshot (3 Dec 2025). The <a href="https://doi.org/10.21105/joss.11060">JOSS paper</a> documents the earlier V3 (1,340) index.
+- <strong>RMF:</strong> template actions in <code>rmf_meta.json</code> joined per risk id (<code>rmf_lookup</code>); the RMF FAISS index supports rebuilds and legacy paths
 - <strong>Storage:</strong> FAISS index files live inside the package at <code>fairsense_agentix/data/indexes/</code> in LangChain format:
   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fairsense_agentix/data/indexes/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── risks/index.faiss   # vector index (1,340 risks, 384-dim embeddings)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── risks/index.faiss   # vector index (1,538 risks, 384-dim embeddings)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── risks/index.pkl     # LangChain document store
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── risks_meta.json     # human-readable fields (id, risk_name, description, severity, category)
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── rmf/index.faiss
@@ -2856,13 +2897,13 @@ flowchart TB
         
         
           
-          <a href="../api/" class="md-footer__link md-footer__link--next" aria-label="Next: API Reference">
+          <a href="../mit-risk-index/" class="md-footer__link md-footer__link--next" aria-label="Next: MIT risk index">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                API Reference
+                MIT risk index
               </div>
             </div>
             <div class="md-footer__button md-icon">

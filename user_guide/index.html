@@ -342,6 +342,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../mit-risk-index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MIT risk index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../api/" class="md-tabs__link">
         
   
@@ -891,6 +910,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#batch-mode-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch mode (UI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#shutdown" class="md-nav__link">
     <span class="md-ellipsis">
       Shutdown
@@ -1184,6 +1212,28 @@
   
   <span class="md-ellipsis">
     Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mit-risk-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIT risk index
     
   </span>
   
@@ -1611,6 +1661,15 @@
   <a href="#reading-results" class="md-nav__link">
     <span class="md-ellipsis">
       Reading Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-mode-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch mode (UI)
     </span>
   </a>
   
@@ -2395,11 +2454,11 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">What the recommendations are</p>
-<p>The recommendations are <strong>not</strong> text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions, then indexed for retrieval. See <code>scripts/transform_mit_data.py</code> for how they are built.</p>
+<p>The recommendations are <strong>not</strong> text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions. At runtime they are loaded <strong>by MIT <code>risk_id</code></strong> from <code>rmf_meta.json</code> (<code>rmf_lookup</code>), not via a separate global FAISS search on the RMF index. Default <strong><code>rmf_per_risk</code>: 4</strong> (max 20). See <a href="../mit-risk-index/">MIT risk index</a> and <code>scripts/transform_mit_data.py</code>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Risk source</p>
-<p>Risks are retrieved from the <a href="https://airisk.mit.edu/">MIT AI Risk Repository</a> (V3, 1,340 entries) using semantic similarity search. The <code>category</code> field follows the repository's Domain Taxonomy; the number prefix (e.g., <code>3.1</code>) identifies the domain and subcategory. A score of <code>1.0</code> means the risk is maximally relevant to the described scenario; <code>0.0</code> means unrelated.</p>
+<p>Risks are retrieved from the <a href="https://airisk.mit.edu/">MIT AI Risk Repository</a> (V4, 1,538 indexed entries, Dec 2025 snapshot) using semantic similarity search. The <code>category</code> field follows the repository's Domain Taxonomy; the number prefix (e.g., <code>3.1</code>) identifies the domain and subcategory. A score of <code>1.0</code> means the risk is maximally relevant to the described scenario; <code>0.0</code> means unrelated.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">If <code>result.status</code> is <code>failed</code></p>
@@ -2556,6 +2615,9 @@
 </tbody>
 </table>
 <p>A <strong>"MIT AI Risk Repository ↗"</strong> link in the results header opens the full database for deeper exploration.</p>
+<p>Each risk card lists up to four <strong>illustrative NIST AI RMF</strong> actions (<strong>GOVERN</strong>, <strong>MAP</strong>, <strong>MEASURE</strong>, <strong>MANAGE</strong>) <strong>linked by MIT risk id</strong>. They are generated templates from <code>transform_mit_data.py</code>, not verbatim MIT mitigations—hover the ⓘ on <strong>Mitigations</strong> in the UI. Results are <strong>deduplicated</strong> by risk id and category label (best score kept). The header shows the bundled index version (from <code>/v1/health</code>). Use <strong>JSON</strong> or <strong>CSV</strong> to download results.</p>
+<h3 id="batch-mode-ui">Batch mode (UI)<a class="headerlink" href="#batch-mode-ui" title="Permanent link">&para;</a></h3>
+<p>On <strong>Bias (Text)</strong> and <strong>Risk</strong>, switch <strong>Run → batch</strong>. Enter multiple inputs separated by a line containing only <code>---</code>, or upload a <strong>CSV</strong> with a <code>scenario</code> / <code>content</code> / <code>text</code> column. A progress bar tracks <code>POST /v1/batch</code> polling. Download <strong>JSON</strong> or <strong>Combined CSV</strong> (risk batch flattens all <code>joined_table</code> rows with a <code>batch_item</code> column).</p>
 <h3 id="shutdown">Shutdown<a class="headerlink" href="#shutdown" title="Permanent link">&para;</a></h3>
 <p>Click the red <strong>Shutdown</strong> button in the top-right corner of the app page to gracefully stop both servers, or press <code>Ctrl+C</code> in the terminal.</p>
 <hr />
