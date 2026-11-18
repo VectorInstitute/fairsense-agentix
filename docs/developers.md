@@ -162,7 +162,8 @@ The CSV / FAISS risk workflow lives under `fairsense_agentix/graphs/risk/`. **Ca
 | Module | Contents |
 |--------|----------|
 | `build.py` | `create_risk_graph()` — sequential embed → search → RMF → join → HTML → CSV. |
-| `nodes_retrieval.py` | `embed_scenario`, `search_risks`, `search_rmf_per_risk`. |
+| `nodes_retrieval.py` | `embed_scenario`, `search_risks`, `search_rmf_per_risk` (calls `rmf_lookup.recommendations_for_risk`). |
+| `rmf_lookup.py` | Load `rmf_meta.json` by MIT `risk_id` (replaces global RMF FAISS neighbor search at display time). |
 | `nodes_output.py` | `join_data`, `format_html`, `export_csv`. |
 
 ### Evaluator package (`services/evaluator/`)

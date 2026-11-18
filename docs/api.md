@@ -124,12 +124,20 @@ Check if the server is ready to accept requests.
 ```json
 {
   "status": "ok",
+  "software_version": "0.3.0",
   "llm_provider": "openai",
-  "mock_mode": false
+  "mock_mode": false,
+  "mit_risk_repository_version": "v4",
+  "mit_risk_snapshot_date": "2025-12-03",
+  "indexed_risk_count": 1538
 }
 ```
 
 `mock_mode` is `true` when the server runs with `FAIRSENSE_LLM_PROVIDER=fake`; every analysis result is then a synthetic placeholder and the UI shows a warning banner.
+
+`mit_*` and `indexed_risk_count` describe the MIT corpus bundled in this release (see [MIT risk index](mit-risk-index.md)); the [JOSS paper](https://doi.org/10.21105/joss.11060) documents the earlier V3 (1,340) snapshot.
+
+**Risk analysis options** (JSON `options` on `/v1/analyze` and batch items): `top_k` (default **5**, max 100) selects MIT risks from FAISS; `rmf_per_risk` (default **4**, max 20) caps illustrative RMF actions per risk (loaded by `risk_id` from packaged metadata).
 
 **cURL Example:**
 ```bash

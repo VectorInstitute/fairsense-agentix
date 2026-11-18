@@ -220,11 +220,11 @@ class TestPhase2Integration:
             risk_id = risk.get("risk_id") or risk.get("id")
             assert risk_id in result["workflow_result"]["rmf_recommendations"]
             rmf_recs = result["workflow_result"]["rmf_recommendations"][risk_id]
-            assert len(rmf_recs) == 3  # 3 RMF per risk
+            assert len(rmf_recs) == 4  # default rmf_per_risk
 
         # Verify data joining
         assert result["workflow_result"]["joined_table"] is not None
-        assert len(result["workflow_result"]["joined_table"]) == 15  # 5 risks × 3 RMF
+        assert len(result["workflow_result"]["joined_table"]) == 20  # 5 risks × 4 RMF
         first_row = result["workflow_result"]["joined_table"][0]
         assert "risk_id" in first_row
         assert "rmf_id" in first_row

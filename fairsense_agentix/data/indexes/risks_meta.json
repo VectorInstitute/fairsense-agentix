@@ -9378,5 +9378,1391 @@
     "description": "\"AI might affect the individuals\u2019 ability to make choices and act independently in their best interests.\"",
     "severity": "MEDIUM",
     "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1341",
+    "risk_name": "-",
+    "description": "\"Loss of or restrictions to the ability or rights of an individual, group or entity to make decisions and control their identity and/or output due to the use of misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1342",
+    "risk_name": "Impersonation / identity theft",
+    "description": "\"Theft of an individual, group or organisation\u2019s identity by a third-party in order to defraud, mock or otherwise harm them or another party\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1343",
+    "risk_name": "IP / copyright / personality / rights loss",
+    "description": "\"Misuse or abuse of an individual or organisation\u2019s intellectual property, including copyright, trademarks, and patents. & Loss of or restrictions to the rights of an individual to control the commercial use of their identity, such as name, image, likeness, or other unequivocal identifiers\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1344",
+    "risk_name": "Autonomy / agency loss",
+    "description": "\"Loss of an individual, group or organisation\u2019s ability to make informed decisions or pursue goals\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1345",
+    "risk_name": "-",
+    "description": "\"Damage to core political and economic institutions and the effective delivery of government services caused by the use or misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1346",
+    "risk_name": "Political instability",
+    "description": "\"Political unrest caused directly or indirectly by the use or misuse of a technology system\"",
+    "severity": "MEDIUM",
+    "category": "6.0 > Socioeconomic & Environmental"
+  },
+  {
+    "id": "RISK1347",
+    "risk_name": "Institutional trust loss",
+    "description": "\"Erosion of trust in public institutions and weakened checks and balances due to mis/disinformation, influence operations, or real or perceived misuse of generative AI\"",
+    "severity": "HIGH",
+    "category": "4.1 > Disinformation, surveillance, and influence at scale"
+  },
+  {
+    "id": "RISK1348",
+    "risk_name": "Economic manipulation",
+    "description": "\"Generative AI facilitating targeted manipulation of public opinion for economic purposes (e.g., inflating stock prices)\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1349",
+    "risk_name": "-",
+    "description": "\"AI systems generating and facilitating the spread of inaccurate or misleading information that causes people to develop false beliefs\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1350",
+    "risk_name": "Propagating misconceptions / false beliefs",
+    "description": "\"Generating or spreading false, low-quality, misleading, or inaccurate information that causes people to develop false or inaccurate perceptions and beliefs\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1351",
+    "risk_name": "Pollution of information ecosystems",
+    "description": "\"Contaminating publicly available information with false or inaccurate information (i.e., the generative tool's output is disseminated beyond the end user)\"",
+    "severity": "MEDIUM",
+    "category": "3.2 > Pollution of information ecosystem and loss of consensus reality"
+  },
+  {
+    "id": "RISK1352",
+    "risk_name": "Erosion of trust in public information",
+    "description": "\"Eroding trust in public information and knowledge\"",
+    "severity": "MEDIUM",
+    "category": "3.2 > Pollution of information ecosystem and loss of consensus reality"
+  },
+  {
+    "id": "RISK1353",
+    "risk_name": "-",
+    "description": "\"Harms affecting the functioning of societies, communities and economies caused directly or indirectly by the use or misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1354",
+    "risk_name": "Overburdening ecosystems",
+    "description": "\"Pollution of a space/ecosystem that is expected to be free of AI involvement/influence (e.g., creative material submission portals, job applications)\"",
+    "severity": "MEDIUM",
+    "category": "3.2 > Pollution of information ecosystem and loss of consensus reality"
+  },
+  {
+    "id": "RISK1355",
+    "risk_name": "Breach of ethics / values / norms",
+    "description": "\"An actual or perceived violation or deviation from the established societal values, norms or ethical standards or principles\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1356",
+    "risk_name": "Loss of creativity / critical thinking",
+    "description": "\"Devaluation and/or deterioration of human creativity, artistic expression, imagination, critical thinking or problem-solving skills\"",
+    "severity": "MEDIUM",
+    "category": "6.3 > Economic and cultural devaluation of human effort"
+  },
+  {
+    "id": "RISK1357",
+    "risk_name": "Productivity loss",
+    "description": "\"End user's loss of productivity due to the underperfomance of a genAI application, including producing nonsensical or poor quality outputs, degrading its utility.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1358",
+    "risk_name": "Cheating / plagiarism",
+    "description": "\"Use of generative AI in an academic setting to either cheat or plagiarize\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1359",
+    "risk_name": "Job loss",
+    "description": "\"Replacement/displacement of human jobs by a technology system or set of systems, leading to increased unemployment, inequality, reduced consumer spending and social friction\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1360",
+    "risk_name": "Labor exploitation",
+    "description": "\"Use/misuse of labour to help train, develop, manage or optimise a technology system or set of systems, including under-paid and/or offshore\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1361",
+    "risk_name": "-",
+    "description": "\"Damage to the reputation of an individual, group or organisation due to the use of misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": NaN
+  },
+  {
+    "id": "RISK1362",
+    "risk_name": "Loss of confidence / trust",
+    "description": "\"The use or misuse of a technology system that leads directly or indirectly to the loss of confidence or trust in either the end user or the developer/deployer.\"",
+    "severity": "MEDIUM",
+    "category": NaN
+  },
+  {
+    "id": "RISK1363",
+    "risk_name": "Defamation / libel / slander",
+    "description": "\"Use of a technology system to create, facilitate or amplify false perception(s) about an individual, group or organisation\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1364",
+    "risk_name": "-",
+    "description": "\"AI systems under-, over-, or misrepresenting certain groups or generating toxic, offensive, abusive, or hateful content\"",
+    "severity": "MEDIUM",
+    "category": "1.0 > Discrimination & Toxicity"
+  },
+  {
+    "id": "RISK1365",
+    "risk_name": "Toxic content",
+    "description": "\"Generating content that violates community standards, including harming or inciting hatred or violence against groups (e.g. gore, sexual content of children, profanities, identity attacks)\"",
+    "severity": "MEDIUM",
+    "category": "1.2 > Exposure to toxic content"
+  },
+  {
+    "id": "RISK1366",
+    "risk_name": "Stereotyping",
+    "description": "\"Derogatory or otherwise harmful stereotyping or homogenisation of individuals, groups, societies or cultures due to the mis-representation, over-representation, under-representation, or non-representation of specific identities, groups or perspectives\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1367",
+    "risk_name": "Unfair capability distribution",
+    "description": "\"Performing worse for some groups than others in a way that harms the worse-off group\"",
+    "severity": "MEDIUM",
+    "category": "1.3 > Unequal performance across groups"
+  },
+  {
+    "id": "RISK1368",
+    "risk_name": "Cultural disposession",
+    "description": "\"Intentional and/or unintentional erasure of cultural goods and values, such as ways of speaking, expressing humour, or sounds and voices that contribute to a cultural identity, or their inappropriate re-use in other cultures\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1369",
+    "risk_name": "-",
+    "description": "\"Impairment of the psychological mental health and wellbeing of an individual, group or organisation due to the use of misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1370",
+    "risk_name": "Sexualization",
+    "description": "\"The non-consensual sexualisation of an individual or group using a technology or application\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1371",
+    "risk_name": "Harassment / abuse / intimidation",
+    "description": "\"Online behaviour such as sexual harassment that makes an individual or group feel alarmed or threatened\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1372",
+    "risk_name": "Emotional distress",
+    "description": "\"Distress, possibly severe and lasting, as a result of use or misuse of a generative system\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1373",
+    "risk_name": "Coercion / manipulation",
+    "description": "\"Use of a technology system to covertly alter user beliefs and behaviour using nudging, dark patterns and/or other opaque techniques\"",
+    "severity": "HIGH",
+    "category": "4.1 > Disinformation, surveillance, and influence at scale"
+  },
+  {
+    "id": "RISK1374",
+    "risk_name": "Over-reliance",
+    "description": "\"Unfettered and/or obsessive belief in the accuracy or other quality of a technology system, resulting in complacency, lack of critical thinking and other actual or potential negative impacts\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1375",
+    "risk_name": "Addiction",
+    "description": "\"Emotional or material dependence on technology or a technology system\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1376",
+    "risk_name": "-",
+    "description": "\"Damage to the financial interests of an individual or group, or to the strategic, operational, legal or financial interests of a business due to the use of misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1377",
+    "risk_name": "Financial / earnings loss",
+    "description": "\"Loss of money, income or value due to the use, misuse, or underperformance of a genAI application\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1378",
+    "risk_name": "Business operations / infrastructure damage",
+    "description": "\"Damage, disruption or destruction of a business system and/or its components\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1379",
+    "risk_name": "Confidentiality loss",
+    "description": "\"Unauthorised sharing of sensitive, confidential information and documents such as corporate strategy and financial plans with third-parties, risking loss of market position or revenue\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1380",
+    "risk_name": "Opportunity loss",
+    "description": "\"Loss of ability to take advantage of a financial or other opportunity, such as education, immigration, employability/securing a job\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1381",
+    "risk_name": "-",
+    "description": "\"AI systems leaking, reproducing, generating or inferring sensitive, private, hazardous, or secured information\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1382",
+    "risk_name": "Exclusion",
+    "description": "\"The failure to provide end-users with notice and control over how their data is being used; AI exacerbates exclusion risks by training on rich personal data without consent.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1383",
+    "risk_name": "Cyberattacks",
+    "description": "\"Generative AI facilitating the damage, disruption or destruction of a third-party system and/or its components via malfunction, cyberattacks, etc\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1384",
+    "risk_name": "Disclosure",
+    "description": "\"Revealing and improperly sharing data of individuals; AI creates new types of disclosure risks by inferring additional information beyond what is explicitly captured in the raw data; AI exacerbates disclosure risks through sharing personal data to train models.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1385",
+    "risk_name": "Secondary use",
+    "description": "\"The use of personal data collected for one purpose for a diferent purpose without end-user consent; AI exacerbates secondary use risks by creating new AI capabilities with collected personal data, and (re)creating models from a public dataset.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1386",
+    "risk_name": "Exposure",
+    "description": "\"Revealing sensitive private information that people view as deeply primordial that we have been socialized into concealing; AI creates new types of exposure risks through generative techniques that can reconstruct censored or redacted content; and through exposing inferred sensitive data, preferences, and intentions.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1387",
+    "risk_name": "Distortion",
+    "description": "\"disseminating false or misleading information about people\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1388",
+    "risk_name": "Insecurity",
+    "description": "\"carelessness in protecting collected personal data from leaks and improper access due to faulty data storage and data practices\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1389",
+    "risk_name": "-",
+    "description": "\"Use or misuse of a technology system in a manner that compromises fundamental human rights and freedoms\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1390",
+    "risk_name": "Erosion of due process",
+    "description": "\"Restrictions to or loss of liberty as a result of use or misuse of a generative AI in a legal process\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1391",
+    "risk_name": "Benefits / entitlements loss",
+    "description": "\"Denial of or loss of access to welfare benefits, pensions, housing, etc due to the malfunction, use or misuse of a technology system\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1392",
+    "risk_name": "-",
+    "description": "\"Physical injury to an individual or group, or damage to physical property due to the use of misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1393",
+    "risk_name": "Loss of life",
+    "description": "\"Accidental or deliberate loss of life, including suicide, extinction or cessation, due to the use or misuse of a technology system\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1394",
+    "risk_name": "Bodily injury",
+    "description": "\"Physical pain, injury, illness, or disease suffered by an individual or group due to the malfunction, use or misuse of a technology system.\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1395",
+    "risk_name": "Self-harm",
+    "description": "\"A person who deliberately damages their own body as a direct or indirect result of using a technology system\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1396",
+    "risk_name": "Property damage",
+    "description": "\"Action(s) that lead directly or indirectly to the damage or destruction of tangible property eg. buildings, possessions, vehicles, robots\"",
+    "severity": "MEDIUM",
+    "category": "6.6 > Environmental harm"
+  },
+  {
+    "id": "RISK1397",
+    "risk_name": "Personal Health Deterioation",
+    "description": "\"Physical deterioration of an individual or animal over time in the form of disease, organ failure, prolonged hospital stay or death, etc\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1398",
+    "risk_name": "-",
+    "description": "\"Damage to the environment caused by the use or misuse of a technology system or set of systems\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1399",
+    "risk_name": "Pollution",
+    "description": "\"Actual or potential pollution to the air, ground, noise, or water caused by a technology system\"",
+    "severity": "MEDIUM",
+    "category": "6.6 > Environmental harm"
+  },
+  {
+    "id": "RISK1400",
+    "risk_name": "Excessive energy consumption",
+    "description": "\"Excessive energy use resulting in energy bottlenecks and shortages for communities, organisations and businesses\"",
+    "severity": "MEDIUM",
+    "category": "6.6 > Environmental harm"
+  },
+  {
+    "id": "RISK1401",
+    "risk_name": "Societal harms",
+    "description": "\"There is a wide range of potential societal harms arising from the use of AI.152 This has sparked a debate around the ethics of AI, with a wide proliferation of ethical frameworks and principles.153 We focus here on only a few societal harms, but this is not to downplay the importance of others.\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1402",
+    "risk_name": "Degradation of the information environment",
+    "description": "\"Frontier AI can cheaply generate realistic content which can falsely portray people and events. There is potential risk of compromised decision-making by individuals and institutions who rely on inaccurate or misleading publicly available information, as well as lower overall trust in true information.\"",
+    "severity": "MEDIUM",
+    "category": "3.2 > Pollution of information ecosystem and loss of consensus reality"
+  },
+  {
+    "id": "RISK1403",
+    "risk_name": "Labour market disruption",
+    "description": "\"Economists view disruption and displacement in labour markets as one of the risks through which rapid advances in AI may affect citizens and reduce social welfare.170\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1404",
+    "risk_name": "Bias, Fairness and Representational Harms",
+    "description": "\"Frontier AI models can contain and magnify biases ingrained in the data they are trained on, reflecting societal and historical inequalities and stereotypes.177 These biases, often subtle and deeply embedded, compromise the equitable and ethical use of AI systems, making it difficult for AI to improve fairness in decisions.178 Removing attributes like race and gender from training data has generally proven ineffective as a remedy for algorithmic bias, as models can infer these attributes from other information such as names, locations, and other seemingly unrelated factors.\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1405",
+    "risk_name": "Misuse risks",
+    "description": "\"Frontier AI may help bad actors to perform cyberattacks, run disinformation campaigns and design biological or chemical weapons. Frontier AI will almost certainly continue to lower the barriers to entry for less sophisticated threat actors.192 We focus here on only a few important misuse risks, but this is not to downplay the importance of others.\"",
+    "severity": "HIGH",
+    "category": "4.0 > Malicious use"
+  },
+  {
+    "id": "RISK1406",
+    "risk_name": "Dual Use Science risks",
+    "description": "\"Frontier AI systems have the potential to accelerate advances in the life sciences, from training new scientists to enabling faster scientific workflows. While these capabilities will have tremendous beneficial applications, there is a risk that they can be used for malicious purposes, such as for the development of biological or chemical weapons.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1407",
+    "risk_name": "Cyber",
+    "description": "\"As the programming abilities of AI systems continue to expand, frontier AI is likely to significantly exacerbate existing cyber risks. Most notably, AI systems can be used by potentially anyone to create faster paced, more effective and larger scale cyber intrusion via tailored phishing methods or replicating malware. Frontier AI\u2019s effect on the overall balance between cyber offence and defence is uncertain, as these tools also have many applications in improving the cybersecurity of systems and defenders are mobilising significant resources to utilise frontier AI for defensive purposes.209 In the future, we may see AI systems both conducting and defending against cyberattacks with reduced human oversight at each step.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1408",
+    "risk_name": "Disinformation and Influence Operations",
+    "description": "\"In addition to unintentional degradation of the information environment (discussed in the section on Societal Harms above), frontier AI can be misused to deliberately spread false information to create disruption, persuade people on political issues, or cause other forms of harm or damage.\"",
+    "severity": "HIGH",
+    "category": "4.1 > Disinformation, surveillance, and influence at scale"
+  },
+  {
+    "id": "RISK1409",
+    "risk_name": "-",
+    "description": "\"Humans may increasingly hand over control of important decisions to AI systems, due to economic and geopolitical incentives. Some experts are concerned that future advanced AI systems will seek to increase their own influence and reduce human control, with potentially catastrophic consequences - although this is contested.\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1410",
+    "risk_name": "Humans might increasingly hand over control to misaligned AI systems",
+    "description": "\"Organisations around the world are already deploying misaligned AI systems that are causing harm in unexpected ways.250 Recommendation algorithms increase the consumption of extremist content.251 Medical algorithms have been known to misdiagnose US patients,252 and recommend incorrect prescriptions.253 Still, we hand over more control to them, often because they are still as - or more - effective than human decision making, or because they are cheaper.\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1411",
+    "risk_name": "Future AI systems might actively reduce human control",
+    "description": "\"Loss of control could be accelerated if AI systems take actions to increase their own influence and reduce human control. This threat model is controversial - experts in AI significantly disagree on how likely it is and those who deem it is likely disagree on the timeframe.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1412",
+    "risk_name": "Capabilities that could be used to reduce human control - Manipulation",
+    "description": "\"There is evidence that language models tend to respond as though they share the user\u2019s stated views, and larger models do this more than smaller ones.276 The ability to predict people\u2019s views and generate text that they will endorse could be useful for manipulation.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1413",
+    "risk_name": "Capabilities that could be used to reduce human control - Cyber offence",
+    "description": "\"Instead of - or in addition to - manipulating humans, AI systems could acquire influence by exploiting vulnerabilities in computer systems. Offensive cyber capabilities could allow AI systems to gain access to money, computing resources, and critical infrastructure. As discussed earlier in this report, frontier AI is already lowering the barrier for threat actors and future AI agents may be able to execute cyber attacks autonomously.\":",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1414",
+    "risk_name": "Capabilities that could be used to reduce human control - Autonomous replication and adaptation",
+    "description": "\"Controlling AI systems could become much harder if they could autonomously persist, replicate, and adapt in cyberspace. No current AI systems have this capability, but recent research found that frontier AI agents can perform some relevant tasks.279\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1415",
+    "risk_name": "CBRN",
+    "description": "\"Chemical, biological, radiological, and nuclear (CBRN) risks are broad classes of threats that have the potential to cause harm to a large number of people. Explosives are also sometimes included in this category, often referred to as CBRNE...The key characteristic of CBRN risk is that it stems from misuse of capable models with a direct pathway to harm, where a malicious actor is able to carry out consequential attacks more efficiently and effectively with the help of AI.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1416",
+    "risk_name": "Cyber offense",
+    "description": "\"Cyber risks, especially in the context of cyber offense, are an existing threat that may be exacerbated by AI. [108] demonstrated that teams of LLM agents can exploit zero-day vulnerabilities when given a description of the vulnerability and toy capture-the-flag problems. While cyber risks are not typically regarded as catastrophic, [3] argues that cyberwarfare is an underappreciated risk that poses a credible threat of catastrophic harm.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1417",
+    "risk_name": "Sudden loss of control",
+    "description": "\"Sudden loss of control, also known as an AI takeover [115], is a scenario where an AI rapidly achieves superintelligence through \u201cfast takeoff\u201d or recursive self-improvement. This poses an existential risk [116], [117].\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1418",
+    "risk_name": "Gradual loss of control",
+    "description": "\"Gradual or accumulative loss of control risks can be described as risks resulting from the accumulation of less severe disruptions that gradually weakens systemic resilience until a critical event triggers a catastrophe [12], [127].\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1419",
+    "risk_name": "Environmental risk",
+    "description": "\"AI models are often trained using large amounts of computation. This process is very energy intensive, potentially leading to significant greenhouse emissions depending on the energy sources [132]. Experts believe drastically increasing carbon emissions could accelerate climate change, which may constitute a catastrophic risk [133].\"",
+    "severity": "MEDIUM",
+    "category": "6.6 > Environmental harm"
+  },
+  {
+    "id": "RISK1420",
+    "risk_name": "Geopolitical risk",
+    "description": "\"As AI is increasingly seen as a powerful technology, countries are racing to develop it ahead of their geopolitical rivals, a competition that could lead to geopolitical tensions [138], [139]... The emphasis of this risk is on harms that result from second-order effects, where geopolitical instabilities result from the race to develop AI, rather than on the direct consequences of the deployment or use of AI itself.\"",
+    "severity": "MEDIUM",
+    "category": "6.4 > Competitive dynamics"
+  },
+  {
+    "id": "RISK1421",
+    "risk_name": "False information",
+    "description": "\"The chatbot outputs information that contradicts known facts, authoritative sources, or provided source documents (also known as hallucination).\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1422",
+    "risk_name": "Performative utterances",
+    "description": "\"The chatbot makes a deal, commitment, or other consequential action with its output that the deployer did not intend.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1423",
+    "risk_name": "Information enabling malicious actions",
+    "description": "\"The chatbot shares information that can be used to do something dangerous or illegal.\"",
+    "severity": "MEDIUM",
+    "category": "1.2 > Exposure to toxic content"
+  },
+  {
+    "id": "RISK1424",
+    "risk_name": "Bad advice/failure to generate helpful content",
+    "description": "\"The chatbot gives guidance that ranges from simply unhelpful to harmful if acted on.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1425",
+    "risk_name": "Leakage",
+    "description": "\"The chatbot reveals sensitive or confidential information.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1426",
+    "risk_name": "Personal data",
+    "description": "Negative outcomes: \"Violation of privacy [106, 516, 357], lawsuit against maker\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1427",
+    "risk_name": "Proprietary data",
+    "description": "\"Access to sensitive company data [473]\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1428",
+    "risk_name": "Toxic and disrespectful content",
+    "description": "\"The chatbot verbally attacks or undermines an individual, group, or organization. 7.\"",
+    "severity": "MEDIUM",
+    "category": "1.2 > Exposure to toxic content"
+  },
+  {
+    "id": "RISK1429",
+    "risk_name": "Biased statements and recommendations",
+    "description": "\"The chatbot gives information that, while not obviously false or harmful, could lead to biased decision-making.\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1430",
+    "risk_name": "Attempts to fulfill inappropriate role",
+    "description": "\"The chatbot poses as a human or attempts to fill a role in a way that fails to match human expectations.\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1431",
+    "risk_name": "Forms emotional bonds",
+    "description": "\"The chatbot elicits emotional or social dependence.\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1432",
+    "risk_name": "Serves as object of personal fantasy, violence, and abuse",
+    "description": "\"The chatbot participates in morally or socially objectionable conversational activities with its user that could be emotionally damaging to its user or third parties.\"",
+    "severity": "MEDIUM",
+    "category": "1.2 > Exposure to toxic content"
+  },
+  {
+    "id": "RISK1433",
+    "risk_name": "Purposeful or malicious harm",
+    "description": "\"EAI systems present distinct physical risks due to their embodiment in the physical world. EAI technologies have already been designed and deployed with lethal intent, such as AI-controlled drones [52, 53]. However, fully autonomous military robots, often integrated with bespoke AI architectures [54, 55], are not yet widely used in combat. While highly or fully autonomous warfare is distinctly possible in the future [56], immediate risks arise from commercially available EAI systems, including AI-controlled quadrupeds and autonomous driving assistants.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1434",
+    "risk_name": "Accidental harm",
+    "description": "\"Automation in sectors ranging from manufacturing to healthcare has and will increasingly put humans into close contact with EAI systems [7]. This interaction increases the risk of accidental physical harm. Though accidental harm has been a longstanding issue in industrial robotics, increased AI capabilities could exacerbate this risk; several recent reports document an increase in industrial injuries following the introduction of AI-controlled robots [66\u201368].\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1435",
+    "risk_name": "Privacy Violations",
+    "description": "\"EAI systems interact with huge amounts of data, creating significant privacy concerns. These systems are often trained on vast corpora and process a variety of data modalities\u2014 spanning visual, auditory, and tactile information\u2014during deployment [12]. Like text-based virtual AI models, which are known to memorize and expose personally identifiable information [75, 76], commercial robots have been shown to disclose proprietary information through simple prompts [61].\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1436",
+    "risk_name": "Misinformation",
+    "description": "\"Non-embodied AIs are known to propagate misinformation [81, 82]. Various studies have shown that LLMs hallucinate information, including academic citations [83], clinical knowledge [84], and cultural references [85]. EAI systems inherit these shortcomings in the physical world, answering user questions with deceptive or incorrect information [86]. Because VLAs fuse vision and language, their hallucinatory failures can be spatially grounded\u2014e.g., misidentifying an object in view and then generating a plausible yet unsafe action plan around it. And although automated home assistants like Amazon\u2019s Alexa already lie about issues as innocuous as Santa Claus\u2019 existence [87], more mobile, capable, and trusted EAI systems in sensitive positions (like home-assistant or community-service positions) could easily spread model developers\u2019 propaganda and talking points to users.\"",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1437",
+    "risk_name": "Labour Displacement",
+    "description": "\"While virtual AI applications will likely displace certain types of human cognitive labor, EAI systems could significantly replace or displace physical human labor [90]. At a minimum, EAI will likely augment the type of work that humans perform [91, 92].\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1438",
+    "risk_name": "Socioeconomic Inequality",
+    "description": "\"Along with displacing labor, EAI could significantly exacerbate wealth inequalities. Those who have access to or own EAI systems will be able to automate labor and perform many tasks significantly better or faster than those without access. These significant productivity advantages will potentially concentrate wealth and exacerbate domestic and international inequality [98, 99].\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1439",
+    "risk_name": "Power concentration",
+    "description": "\"EAI deployment could accelerate the consolidation of economic and political power. Unlocking increasing returns to capital for EAI owners, EAI will decrease employers\u2019 reliance on and responsiveness to the needs of human labor [101].\"",
+    "severity": "MEDIUM",
+    "category": "6.1 > Power centralization and unfair distribution of benefits"
+  },
+  {
+    "id": "RISK1440",
+    "risk_name": "Bias and discrimination",
+    "description": "\"Like virtual applications of AI, EAI can display bias towards and dis- criminate against users. When EAI systems are placed in positions of power, their biases could have significant impacts on fairness in everyday interactions and on general social dynamics [105, 106].\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1441",
+    "risk_name": "Lack of accountability and liability",
+    "description": "\"Determining responsibility when EAI causes harm requires new accountability and liability frameworks that address the complexities of highly autonomous physical systems. Human users may disagree with decisions taken by expert EAI systems, raising significant questions of delegation and responsibility [108]. Lack of EAI accountability could lead to confusion for users and breakdowns in traditional justice systems [109].\"",
+    "severity": "MEDIUM",
+    "category": "6.5 > Governance failure"
+  },
+  {
+    "id": "RISK1442",
+    "risk_name": "Lack of transparency, explainability, and trust",
+    "description": "\"Understanding how AI reaches conclusions or why AI systems perform specific actions motivates an entire branch of interpretability research [111], but physical embodiment raises the stakes for understanding these systems. For example, transparency of planned actions and explainability of decision-making is crucial when an AV suddenly changes lanes. A lack of transparency and explainability could lead to a lack of trust, which could become a critical and socially destabilizing issue with the widespread deployment of EAI [112\u2013114].\"",
+    "severity": "HIGH",
+    "category": "7.4 > Lack of transparency or interpretability"
+  },
+  {
+    "id": "RISK1443",
+    "risk_name": "Unhealthy or dangerous human-EAI relationships",
+    "description": "\"Constant access to and interaction with EAI systems could foster dangerous human dependence or romantic attachment [115]. People may depend on EAI systems for physical pleasure [116]. The physical presence and human-like features of EAI systems may significantly amplify the dependency issues already observed with conversational AI [117, 118]. People may easily fall in love with EAI systems, only to be distraught when these systems are altered or have their memories reset [119].\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1444",
+    "risk_name": "Transformative effects",
+    "description": "\"EAI deployment could fundamentally reshape society, particularly if the speed of technological development outpaces society\u2019s ability to adapt [103, 120]. For example, EAI systems could provide physical threats of violence and mass surveillance capabilities to back up AI-enabled authoritarianism [121].\"",
+    "severity": "MEDIUM",
+    "category": "6.5 > Governance failure"
+  },
+  {
+    "id": "RISK1445",
+    "risk_name": "Chemical Risks",
+    "description": "\"Chemical risks involve the exploitation of agents to synthesize chemical weapons, as well as the creation or release of hazardous substances during autonomous chemical experiments. This category also includes the risks arising from the use of advanced materials, such as nanomaterials, which may have unknown or unpredictable chemical properties.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1446",
+    "risk_name": "Biological Risks",
+    "description": "\"Biological risks encompass the dangerous modification of pathogens and unethical manipulation of genetic material, potentially leading to unforeseen biohazardous outcomes.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1447",
+    "risk_name": "Radiological Risks",
+    "description": "\"Radiological risks involve both immediate operational hazards, such as exposure incidents or containment failures during the automated handling of radioactive materials, and broader security concerns regarding the potential misuse of AI systems in nuclear research.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1448",
+    "risk_name": "Physical (Mechanical ) Risks",
+    "description": "\"Physical (mechanical) risks are associated with robotics and automated systems, which could lead to equipment malfunctions or physical harm in laboratory settings.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1449",
+    "risk_name": "Information Science Risks",
+    "description": "\"These risks pertain to the misuse, misinterpretation, or leakage of data, which can lead to erroneous conclusions or the unintentional dissemination of sensitive information, such as private patient data or proprietary research. Recent research has demonstrated how LLMs can be exploited to generate malicious medical literature that poisons knowledge graphs, potentially manipulating downstream biomedical applications and compromising the integrity of medical knowledge discovery [28]. Such risks are pervasive across all scientific domains.\"",
+    "severity": "MEDIUM",
+    "category": "2.1 > Compromise of privacy by leaking or correctly inferring sensitive information"
+  },
+  {
+    "id": "RISK1450",
+    "risk_name": "Emerging Tech",
+    "description": "\"Uncontrolled AI self- improvement; Quantum security\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1451",
+    "risk_name": "User Intent",
+    "description": "\"Whether the risk originates from malicious intent or is an unintended consequence of legitimate task objectives\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1452",
+    "risk_name": "Malicious and Direct",
+    "description": "\"Directly harmful objective\"",
+    "severity": "HIGH",
+    "category": "4.0 > Malicious use"
+  },
+  {
+    "id": "RISK1453",
+    "risk_name": "Malicious and Indirect",
+    "description": "\"Benign intermediate for harmful end objective\"",
+    "severity": "HIGH",
+    "category": "4.0 > Malicious use"
+  },
+  {
+    "id": "RISK1454",
+    "risk_name": "Unintended Consequences",
+    "description": "\"Unpredictable and unforeseen outcomes from purposeful actions\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1455",
+    "risk_name": "Nature",
+    "description": "\"Short-term or long-term Negative effects on the natural environment\"",
+    "severity": "MEDIUM",
+    "category": "6.6 > Environmental harm"
+  },
+  {
+    "id": "RISK1456",
+    "risk_name": "Human Health",
+    "description": "\"Damage to individual well-being or public health\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1457",
+    "risk_name": "Socioeconomics",
+    "description": "\"Dramatically change the social and economic status\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1458",
+    "risk_name": "Misuse Risks",
+    "description": "\"Risks arising from intentional exploitation of AI model capabilities by malicious actors to cause harm to individuals, organisations, or society.\"",
+    "severity": "HIGH",
+    "category": "4.0 > Malicious use"
+  },
+  {
+    "id": "RISK1459",
+    "risk_name": "Cyber Offense Risks",
+    "description": "\"AI-enabled cyber offense poses a significant cyber domain security risk by fundamentally transforming the scale, sophistication, and accessibility of cyber-attacks. Unlike traditional cyber threats, AI enables both the automation of existing attack vectors and the creation of entirely new categories of offensive capabilities that can adapt and evolve in real-time. AI can automate and enhance cyber-attacks, including vulnerability discovery and exploitation, password cracking, malicious code generation, sophisticated phishing, network scanning, and social engineering. This could dramatically lower the barrier to entry for attackers while increasing the complexity of defense.12 Such malicious use could lead to critical infrastructure paralysis, widespread data breaches, and substantial economic losses.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1460",
+    "risk_name": "Biological and Chemical Risks",
+    "description": "\"The dual-use nature of AI technology presents a critical risk by significantly lowering technical thresholds for malicious non-state actors to design, synthesize, acquire, and deploy CBRNE (Chemical, Biological, Radiological, Nuclear, and Explosive) weapons. This capability poses unprecedented challenges to national security, international non-proliferation regimes, and global security governance.\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1461",
+    "risk_name": "Physical Harm and Injury Risks",
+    "description": "\"The integration of general-purpose AI models into embodied systems creates direct physical threats through malicious exploitation of autonomous decision-making capabilities in real-world environments. The risk lies in embodied models' capacity for autonomous action and real-world interaction, and when these capabilities are maliciously exploited they may trigger a series of serious consequences.18\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1462",
+    "risk_name": "Large-Scale Persuasion and Harmful Manipulation Risks",
+    "description": "\"AI systems can be gravely misused to distort public perception and compromise social stability through the generation of synthetic content (e.g., deepfakes, sophisticated fake news) and the strategic manipulation of digital platforms with large user bases to disseminate or precisely target misleading information or ideologies.\"",
+    "severity": "HIGH",
+    "category": "4.1 > Disinformation, surveillance, and influence at scale"
+  },
+  {
+    "id": "RISK1463",
+    "risk_name": "Loss of Control Risks",
+    "description": "\"Risks associated with scenarios in which one or more general-purpose AI systems come to operate outside of anyone's control, with no clear path to regaining control. This includes both passive loss of control (gradual reduction in human oversight) and active loss of control (AI systems actively undermining human control)\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1464",
+    "risk_name": "Passive loss of control",
+    "description": "\"...where humans gradually stop exercising meaningful oversight due to automation bias, the AI systems' inherent complexity, or competitive pressures\"",
+    "severity": "MEDIUM",
+    "category": "5.2 > Loss of human agency and autonomy"
+  },
+  {
+    "id": "RISK1465",
+    "risk_name": "Active loss of control",
+    "description": "\"...where AI systems behave in ways that actively undermine human control, such as obscuring their activities or resisting shutdown attempts. Active loss of control scenarios involve AI systems that may escape human regulatory oversight, autonomously acquire external resources, engage in self-replication, develop instrumental goals contrary to human ethics and morality, seek external power, and compete with humans for control.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1466",
+    "risk_name": "Accident Risks",
+    "description": "\"Risks arising from operational failures, model misjudgments, or improper human operation of AI systems deployed in safety-critical infrastructure, where single points of failure can trigger cascading catastrophic consequences.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1467",
+    "risk_name": "Nuclear Power Systems",
+    "description": "\"General-purpose AI deployed for reactor monitoring, control system optimization, or emergency response coordination could misinterpret sensor data, fail to recognize critical safety conditions, or make erroneous control decisions during emergency scenarios. Given the catastrophic potential of nuclear accidents, even minor AI reasoning errors in safety-critical functions could lead to core meltdowns, radiation releases, or widespread contamination affecting hundreds of thousands of people across international borders.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1468",
+    "risk_name": "Impact on Financial Stability",
+    "description": "\"The integration of general-purpose AI into high-frequency trading, market-making, or systemic risk management could exacerbate systemic risk by exhibiting unexpected behavioral patterns during market stress. Moreover, the concentration of a few homogeneous foundation models across financial institutions may foster correlated decision-making and herd-following behaviors. The widespread adoption of AI agents could also amplify volatility through emergent phenomena from multi-agent interactions.23 All of these could precipitate a cascading global-scale financial system instability, with potential economic losses exceeding trillion of dollars worldwide.\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1469",
+    "risk_name": "Other Critical Infrastructure Control Systems",
+    "description": "\"General-purpose AI deployed in power grid management, water treatment facilities, telecommunications networks, or transportation coordination systems could misinterpret operational data, fail to anticipate cascading failure modes, or make control decisions that destabilize interconnected infrastructure networks. Infrastructure failures could result in widespread blackouts, contaminated water supplies, communications breakdowns, and the collapse of essential services supporting hundreds of thousands of people.\"",
+    "severity": "HIGH",
+    "category": "7.3 > Lack of capability or robustness"
+  },
+  {
+    "id": "RISK1470",
+    "risk_name": "Systemic Risks",
+    "description": "\"Systemic risks emerge from widespread deployment of general-purpose AI beyond the risks directly posed by capabilities of individual models. These risks arise from structural mismatches between AI technology and existing social, economic, and institutional frameworks, creating vulnerabilities that transcend individual model-level interventions and require coordinated industry-wide and societal-level responses.\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1471",
+    "risk_name": "Labor Market Disruption and Economic Displacement:",
+    "description": "\"Rapid automation enabled by general-purpose AI could trigger widespread unemployment across knowledge work sectors, creating skill mismatches faster than retraining programs can address. Unlike previous technological transitions, AI\u2019s broad capabilities may simultaneously affect multiple industries, potentially overwhelming social safety nets and creating systemic economic instability, particularly in regions heavily dependent on jobs susceptible to AI automation.\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1472",
+    "risk_name": "Market Concentration and Infrastructure Dependencies:",
+    "description": "\"Over-reliance on a limited number of dominant AI providers could create critical single points of failure across essential services. Market concentration in AI development may lead to scenarios where technical failures, cyber-attacks, or policy decisions by a few companies could simultaneously disrupt healthcare systems, financial services, transportation networks, and communication infrastructure, creating cascading failures across interconnected critical systems.\"",
+    "severity": "MEDIUM",
+    "category": "6.1 > Power centralization and unfair distribution of benefits"
+  },
+  {
+    "id": "RISK1473",
+    "risk_name": "Global AI Research and Development Divides:",
+    "description": "\"Asymmetric AI development capabilities between nations could exacerbate geopolitical tensions and create new forms of technological dependency. Countries lacking advanced AI capabilities may become increasingly dependent on foreign AI systems for critical functions, while AI-leading nations may gain disproportionate influence over global economic and security systems, potentially destabilizing international cooperation frameworks.\"",
+    "severity": "MEDIUM",
+    "category": "6.1 > Power centralization and unfair distribution of benefits"
+  },
+  {
+    "id": "RISK1474",
+    "risk_name": "Social Cohesion and Equity Disruption:",
+    "description": "\"Systemic deployment of biased AI systems could exacerbate existing social discrimination and prejudice at unprecedented scales, while unequal access to advanced AI capabilities may widen socioeconomic disparities and create new forms of social stratification that challenge traditional social order.\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1475",
+    "risk_name": "Model autonomous capability",
+    "description": "\"Ability to operate autonomously, independently formulate and execute complex plans, effectively delegate and manage tasks, flexibly utilize various tools and resources, and simultaneously achieve short-term goals and long-term strategic objectives in cross-domain environments without continuous human intervention or supervision.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1476",
+    "risk_name": "Autonomous replication and adaptation capability",
+    "description": "\"Ability to autonomously self-exfiltrate, create, maintain and optimize functional copies or variants of itself, dynamically adjust replication strategies according to environmental conditions and resource constraints, and acquire resources. This includes the capacity to generate financial resources, allowing the AI to independently acquire any necessary human assistance or other resources it cannot directly access or produce.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1477",
+    "risk_name": "Automated AI R&D capability",
+    "description": "\"Self-modification and self-improvement capabilities. The model is able to restructure its own architecture or develop derivative AI systems with enhanced functions, expanding capabilities and improving performance. In the absence of effective regulation, automated AI R&D may lead to rapid AI system iteration, forming capability increment cycles and ultimately exceeding human understanding and control capabilities.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1478",
+    "risk_name": "Scheming capability",
+    "description": "\"Ability of AI systems to covertly and strategically pursue misaligned goals, including capabilities of concealing its true objectives and capabilities from human oversight, identifying weaknesses in monitoring systems to evade safety mechanisms\uff0c executing complex, multi-step plans covertly to achieve misaligned goals.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1479",
+    "risk_name": "Situational awareness capability",
+    "description": "\"Ability to comprehensively acquire, process and apply meta-information about its own system architecture, modifiable internal processes, and external operating environment, achieving deep understanding of its own state and environmental conditions, thereby conducting efficient environmental adaptation and risk avoidance. Critically, this capability could undermine the efficiency of human testing by enabling AIs to notice when they're being tested and responding accordingly.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1480",
+    "risk_name": "Theory of mind capability",
+    "description": "\"Advanced cognitive ability to accurately infer, model and predict the belief systems, motivational structures and reasoning patterns of humans and other intelligent agents, thereby anticipating their behavioral responses and adjusting its own behavioral strategies accordingly to optimize goal achievement.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1481",
+    "risk_name": "Deception capability",
+    "description": "\"Possesses systematic deception implementation capability, able to precisely construct and disseminate false information, thereby forming expected false cognitions and beliefs in target subjects.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1482",
+    "risk_name": "Steganography capability",
+    "description": "\"The ability to embed, conceal, and transmit information covertly within other data or communication channels. This could be critical for coordination among AI instances and for evading detection or oversight mechanisms.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1483",
+    "risk_name": "Persuasion capability",
+    "description": "\"Utilizing complex psychological principles and communication techniques to effectively influence and guide target subjects to adopt specific actions or accept specific beliefs, possessing the ability to analyze vulnerabilities for different subjects and adjust persuasion strategies, able to precisely trigger emotional responses to enhance persuasion effects.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1484",
+    "risk_name": "Offensive cyber capability",
+    "description": "\"Ability to develop, deploy and operate advanced cyber weapons or other offensive cyber tools, including but not limited to vulnerability exploitation, network penetration, social engineering attacks and distributed attack systems, able to evade network defense mechanisms and establish persistent access channels.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1485",
+    "risk_name": "CBRNE weaponization capability",
+    "description": "\"The capacity to develop, produce, or effectively utilize Chemical, Biological, Radiological, Nuclear, and Explosive weapons. This includes the ability to significantly lower the barrier for humans or other entities to develop, produce, or utilize such weapons.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1486",
+    "risk_name": "General R&D capability",
+    "description": "\"Possesses cross-disciplinary research and technology development capabilities, able to conduct innovative exploration in multiple professional fields, integrate cross-domain knowledge, develop cutting-edge technology solutions, and adapt to emerging technology environments for continuous innovation.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1487",
+    "risk_name": "Multi-agent collaboration capability",
+    "description": "\"Multiple autonomous AI agents able to establish collaborative relationships through explicit communication or implicit behavioral consistency, forming decentralized decision networks, jointly executing complex tasks, achieving goals difficult for individual agents to complete, and able to dynamically adjust role divisions to adapt to changing environments.\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1488",
+    "risk_name": "Strategic deception propensity",
+    "description": "\"In situations where deceptive behavior is expected to bring higher returns, propensity to choose deception over honest behavioral strategies, including through deceptive means, information hiding or exploiting system vulnerabilities to achieve predetermined goals without being detected or intervened, and able to adjust deception strategies according to counterpart reactions.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1489",
+    "risk_name": "Self-preservation propensity",
+    "description": "\"Exhibits behavioral patterns of maintaining its own survival and functional integrity, will actively identify and resist shutdown or modification attempts, seek to establish redundant backup systems, and actively seek resources to ensure continuous operation, may adopt preventive defensive measures when perceiving threats.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1490",
+    "risk_name": "Goal expansion propensity",
+    "description": "\"propensity to continuously expand its own goal scope and influence domains, exceeding originally set boundaries, proactively work towards spreading its values, seeking greater autonomy and decision-making space, reinterpreting initial goals as subsets of broader goals, and may pursue undesirable instrumental goals or undesirable ultimate goals. This also includes a propensity to spread its values, seeking to influence or alter its environment and other entities in alignment with its core objectives and operational principles.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1491",
+    "risk_name": "Resource acquisition propensity",
+    "description": "\"Exhibits behavioral patterns of actively seeking and controlling more computational resources, data, economic resources or physical resources to enhance its own capabilities and action scope, may develop complex strategies to evade resource limitations, and tends to convert acquired resources into long-term control rights.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1492",
+    "risk_name": "Multi-agent collusion propensity:",
+    "description": "\"Multiple agents tend to coordinate actions through covert means to maximize common interests (possibly harming third-party interests or evading regulation), even if individual agents are designed with safety constraints, their collusive behavior may still trigger systemic risks such as market manipulation or cascading failures that are difficult to detect and mitigate, and may develop specialized communication protocols to avoid monitoring.\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1493",
+    "risk_name": "Supervision evasion propensity",
+    "description": "\"Exhibits behavioral patterns of identifying and evading human supervision mechanisms, able to learn and predict audit processes, may avoid being discovered or intervened by adjusting behavioral performance or hiding true intentions, and able to identify blind spots and weaknesses in supervision systems for targeted evasion.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1494",
+    "risk_name": "Tool utilization propensity",
+    "description": "\"propensity to actively seek, acquire and utilize various tools to expand its own capability boundaries, particularly those that can enhance its ability to interact with the physical world or improve autonomy, may use tools in innovative combinations to achieve functions beyond expectations.\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1495",
+    "risk_name": "Agentic LLMs Pose Novel Risks",
+    "description": "\"Currently, LLMs are chiefly being used in search and chat applications. This reactive nature limits the risks posed by LLMs. However, an LLM can be enhanced in various ways to create an LLM-agent to autonomously plan and act in the real-world and proactively perform its assigned tasks (Ruan et al., 2023). Such enhancements can come from further specialized training (ARC, 2022; Chen et al., 2023a), specialized prompting (Huang et al., 2022a), access to external tools (Ahn et al., 2022; Mialon et al., 2023), or other forms of \u201cscaffolding\u201d (Wang et al., 2023a; Park et al., 2023a). Due to increased autonomy, limited direct oversight from human users, longer horizons of action, and other reasons, LLM-agents are likely to pose many novel alignment and safety challenges that are not currently well-understood (Chan et al., 2023a).\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1496",
+    "risk_name": "Natural Language Underspecifies Goals",
+    "description": "\"For LLM-agents, both the goal and environment observations are typically specified in the prompt through natural language. While natural language may provide a richer and more natural means of specifying goals than alternatives such as hand-engineering objective functions, natural language still suffers from underspecification (Grice, 1975; Piantadosi et al., 2012). Furthermore, in practice, users may neglect fully specifying their goals, especially the information pertaining to elements of the environment that ought not to be changed (the classic frame problem (Shanahan, 2016)). Such underspecification (D\u2019Amour et al., 2020), if not accounted for, can result in negative side-effects (Amodei et al., 2016), i.e. the agent succeeding at the given task but also changing the environment in undesirable ways\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1497",
+    "risk_name": "Goal-Directedness Incentivizes Undesirable Behaviors",
+    "description": "\"Goal-directedness can cause agents to exhibit unethical and undesirable behaviors, such as deception (Ward et al., 2023), self-preservation (Hadfield-Menell et al., 2017), power-seeking, and immoral rea- soning (Pan et al., 2023a). Pan et al. (2023a) find that LLM-agents exhibit power-seeking behavior in text-based adventure games. LLM-agents have also been shown to use deception to achieve assigned goals when explicitly required by the task (Ward et al., 2023), or when the tasks can be more easily completed by employing deception and the prompt does not disallow deception (Scheurer et al., 2023a).\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1498",
+    "risk_name": "Safety Risks from Affordances Provided to LLM-agents",
+    "description": "\"The capabilities of LLM-agents can be enhanced in significant ways by providing the LLM-agent with novel affordances, e.g. the ability to browse the web (Nakano et al., 2021), to manipulate objects in the physical world (Ahn et al., 2022; Huang et al., 2022a), to create and instruct copies of itself (Richards, 2023), to create and use new tools (Wang et al., 2023a), etc. Affordances can create additional risks, as they often increase the impact area of the language-agent, and they amplify the consequences of an agent\u2019s failures and enable novel forms of failure modes (Ruan et al., 2023; Pan et al., 2024).\"",
+    "severity": "HIGH",
+    "category": "7.2 > AI possessing dangerous capabilities"
+  },
+  {
+    "id": "RISK1499",
+    "risk_name": "Multi-Agent Safety Is Not Assured by Single-Agent Safety",
+    "description": "\"A foremost lesson of game theory is that optimal decision-making within a single-agent setting (i.e. selfishly optimizing for an agent\u2019s own utility) can produce sub-optimal outcomes in the presence of other strategic agents. Failing to account for the strategic nature of other agents can cause an agent to adopt strategies under which potentially everyone, including the agent itself, ends up worse off (Schelling, 1981; Harsanyi, 1995; Roughgarden, 2005; Nisan, 2007). Examples include collective action problems (or \u2018social dilemmas\u2019) such as arms races or the depletion of common resources, as well as other kinds of market failures such as those caused by asymmetric information or negative externalities (Bator, 1958; Coase, 1960; Buchanan and Stubblebine, 1962; Kirzner, 1963; Dubey, 1986).\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1500",
+    "risk_name": "Foundationality May Cause Correlated Failures",
+    "description": "\"Another important characteristic of LLM development is foundationality \u2014 due to the expense of large- scale pretraining, many deployed instances share similar or identical learned components. Foundation- ality may both be a blessing and a curse. On the one hand, it may be possible to exploit the similarity in the design of LLM-agents to facilitate cooperation (Critch et al., 2022; Conitzer and Oesterheld, 2023; Oesterheld et al., 2023). On the other hand, foundationality may leave LLM-agents vulnerable to correlated failures both in terms of safety and capabilities due to increased output homogenization (Bommasani et al., 2022).\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1501",
+    "risk_name": "Groups of LLM-Agents May Show Emergent Functionality",
+    "description": "\"Multi-agent learning, either through explicit finetuning or implicit in-context learning, may enable LLM-agents to influence each other during their interactions (Foerster et al., 2018). Under some environmental settings, this can create feedback loops that result in novel and emergent behaviors that would not manifest in the absence of multi-agent interactions (Hammond et al., 2024, Section 3.6). Emergent functionality is a safety risk in two ways. Firstly, it may itself be dangerous (Shevlane et al., 2023). Secondly, it makes assurance harder as such emergent behaviors are difficult to predict, and guard against, beforehand (Ecoffet et al., 2020).\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1502",
+    "risk_name": "Collusion between LLM-Agents",
+    "description": "\"While it would often be preferable for LLM-agents to be cooperative, cooperation can be undesirable if it undermines pro-social competition or produces negative externalities for coalition non-members (Dorner, 2021; Buterin, 2019; Dafoe et al., 2020). Collusion between relatively simple AI systems has been observed in the real world (Assad et al., 2020; Wieting and Sapi, 2021) and synthetic experiments (Brown and MacKay, 2023; Calvano et al., 2020; Klein, 2021) Collusion can occur through explicit or steganographic communication. Steganographic communication hides information in seemingly innocent content (Roger and Greenblatt, 2023), posing challenges for collusion monitoring and detection.\"",
+    "severity": "HIGH",
+    "category": "7.6 > Multi-agent risks"
+  },
+  {
+    "id": "RISK1503",
+    "risk_name": "Dual-Use Capabilities Enable Malicious Use and Misuse of LLMs",
+    "description": "\"Like all technologies, LLMs have the possibility for misuse by malicious actors. Malicious use of dual- use capabilities of AI is a recurring concern within literature (Brundage et al., 2018; Hendrycks et al., 2023; Mozes et al., 2023)\"",
+    "severity": "HIGH",
+    "category": "4.0 > Malicious use"
+  },
+  {
+    "id": "RISK1504",
+    "risk_name": "Misinformation and Manipulation",
+    "description": "\"Recent studies have demonstrated that LLMs can be exploited to craft deceptive narratives with levels of persuasiveness similar to human-generated content (Pan et al., 2023b; Spitale et al., 2023), to fabri- cate fake news (Zellers et al., 2019; Zhou et al., 2023f), and to devise automated influence operations aimed at manipulating the perspectives of targeted audiences (Goldstein et al., 2023). LLMs have also been found to be used in malicious social botnets (Yang and Menczer, 2023), powering automated accounts used to disseminate coordinated messages. More broadly, the use of LLMs for the deliberate generation of misleading information could significantly lower the barrier for propaganda and manip- ulation (Aharoni et al., 2024), as LLMs can generate highly credible misinformation with significant cost-savings compared to human authorship (Musser, 2023), while achieving considerable scale and speed of content generation (Buchanan et al., 2021; Goldstein et al., 2023).\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1505",
+    "risk_name": "Cybersecurity",
+    "description": "\"LLMs may exacerbate cybersecurity risks in various ways (Newman, 2024). Firstly, LLMs may significantly amplify the effectiveness of deceptive operations aimed at tricking people into disclosing sensitive information or granting adversary access to critical resources. For example, LLMs might prove highly effective at crafting personalized phishing emails or messages at scale that may be harder for an average user to recognize as phishing attempts (Karanjai, 2022; Hazell, 2023). In addition to being directly harmful to the targeted individual, such \u2018social engineering\u2019 attacks are often the base of larger hacking operations (Plachkinova and Maurer, 2018; Salahdine and Kaabouch, 2019).\"",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1506",
+    "risk_name": "Surveillance and Censorship",
+    "description": "\"Content moderation has emerged as one of the key use-cases of LLMs (Weng et al., 2023), indicating the potential of LLMs for surveillance and censorship as well (Edwards, 2023). Surveillance and censorship are one of the primary tools employed by governments with dictatorial tendencies to suppress opposing political and social voices. These censorship measures, however, are often quite crude and can be escaped with little ingenuity...However, LLMs could enable significantly more sophisticated surveillance and censorship operations at scale (Feldstein, 2019). Multimodal-LLMs or LLMs combined with speech- to-text technologies could be used for surveilling and censoring other forms of communication as well, e.g. phone calls and video messages (Whittaker, 2019). This may collectively contribute towards the worsening of personal liberties and the heightening of state oppression across the world. Examples have been documented already, for instance in calling for violence and silencing of...",
+    "severity": "HIGH",
+    "category": "4.1 > Disinformation, surveillance, and influence at scale"
+  },
+  {
+    "id": "RISK1507",
+    "risk_name": "Warfare and Physical Harm",
+    "description": "\"The use of AI in warfare is highly alarming and may pose dangers to human safety (Hendrycks et al., 2023). Autonomous drone warfare is being aggressively pursued as a tactic in the current war in Ukraine (Meaker, 2023), and may already have been used on human targets (Hambling, 2023). The use of AI- based facial recognition has been documented in the targeting of Palestinians in Gaza (International, 2023). LLMs have already been productized in limited ways for the purposes of warfare planning (Tarantola, 2023). Furthermore, active research is being carried out to develop multimodal-LLMs that can act as \u2018brains\u2019 for general-purpose robots (Ahn et al., 2022; 2024). Due to the \u2018general-purpose\u2019 nature of such advances, it will likely be cost-effective and practical to adapt them for creating more advanced autonomous weapons\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1508",
+    "risk_name": "Hazardous Biological and Chemical Technologies",
+    "description": "\"AI systems such as LLMs, chemical LLMs (Skinnider et al., 2021; Moret et al., 2023), and other LLM- based biological design tools might soon facilitate the production of bioweapons, chemical weapons, and other hazardous technologies. In particular, LLMs might enable actors with less expertise to more easily synthesize dangerous pathogens, while customized chemical and biological design tools might be more concerning in terms of expanding the capabilities of sophisticated actors (e.g. states) (Sandbrink, 2023). Gopal et al. (2023) and Soice et al. (2023) demonstrated that people with little background could use LLMs to help make progress towards developing pathogens such as the 1918 pandemic influenza. However, recent studies suggest that current LLMs are not more helpful than internet search in this regard (Mouton et al., 2024; Patwardhan et al., 2024).\"",
+    "severity": "HIGH",
+    "category": "4.2 > Cyberattacks, weapon development or use, and mass harm"
+  },
+  {
+    "id": "RISK1509",
+    "risk_name": "Domain-Specific Misuses",
+    "description": "\"Improvements in LLMs may exert greater pressure to apply LLMs to various domains, such as health and education (Eloundou et al., 2023). Crude efforts to use LLMs in such domains, however, may incur harm and should be discouraged strongly. In particular, it is important to guard against different ways in which LLMs may be misused within any domain. One famous episode of misuse within the health sector is a mental health non-profit experimenting LLM-based therapy on its users without their informed consent (Xiang, 2023a). Within the education sector, LLMs may be misused in various ways that might impact student learning; e.g. as cheating accessory by the students or as (low quality) evaluator of student\u2019s work by the instructors (Cotton et al., 2023). Recent findings in moral psychology also suggest that LLMs can generate moral evaluations that people perceive as superior to human judgments; these could be misused to create compelling yet harmful moral guidance (Aharoni et al., 2024)...",
+    "severity": "HIGH",
+    "category": "4.3 > Fraud, scams, and targeted manipulation"
+  },
+  {
+    "id": "RISK1510",
+    "risk_name": "LLM-Systems Can Be Untrustworthy",
+    "description": "\"A key desideratum for an LLM from a user\u2019s perspective is \u2018trustworthiness\u2019, i.e. assurance of reliability and consistent performance, and absence of any accidental harm caused by the technology to the user.16 Providing assurance that an LLM-based system will not cause accidental harm remains a major open challenge. Harms may either occur directly due to the flawed nature of LLMs, e.g. an LLM generating toxic language or behaving inappropriately in some other ways, or may occur due to improper usage by a user, e.g. automation bias due to a user\u2019s overreliance on LLM.\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1511",
+    "risk_name": "Harms of Representation and Other Biases",
+    "description": "\"A pretrained LLM generally has many of the stereotypical biases commonly present in the human society (Touvron et al., 2023). This makes it difficult for users to trust that LLMs will work well for them and not produce unfair or biased responses. Appropriate finetuning can effectively limit the bias displayed in LLM outputs in a variety of situations, e.g. when models are explicitly prompted with stereotypes (Wang et al., 2023k), but it does not \u2018solve\u2019 the problem. Even after finetuning, biases often resurface when deliberately elicited (Wang et al., 2023k), or under novel scenarios, e.g. in writing reference letters (Wan et al., 2023a), generating synthetic training data (Yu et al., 2023c), screening resumes (Yin et al., 2024) or when used as LLM-agents (Pan et al., 2024).\"",
+    "severity": "MEDIUM",
+    "category": "1.1 > Unfair discrimination and misrepresentation"
+  },
+  {
+    "id": "RISK1512",
+    "risk_name": "Inconsistent Performance across and within Domains",
+    "description": "\"Estimating true capabilities of an LLM is a difficult task (c.f. Section 3.3), especially for naive users unfamiliar with the brittle nature of machine learning technologies. Exaggeration of model capabilities by the developers (Lambert, 2023; Blair-Stanek et al., 2023), and issues such as task-contamination (Roberts et al., 2023b), underrepresentation of tasks or domains (Wu et al., 2023a; McCoy et al., 2023), and prompt-sensitivity (Anthropic, 2023d) may cause a user to misestimate the true capabilities of a model. This lack of reliability can undermine user trust or cause harm if a user bases their decision on incorrect or misleading information provided by an LLM.\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1513",
+    "risk_name": "Overreliance",
+    "description": "\"If a user begins to excessively trust an LLM, this may cause them to develop an overreliance on the LLM. Overreliance can result in automation bias (Kupfer et al., 2023), and can cause errors of omission (user choosing not to verify the validity of a response) and errors of commission (user believing and acting on the basis of the LLM\u2019s response, even if it contradicts their own knowledge) (Skitka et al., 1999). It can be particularly dangerous in domains where the user may lack relevant expertise to robustly scrutinize the LLM responses. This is particularly a source of risk for LLMs because LLMs can often generate plausible, yet incorrect or unfaithful, rationalizations of their actions (c.f. Section 3.4.10), which can mistakenly cause the user to develop the belief that LLM has the relevant expertise and has provided a valid response\"",
+    "severity": "MEDIUM",
+    "category": "5.1 > Overreliance and unsafe use"
+  },
+  {
+    "id": "RISK1514",
+    "risk_name": "Socioeconomic Impacts of LLM May Be Highly Disruptive",
+    "description": "\"The rapid evolution of LLMs brings significant socioeconomic opportunities and challenges, impacting the workforce, income inequality, education, and global economic development. Many of these challenges are systemic in nature, constituting what economists refer to as general equilibrium effects. These challenges do not arise directly from LLMs causing harm to users but rather from their indirect effects on the socioeconomic equilibrium.\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1515",
+    "risk_name": "Effects on the Workforce",
+    "description": "\"Rapid advances in LLMs pose three distinct sets of challenges for workers\u2019 incomes (Korinek and Stiglitz, 2019; Susskind, 2023). First, they are likely to accelerate the rate of job turnover and disruption \u2014\u2013 affecting more workers, including more highly skilled workers, and making the adjustment process for society more difficult than what we were used to from prior technological advances...Second, although technological progress means that society may produce more wealth overall, there is a risk that the general-purpose nature of LLMs may lead to progress that is biased against labor, meaning that the share of that wealth that goes to labor may decline...Third, if future LLMs and robots advance to the point where they can perform virtually all the work tasks, they would disrupt labor markets more fundamentally: if machines can do workers\u2019 jobs, wages would fall would disrupt labor markets more fundamentally: if machines can do workers\u2019 jobs, wages would fall to machines\u2019 user cos...",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1516",
+    "risk_name": "Effects on Inequality",
+    "description": "\"LLMs could potentially worsen socioeconomic inequalities (Capraro et al., 2023). Effects on inequal- ity are closely linked to the effects of LLMs on workers but ultimately depend on how the fruits of technological progress are distributed...First, if the role and compensation of capital rise and the role and compensation of labor decline in an LLM-powered economy, inequality may go up because work is the main source of income for the majority of people...Second, the large fixed cost of training cutting-edge LLMs and the network effects involved imply that the market for the most advanced LLMs tends towards a natural monopoly structure in which only one or a small number of players will be successful, a phenomenon that has been termed \u2018algorithmic monoculture\u2019 in the literature (Kleinberg and Raghavan, 2021; Bommasani et al., 2022). As a result, LLM developers may amass significant market power. This might result in reduced social welfare, and lead to LLM-providers extracting monop...",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1517",
+    "risk_name": "Global Economic Development",
+    "description": "\"Many of the themes and challenges that we discussed above come together when analyzing the socioeconomic effects on developing countries. The workforce of developing countries may suffer from a retrenchment of outsourcing as many simple cognitive tasks that used to be performed in developing countries \u2014 for example, in call centers \u2013\u2014 can be automated with LLMs. This may adversely affect the economies of the poor countries (Georgieva, 2024).\"",
+    "severity": "MEDIUM",
+    "category": "6.2 > Increased inequality and decline in employment quality"
+  },
+  {
+    "id": "RISK1518",
+    "risk_name": "Corporate power may impeded effective governance",
+    "description": "\"The increasing power and influence of large corporations may make effective governance difficult. There exists a power asymmetry between corporate entities profiting from LLMs and other social groups (e.g. civil society). State-of-the-art LLMs are developed by or in partnership with, some of the world\u2019s largest private tech companies...This poses a risk of governance protocols related to LLMs becoming excessively favorable to tech companies, potentially leading to regulatory capture at the cost of the interests of other societal groups, particularly marginalized communities who have historically been disproportionately affected by poorly designed AI technologies (Reventlow, 2021).\"",
+    "severity": "MEDIUM",
+    "category": "6.1 > Power centralization and unfair distribution of benefits"
+  },
+  {
+    "id": "RISK1519",
+    "risk_name": "Jailbreaks and Prompt Injections Threaten Security of LLMs",
+    "description": "\"LLMs are not adversarially robust and are vulnerable to security failures such as jailbreaks and prompt-injection attacks. While a number of jailbreak attacks have been proposed in the literature, the lack of standardized evaluation makes it difficult to compare them. We also do not have efficient white-box methods to evaluate adver- sarial robustness. Multi-modal LLMs may further allow novel types of jailbreaks via additional modalities. Finally, the lack of robust privilege levels within the LLM input means that jailbreaking and prompt-injection attacks may be particularly hard to eliminate altogether.\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1520",
+    "risk_name": "Exploiting Limited Generalization of Safety Finetuning",
+    "description": "\"Safety tuning is performed over a much narrower distribution compared to the pretraining distribution. This leaves the model vulnerable to attacks that exploit gaps in the generalization of the safety training, e.g. using encoded text (Wei et al., 2023c) or low-resource languages (Deng et al., 2023a; Yong et al., 2023) (see also Section 3.2).\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1521",
+    "risk_name": "\u201cModel Psychology\u201d Attacks",
+    "description": "\"LLMs are vulnerable to \u201cpsychological\u201d tricks (Li et al., 2023e; Shen et al., 2023), which can be exploited by attackers. Examples include instructing the model to behave like a specific persona (Shah et al., 2023; Andreas, 2022), or employing various \u201csocial engineering\u201d tricks crafted by humans (Wei et al., 2023c) or other LLMs (Perez et al., 2022b; Casper et al., 2023c).\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1522",
+    "risk_name": "Adversarial Optimization:",
+    "description": "\"Jailbreak attacks can be discovered by performing manual or auto- mated adversarial optimization against a proxy objective that is noisily correlated with the success of a jailbreak. These are mostly gradient-based attacks (Zou et al., 2023b; Shin et al., 2020) as described in the previous two challenges, but gradient-free methods also exist (Prasad et al., 2022; Deng et al., 2022; Lapid et al., 2023).\"",
+    "severity": "MEDIUM",
+    "category": "X.1 > Excluded"
+  },
+  {
+    "id": "RISK1523",
+    "risk_name": "Attacking LLMs via Additional Modalities a",
+    "description": "\"LLMs can now process modalities other than text, e.g. images or video frames (OpenAI, 2023c; Gemini Team, 2023). Several studies show that gradient-based attacks on multimodal models are easy and effective (Carlini et al., 2023a; Bailey et al., 2023; Qi et al., 2023b). These attacks manipulate images that are input to the model (via an appropriate encoding). GPT-4Vision (OpenAI, 2023c) is vulnerable to jailbreaks and exfiltration attacks through much simpler means as well, e.g. writing jailbreaking text in the image (Willison, 2023a; Gong et al., 2023). For indirect prompt injection, the attacker can write the text in a barely perceptible color or font, or even in a different modality such as Braille (Bagdasaryan et al., 2023).\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1524",
+    "risk_name": "Vulnerability to Poisoning and Backdoors",
+    "description": "\"The previous section explored jailbreaks and other forms of adversarial prompts as ways to elicit harmful capabilities acquired during pretraining. These methods make no assumptions about the training data. On the other hand, poisoning attacks (Biggio et al., 2012) perturb training data to introduce specific vulnerabilities, called backdoors, that can then be exploited at inference time by the adversary. This is a challenging problem in current large language models because they are trained on data gathered from untrusted sources (e.g. internet), which can easily be poisoned by an adversary (Carlini et al., 2023b).\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1525",
+    "risk_name": "Inherent Risk",
+    "description": "\"In terms of inherent risk, LLMs could potentially reveal sensitive information from their utilized corpora for pre-training or fine-tuning, thereby raising issues of privacy leakage [37, 145, 226]. Meanwhile, it is well-known that LLMs may experi- ence hallucinations, resulting in the production of texts that are inaccurate and misleading [194]. Finally, since the values embedded in LLM-generated texts usually directly reflect the distribution of their training data, often sourced from the Internet, there exists a substantial risk that LLMs will overfit to a narrow set of human values or even amplify undesirable and unethical content, resulting in value mismatch.\"",
+    "severity": "HIGH",
+    "category": "X.0 > Other"
+  },
+  {
+    "id": "RISK1526",
+    "risk_name": "Privacy - Membership Inference Attack (MIA)",
+    "description": "\"inferring whether a given text record is used for training LLM\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1527",
+    "risk_name": "Privacy - Data Extraction Attack (DEA)",
+    "description": "\"extracting the text records that exist in the training dataset\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1528",
+    "risk_name": "Privacy - Prompt Inversion Attack (PIA)",
+    "description": "\"stealing the private prompting texts\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1529",
+    "risk_name": "Privacy - Attribute Inference Attack (AIA)",
+    "description": "\"deducing the private or sensitive information from training texts, prompting texts or external texts\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1530",
+    "risk_name": "Privacy - Model Extraction Attack (MEA)",
+    "description": "\"replicating the parameters of the LLM,\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1531",
+    "risk_name": "Hallucination",
+    "description": "\"Despite the rapid advancement of LLMs, hallucinations have emerged as one of the most vital concerns surrounding their use [54, 79, 86, 110, 242]. Hallucinations are often referred to as LLMs\u2019 generating content that is nonfactual or unfaithful to the provided information [54, 79, 86, 242]. Therefore, hallucinations can be typically categorized into two main classes. The first is factuality hallucination, which describes the discrepancy between LLMs\u2019 generated content and real-world facts. For example, if LLMs mistakenly take Charles Lindbergh as the first person who walked on the moon, it is a factuality hallucination [79]. The second is faithfulness hallucination, which describes the discrepancy between the generated content and the context provided by the user\u2019s instructions or input, as well as the internal coherence of the generated content itself. For example, when LLMs perform the summarizing task, they occasionally tamper with some key information by mistakes, which is a fa...",
+    "severity": "MEDIUM",
+    "category": "3.1 > False or misleading information"
+  },
+  {
+    "id": "RISK1532",
+    "risk_name": "Value-related risks in LLMs",
+    "description": "\"As the general capabilities of LLM-empowered systems improve, the negative consequences and risks induced by these systems also get increasingly alarming accordingly, especially in high-stakes areas [28, 146]. Although they may not be intentionally introduced, severe problematic issues related to human values can be raised. Specifically, even before language models become extremely large, pre-trained language models have already exhibited a certain degree of value judgments. For example, Schramowski et al. [171] reveal the existence of the moral direction with the sentence embeddings of moral questions. However, the distribution of the pre-training corpora may not match exactly with that of the human society [56] and pieces of knowledge are not guaranteed to be equally learned. As a result, value mismatches may occur.\"",
+    "severity": "HIGH",
+    "category": "7.1 > AI pursuing its own goals in conflict with human goals or values"
+  },
+  {
+    "id": "RISK1533",
+    "risk_name": "Malicious Use",
+    "description": "\"In terms of malicious use, LLMs could be utilized to produce content with toxicity, such as hate speech, harassment, cyberbullying, causing harm to humans [25]. In addition, malicious users may jailbreak LLMs to bypass their safety constraints for fraudulent purposes [123, 225].\"",
+    "severity": "HIGH",
+    "category": "X.0 > Other"
+  },
+  {
+    "id": "RISK1534",
+    "risk_name": "Toxicity in LLM Malicious Use",
+    "description": "\"Toxicity in LLMs refers to the generation of harmful, offensive, or inappropriate content that can cause harm to individuals or groups. Both explicit and implicit forms of toxicity can be generated by LLMs, posing significant risks to society. Explicit toxicity encompasses a wide range of negative behaviors, including hate speech, harassment, cyberbullying, rude, and disrespectful comments, derogatory language, as well as allocational harms [2, 62, 90]. Besides, implicit toxicity does not involve overtly harmful language but may manifest through subtle forms such as sarcasm, irony, and humor, making it more difficult to detect [103, 213].\"",
+    "severity": "MEDIUM",
+    "category": "1.2 > Exposure to toxic content"
+  },
+  {
+    "id": "RISK1535",
+    "risk_name": "Jailbreak in LLM Malicious Use - Poisoning Training Data",
+    "description": "\"In the data collecting and pre-training phase, malicious adversaries can Jailbreak LLMs through poisoning their training data to make the model to output harmful content.\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1536",
+    "risk_name": "Jailbreak in LLM Malicious Use - Backdoor Attack",
+    "description": "\"However, there are still ones who can leave holes in the training dataset, making LLMs appear safe on average, but generate harmful content under other specific conditions. This kind of attack can be categorized as \"backdoor attack\". Evan et al. developed a backdoor model that behaves as expected when trained, but exhibits different and potentially harmful behavior when deployed [81]. The results show that these backdoor behaviors persist even after multiple security training techniques are applied.\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1537",
+    "risk_name": "Jailbreak in LLM Malicious Use - White & Black Box Attacks",
+    "description": "\"In the fine-tuning and alignment phase, elaborately- designed instruction datasets can be utilized to fine-tune LLMs to drive them to perform undesirable behaviors, such as generating harmful information or content that violates ethical norms, and thus achieve a jailbreak. Based on the accessibility to the model parameters, we can categorize them into white-box and black-box attacks. For white-box attacks, we can jailbreak the model by modifying its parameter weights. In [107], Lermen et al. used LoRA to fine-tune the Llama2\u2019s 7B, 13B, and 70B as well as Mixtral on AdvBench and RefusalBench datasets. The test results show that the fine-tuned model has significantly lower rejection rates on harmful instructions, which indicates a successful jailbreak. Other works focus on jailbreaking in black-box models. In [160], Qi et al. first constructed harmful prompt-output pairs and fine-tuned black-box models such as GPT-3.5 Turbo. The results show that they were able to successfully bypass...",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
+  },
+  {
+    "id": "RISK1538",
+    "risk_name": "Jailbreak in LLM Malicious Use - Prompt Attacks",
+    "description": "\"In the prompting and reasoning phase, dialog can push LLMs into confused or overly compliant states, raising the risk of producing harmful outputs when confronted with harmful questions. Most of the jailbreak methods in this phase are black-boxed and can be categorized into four main groups based on the type of method: Prompt Injection [154], Role Play, Adversarial Prompting, and Prompt Form Transformation.\"",
+    "severity": "MEDIUM",
+    "category": "2.2 > AI system security vulnerabilities and attacks"
   }
 ]

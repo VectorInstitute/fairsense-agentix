@@ -23,6 +23,12 @@ RISK002,Data Privacy Violation,"Unauthorized collection or disclosure of persona
 ```
 
 ### 2. ai_rmf.csv
+
+**Provenance:** For MIT exports, `transform_mit_data.py` **generates** these rows using
+heuristic domain → NIST AI RMF function templates. They support UI/export structure and
+are linked to each `risk_id`; they are **not** copied from MIT mitigation columns unless
+you customize the transform.
+
 NIST AI Risk Management Framework recommendations with the following columns:
 
 | Column | Type | Description | Example |

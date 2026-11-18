@@ -44,6 +44,7 @@ nav:
   - User Guide: user_guide.md
   - Server Guide: server.md
   - Architecture: architecture.md
+  - MIT risk index: mit-risk-index.md
   - API Reference: api.md
   - Developer Guide: developers.md
   - Acknowledgments: acknowledgments.md

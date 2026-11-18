@@ -9,7 +9,13 @@ import time
 
 from fastapi import APIRouter, BackgroundTasks, Header, HTTPException, Request
 
+from fairsense_agentix import __version__
 from fairsense_agentix.configs import settings
+from fairsense_agentix.data.risk_corpus import (
+    MIT_AI_RISK_REPOSITORY_VERSION,
+    MIT_AI_RISK_SNAPSHOT_DATE,
+    MIT_INDEXED_RISK_COUNT,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -19,16 +25,24 @@ _LOOPBACK_HOSTS = frozenset({"127.0.0.1", "::1", "localhost", "testclient"})
 
 
 @router.get("/v1/health")
-async def health() -> dict[str, str | bool]:
+async def health() -> dict[str, str | bool | int]:
     """Return readiness probe details.
 
     ``mock_mode`` is ``True`` when the LLM provider is ``fake``: results are
     synthetic placeholders and must not be interpreted as real analysis.
+
+    Risk index fields describe the MIT corpus bundled in this release (see
+    ``fairsense_agentix.data.risk_corpus``); they may differ from the frozen
+    JOSS paper snapshot.
     """
     return {
         "status": "ok",
+        "software_version": __version__,
         "llm_provider": settings.llm_provider,
         "mock_mode": settings.llm_provider == "fake",
+        "mit_risk_repository_version": MIT_AI_RISK_REPOSITORY_VERSION,
+        "mit_risk_snapshot_date": MIT_AI_RISK_SNAPSHOT_DATE,
+        "indexed_risk_count": MIT_INDEXED_RISK_COUNT,
     }
 
 
