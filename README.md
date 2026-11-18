@@ -14,7 +14,7 @@
 
 FairSense-AgentiX is an open-source bias detection and AI risk assessment platform that uses **agentic workflows** (LangGraph orchestration, critique-and-refine) to analyze text, images, and deployment scenarios. It was **peer-reviewed and published** in the [Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.11060) ([DOI: 10.21105/joss.11060](https://doi.org/10.21105/joss.11060)).
 
-**Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/) · **Archive:** [Zenodo](https://doi.org/10.5281/zenodo.23106857) (latest release; cite the version DOI you used)
+**Documentation:** [https://vectorinstitute.github.io/fairsense-agentix/](https://vectorinstitute.github.io/fairsense-agentix/) · **Archive:** [Zenodo v0.3.0](https://doi.org/10.5281/zenodo.24354331) ([all versions](https://doi.org/10.5281/zenodo.23106857))
 
 ## ✨ Key Features
 
@@ -206,7 +206,18 @@ This research was funded by the European Union's Horizon Europe research and inn
 
 ## 📖 Citation
 
-For **reproducibility**, cite the **Zenodo DOI of the exact release** you used (e.g. **v0.3.0** for the bundled MIT Risk Repository V4 index) **in addition to** the JOSS article below. The JOSS paper describes the software as peer-reviewed at publication time (including the earlier V3 risk snapshot); it is not updated for each release.
+For **reproducibility**, cite the **Zenodo DOI of the exact release** you used—**[v0.3.0](https://doi.org/10.5281/zenodo.24354331)** for the bundled MIT Risk Repository V4 index—**in addition to** the JOSS article below. The JOSS paper describes the software as peer-reviewed at publication time (including the earlier V3 risk snapshot); it is not updated for each release. See also [`CITATION.cff`](CITATION.cff) for machine-readable metadata.
+
+```bibtex
+@software{Narayanan2026_FairSense,
+  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
+  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
+  year = {2026},
+  version = {0.3.0},
+  doi = {10.5281/zenodo.24354331},
+  url = {https://doi.org/10.5281/zenodo.24354331}
+}
+```
 
 ```bibtex
 @article{Narayanan2026,

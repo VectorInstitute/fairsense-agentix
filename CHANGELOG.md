@@ -1,8 +1,10 @@
 # Changelog
 
-All notable changes to this project are documented here. The [JOSS paper](https://doi.org/10.21105/joss.11060) describes the peer-reviewed release; cite the [Zenodo DOI](https://doi.org/10.5281/zenodo.23106857) of the version you used for reproducible software and data snapshots.
+All notable changes to this project are documented here. The [JOSS paper](https://doi.org/10.21105/joss.11060) describes the peer-reviewed release; cite the [Zenodo version DOI](https://doi.org/10.5281/zenodo.24354331) you used (or another version from the [Zenodo concept record](https://doi.org/10.5281/zenodo.23106857)) for reproducible software and data snapshots.
 
-## [0.3.0] — unreleased
+## [0.3.0] — 2026-11-18
+
+Zenodo: [10.5281/zenodo.24354331](https://doi.org/10.5281/zenodo.24354331) · PyPI: `fairsense-agentix==0.3.0`
 
 ### Data and risk index
 
@@ -25,4 +27,4 @@ All notable changes to this project are documented here. The [JOSS paper](https:
 
 - [MIT risk index](docs/mit-risk-index.md), updated user guide, API, architecture, and data READMEs.
 
-[0.3.0]: https://github.com/VectorInstitute/fairsense-agentix/compare/v0.2.2...v0.3.0
+[0.3.0]: https://github.com/VectorInstitute/fairsense-agentix/releases/tag/v0.3.0

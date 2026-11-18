@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the Zenodo record for the version you used and the JOSS article for peer review."
+title: "FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis"
+version: 0.3.0
+date-released: 2026-11-18
+doi: 10.5281/zenodo.24354331
+license: MIT
+repository-code: "https://github.com/VectorInstitute/fairsense-agentix"
+url: "https://doi.org/10.5281/zenodo.24354331"
+type: software
+keywords:
+  - fairness
+  - bias detection
+  - AI safety
+  - agentic AI
+  - responsible AI
+  - LangGraph
+authors:
+  - family-names: Narayanan
+    given-names: Aravind
+    affiliation: Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada
+    orcid: "https://orcid.org/0009-0008-7991-1929"
+  - family-names: Sekhon
+    given-names: Karanpal
+    affiliation: Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada
+  - family-names: Alinoori
+    given-names: Mahshid
+    affiliation: Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada
+    orcid: "https://orcid.org/0009-0003-6692-6703"
+  - family-names: Raza
+    given-names: Shaina
+    affiliation: Vector Institute for Artificial Intelligence, Toronto, Ontario, Canada
+    orcid: "https://orcid.org/0000-0003-1061-5845"
+preferred-citation:
+  type: article
+  title: "FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis"
+  authors:
+    - family-names: Narayanan
+      given-names: Aravind
+    - family-names: Sekhon
+      given-names: Karanpal
+    - family-names: Alinoori
+      given-names: Mahshid
+    - family-names: Raza
+      given-names: Shaina
+  doi: 10.21105/joss.11060
+  journal: Journal of Open Source Software
+  volume: 11
+  issue: 126
+  start: 11060
+  year: 2026
