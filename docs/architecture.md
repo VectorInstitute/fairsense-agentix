@@ -388,7 +388,7 @@ flowchart TB
 
 1. **embed_scenario** — `sentence-transformers` → 384-dim vector
 2. **search_risks** — top-k similarity over the packaged MIT AI Risk Repository index (**1,538** risks, V4)
-3. **search_rmf_per_risk** — NIST AI RMF–aligned actions per retrieved risk
+3. **search_rmf_per_risk** — illustrative RMF actions per retrieved risk (`rmf_meta.json` lookup by `risk_id`; default **4** per risk via `options.rmf_per_risk`)
 4. **join_data** — merge risks + recommendations
 5. **format_html** — display table
 6. **export_csv** — optional file under `outputs/`
@@ -402,7 +402,7 @@ flowchart TB
 
 **Knowledge Base:**
 - **Risks:** 1,538 indexed entries from the MIT AI Risk Repository V4 snapshot (3 Dec 2025). The [JOSS paper](https://doi.org/10.21105/joss.11060) documents the earlier V3 (1,340) index.
-- **RMF:** companion FAISS index of NIST AI RMF–style mitigation rows joined per risk
+- **RMF:** template actions in `rmf_meta.json` joined per risk id (`rmf_lookup`); the RMF FAISS index supports rebuilds and legacy paths
 - **Storage:** FAISS index files live inside the package at `fairsense_agentix/data/indexes/` in LangChain format:
   ```
   fairsense_agentix/data/indexes/

@@ -113,7 +113,7 @@ class FairSense:
 
     Risk Assessment:
         - top_k: Number of risks to retrieve (default 5, max 100)
-        - rmf_per_risk: RMF recommendations per risk (default 3, max 20)
+        - rmf_per_risk: RMF recommendations per risk (default 4, max 20)
 
     Examples
     --------
@@ -307,7 +307,7 @@ class FairSense:
         **options
             Optional configuration overrides:
             - top_k: Number of risks to retrieve (default 5, max 100)
-            - rmf_per_risk: Recommendations per risk (default 3, max 20)
+            - rmf_per_risk: Recommendations per risk (default 4, max 20)
 
         Returns
         -------

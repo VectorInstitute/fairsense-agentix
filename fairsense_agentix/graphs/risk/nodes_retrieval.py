@@ -170,7 +170,7 @@ def search_rmf_per_risk(state: RiskState) -> dict:
                 telemetry.log_warning("search_rmf_skipped", reason="no_risks")
                 return {"rmf_recommendations": {}}
 
-            # Get RMF recommendations per risk from options (default 3)
+            # Get RMF recommendations per risk from options (default 4)
             options = state.options or {}
             rmf_per_risk = options.get("rmf_per_risk", 4)
 

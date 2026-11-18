@@ -137,6 +137,8 @@ Check if the server is ready to accept requests.
 
 `mit_*` and `indexed_risk_count` describe the MIT corpus bundled in this release (see [MIT risk index](mit-risk-index.md)); the [JOSS paper](https://doi.org/10.21105/joss.11060) documents the earlier V3 (1,340) snapshot.
 
+**Risk analysis options** (JSON `options` on `/v1/analyze` and batch items): `top_k` (default **5**, max 100) selects MIT risks from FAISS; `rmf_per_risk` (default **4**, max 20) caps illustrative RMF actions per risk (loaded by `risk_id` from packaged metadata).
+
 **cURL Example:**
 ```bash
 curl http://localhost:8000/v1/health

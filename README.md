@@ -83,29 +83,6 @@ for instance in result.bias_instances:
     print(f"  - {instance['type']} ({instance['severity']}): {instance['text_span']}")
 ```
 
-
-<<<<<<< HEAD
-## 📖 Citation
-
-For **reproducibility**, cite the **Zenodo DOI of the exact release** you used (e.g. v0.3.0 for the bundled MIT Risk Repository V4 index) **in addition to** the JOSS article below. The JOSS paper describes the software as peer-reviewed at publication time (including the earlier V3 risk snapshot); it is not updated for each release.
-
-```bibtex
-@article{Narayanan2026,
-  doi = {10.21105/joss.11060},
-  url = {https://doi.org/10.21105/joss.11060},
-  year = {2026},
-  publisher = {The Open Journal},
-  volume = {11},
-  number = {126},
-  pages = {11060},
-  author = {Narayanan, Aravind and Sekhon, Karanpal and Alinoori, Mahshid and Raza, Shaina},
-  title = {FairSense-AgentiX: An Agentic Platform for Multi-Modal Fairness and AI Risk Analysis},
-  journal = {Journal of Open Source Software}
-}
-```
-=======
->>>>>>> origin/main
-
 ---
 
 ## 🧑🏿‍💻 Developing
@@ -169,7 +146,9 @@ npm run dev
 
 Or start backend + UI together from the checkout with `python -c "from fairsense_agentix import server; server.start()"`.
 
-Set `VITE_API_BASE` (defaults to `http://localhost:8000`) to point at the API. The UI provides:
+**API URL:** On one machine, set `VITE_API_BASE` if needed (default direct to port 8000). With **SSH port-forwarding only 5173**, leave `VITE_API_BASE` unset—the dev server proxies `/v1` to `127.0.0.1:8000` on the host where both processes run (see [Server guide](docs/server.md)).
+
+The UI provides:
 
 - Unified input surface (text field + drag/drop image upload)
 - Live agent timeline sourced from telemetry events
@@ -226,6 +205,8 @@ This research was funded by the European Union's Horizon Europe research and inn
 ---
 
 ## 📖 Citation
+
+For **reproducibility**, cite the **Zenodo DOI of the exact release** you used (e.g. **v0.3.0** for the bundled MIT Risk Repository V4 index) **in addition to** the JOSS article below. The JOSS paper describes the software as peer-reviewed at publication time (including the earlier V3 risk snapshot); it is not updated for each release.
 
 ```bibtex
 @article{Narayanan2026,

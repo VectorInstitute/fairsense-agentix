@@ -193,6 +193,8 @@ print(result.summary)
 | [Architecture](architecture.md) | Graphs, tools, orchestrator |
 | [API Reference](api.md) | Python and REST |
 | [Developer Guide](developers.md) | Contributing and extending |
+| [MIT risk index](mit-risk-index.md) | Bundled V4 corpus and RMF semantics |
+| [Changelog](../CHANGELOG.md) | Release notes (e.g. v0.3.0) |
 
 ---
 

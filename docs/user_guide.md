@@ -357,7 +357,7 @@ Each item in `result.risks` is a `dict`. Use `.get(...)` for safe access since k
 | `rank` | `int` | Position within the list for that risk |
 
 !!! note "What the recommendations are"
-    The recommendations are **not** text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions, then indexed for retrieval. See `scripts/transform_mit_data.py` for how they are built.
+    The recommendations are **not** text extracted from the NIST AI RMF and carry no NIST control identifiers. They are a curated set of action templates, assigned to each repository risk by its domain and mapped onto the four RMF functions. At runtime they are loaded **by MIT `risk_id`** from `rmf_meta.json` (`rmf_lookup`), not via a separate global FAISS search on the RMF index. Default **`rmf_per_risk`: 4** (max 20). See [MIT risk index](mit-risk-index.md) and `scripts/transform_mit_data.py`.
 
 !!! note "Risk source"
     Risks are retrieved from the [MIT AI Risk Repository](https://airisk.mit.edu/) (V4, 1,538 indexed entries, Dec 2025 snapshot) using semantic similarity search. The `category` field follows the repository's Domain Taxonomy; the number prefix (e.g., `3.1`) identifies the domain and subcategory. A score of `1.0` means the risk is maximally relevant to the described scenario; `0.0` means unrelated.

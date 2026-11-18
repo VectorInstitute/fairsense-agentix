@@ -3,7 +3,7 @@
 FairSense ships a FAISS index built from the **AI Risk Database** sheet of the
 [MIT AI Risk Repository](https://airisk.mit.edu/) (CC BY 4.0).
 
-| Field | Current package (`main` / `data/mit-ai-risks-v4`) |
+| Field | Bundled index (**v0.3.0** and later on this release line) |
 | --- | --- |
 | Repository version | **V4** |
 | Export date | **3 December 2025** |
@@ -27,6 +27,15 @@ should **not** be cited as MIT repository mitigations.
 
 To ship MIT-sourced measures instead, extend the transform to read mitigation columns
 from a future export (when present) and rebuild indexes.
+
+## How RMF rows are attached at runtime
+
+After FAISS returns top-k MIT risks, **`search_rmf_per_risk`** loads mitigations from
+`rmf_meta.json` via `fairsense_agentix.graphs.risk.rmf_lookup`—**keyed by MIT
+`risk_id`**, not by a second global FAISS query on the RMF index. That avoids
+duplicate actions when many risks share similar template embeddings. Request
+`options["rmf_per_risk"]` (default **4**, max 20) to cap how many actions appear per
+risk; the UI uses the same default for risk analysis.
 
 ## Rebuild from a new MIT export
 
