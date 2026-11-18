@@ -51,7 +51,10 @@ npm install
 npm run dev
 ```
 
-Set `VITE_API_BASE` to your backend URL (default: `http://localhost:8000`).
+**API URL in the browser:**
+
+- **Same machine (laptop):** leave `VITE_API_BASE` unset so the UI calls `http://localhost:8000`, or set it explicitly.
+- **SSH tunnel (one forwarded port):** start the API on the remote host (`127.0.0.1:8000`), run `npm run dev` on the remote, forward **only port 5173**, and **do not** set `VITE_API_BASE`. Vite proxies `/v1` (including WebSockets) to `http://127.0.0.1:8000` (see `ui/vite.config.ts`).
 
 ---
 

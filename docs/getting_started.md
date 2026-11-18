@@ -296,6 +296,9 @@ Once running, you'll have access to:
 | **API Docs** | http://localhost:8000/docs | Interactive Swagger documentation |
 | **WebSocket** | ws://localhost:8000/v1/stream/{run_id} | Real-time agent telemetry |
 
+!!! tip "Remote dev with a single SSH tunnel"
+    If the API and `npm run dev` both run on a cluster host, forward **port 5173** only and open `http://localhost:5173` on your laptop. **Do not** set `VITE_API_BASE`—the Vite dev server proxies `/v1` (HTTP and WebSocket) to `http://127.0.0.1:8000` on that host. See [Server guide](server.md).
+
 ### Using the UI
 
 The web interface has two pages:
